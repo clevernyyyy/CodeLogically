@@ -1,5 +1,9 @@
 ﻿Public Class YesNoIDK
-    Inherits System.Web.UI.UserControl
+    Inherits QuestionControl
+
+
+    Private Property QuestionType As Enums.enmQuestionType = Enums.enmQuestionType.YesNoIDK
+
     Private _AllowIDK As Boolean = False
     Public Property AllowIDK As Boolean
         Get
@@ -33,8 +37,11 @@
         End Get
     End Property
 
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub
+    Public Overrides Function SaveAnswer() As Boolean
+        Return True
+    End Function
 
 End Class

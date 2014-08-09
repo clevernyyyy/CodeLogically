@@ -32,10 +32,10 @@
     <div id="playArea">
         <div id="welcome">
             <h1 class="centered" style="color:white;font-size:72px;">
-                The Survey
+                CodeOne Test Site
             </h1>
             <h2 class="centered" style="color:white;font-size:24px;">
-                Taking surveys since 1940!
+                Test Site since 1940!
             </h2>
         </div>
         <div id="container">
@@ -49,7 +49,7 @@
                 <div class="centered">
                     *** Coming Soon ***
                     <br />
-                    <button type="button" class="btn btn-lg btn-default" style="width:250px">Take a Survey!</button>
+                    <button type="button" class="btn btn-lg btn-default" style="width:250px">Button!</button>
                 </div>
             </div>
         </div>

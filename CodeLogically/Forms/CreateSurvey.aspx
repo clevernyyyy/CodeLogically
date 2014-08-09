@@ -41,28 +41,29 @@
             <!-- Four columns of text below the carousel -->
             <div class="col-xs-12 col-sm-12">
                 <div id="gridDetails" class="row">
-                    <div class="col-6 col-sm-6 col-lg-4 jumbotron">
+                    <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Yes/No Survey!</h4>
-                            <a class="btn btn-default" href="" role="button">Create &raquo;</a></p>
+                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                     </div>
-                    <div class="col-6 col-sm-6 col-lg-4 jumbotron">
+                    <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Multiple Choice Survey!</h4>
+                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-6 col-sm-6 col-lg-4 jumbotron">
+                    <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Rating Scale Survey!</h4>
+                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-md-2">
                     </div>
-                    <div class="col-6 col-sm-6 col-lg-4 jumbotron">
+                    <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Chain Survey!</h4>
+                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                 </div>
             </div>

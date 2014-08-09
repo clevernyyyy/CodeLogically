@@ -92,6 +92,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Controls\CreateYesNo.ascx" />
     <Content Include="Controls\TextInput.ascx" />
     <Content Include="Controls\YesNoIDK.ascx" />
     <Content Include="Forms\CreateSurvey.aspx" />
@@ -178,11 +179,21 @@
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Classes\CreateQuestion.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Classes\Enums.vb" />
     <Compile Include="Classes\Question.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Classes\QuestionControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreateYesNo.ascx.designer.vb">
+      <DependentUpon>CreateYesNo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreateYesNo.ascx.vb">
+      <DependentUpon>CreateYesNo.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\TextInput.ascx.designer.vb">

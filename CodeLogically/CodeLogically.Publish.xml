@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="FTP://184.168.224.160/web/" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FTP" replaceMatchingFiles="True" userName="codeOne" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="08/09/2014 10:11:55" />
+    <file relUrl="Site.Master" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Account/Register.aspx" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="bin/CodeLogically.xml" publishTime="08/09/2014 10:11:53" />
+    <file relUrl="Account/Web.config" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Account/Login.aspx" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="bin/CodeLogically.pdb" publishTime="08/09/2014 10:11:53" />
+    <file relUrl="Scripts/jquery-1.4.1.js" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Account/ChangePassword.aspx" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Global.asax" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="bin/CodeLogically.dll" publishTime="08/09/2014 10:11:53" />
+    <file relUrl="Scripts/jquery-1.4.1-vsdoc.js" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="About.aspx" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Account/ChangePasswordSuccess.aspx" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Default.aspx" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Scripts/jquery-1.4.1.min.js" publishTime="08/09/2014 10:08:37" />
+    <file relUrl="Styles/Site.css" publishTime="08/09/2014 10:08:37" />
+  </publishProfile>
+</publishData>

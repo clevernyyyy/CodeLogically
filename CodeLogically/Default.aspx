@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false"
     CodeBehind="Default.aspx.vb" Inherits="CodeLogically._Default" %>
 
-<%@ Register Src="~/Controls/CreateYesNo.ascx" TagPrefix="uctrl" TagName="CYN" %>
+<%--<%@ Register Src="~/Controls/CreateYesNo.ascx" TagPrefix="uctrl" TagName="CYN" %>--%>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <meta charset="utf-8">
@@ -31,7 +31,6 @@
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-<form runat="server">
     <div id="playArea">
         <div id="welcome">
             <h1 class="centered" style="color:white;font-size:72px;">
@@ -67,7 +66,6 @@
         </div>
     </div>
 
-    </form>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

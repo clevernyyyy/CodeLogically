@@ -43,5 +43,10 @@ Module MiscFunctions
             Throw
         End Try
     End Sub
+    Public Sub SimplePopup(ByRef page As Page, ByVal strText As String, ByVal strTitle As String)
+        Dim strJava As String = "SimplePopup('<div>" & strText & "</div>','" & strTitle & "');"
+
+        ScriptManager.RegisterClientScriptBlock(page, page.GetType, "ErrorPopup", strJava, True)
+    End Sub
 
 End Module

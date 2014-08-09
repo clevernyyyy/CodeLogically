@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Create Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master"
     CodeBehind="CreateSurvey.aspx.vb" Inherits="CodeLogically.CreateSurvey" %>
+        
+<%@ Register Src="~/Controls/PopUp.ascx" TagPrefix="uctrl" TagName="PopUp" %>
+<%@ Register Src="~/Controls/CreateYesNo.ascx" TagPrefix="uctrl" TagName="CYN" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -21,8 +24,9 @@
         type='text/css' />
     <!-- Custom styles for this template -->
     <link href='/Styles/custom.css' rel='stylesheet' type='text/css' />
-    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/Scripts/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/PerPage/CreateSurvey.js?cachebreak=08092014"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -31,7 +35,7 @@
             background: white !important;
         }
     </style>
-    <div class="container centered">
+    <div id="CreateSurveyPage" class="container centered">
         <div class="row row-offcanvas row-offcanvas-right">
             <h2 class="centered" style="color: #3399FF; font-size: 36px;">
                 Create a Survey!
@@ -43,26 +47,39 @@
                 <div id="gridDetails" class="row">
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
-                            Create a Yes/No Survey!</h4>
-                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
+                            Create a Dynamic Survey!</h4>
+                            <%--<uctrl:CustomButton ID="btnDynamicSurvey" runat="server" Text="Search" />--%>
+                            <a ID="btnDynamicSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-md-2">
+                    </div>
+                    <div class="col-8 col-sm-8 col-lg-5 jumbotron">
+                        <h4>
+                            Create a Yes/No Survey!</h4>
+                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Multiple Choice Survey!</h4>
                             <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
+                    <div class="col-md-2">
+                    </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Rating Scale Survey!</h4>
+                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
+                    </div>
+                    <div class="col-8 col-sm-8 col-lg-5 jumbotron">
+                        <h4>
+                            Create an Agree/Disagree Survey!</h4>
                             <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-md-2">
                     </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
-                            Create a Chain Survey!</h4>
+                            Create a Chain/Tree Survey!</h4>
                             <a class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                 </div>
@@ -71,4 +88,22 @@
         <!--/row-->
     </div>
     <!--/.container-->
+    
+    <div style="clear: both;" />
+
+    <div class="none border" id="divCreateSurvey" title="Create Survey">
+        <uctrl:CYN ID="Create_Survey" runat="server" />    
+    </div>
+
+
+
+
+<%--    <uctrl:PopUp runat="server" ID="popupSurvey" PopupId="Create_Survey" Title="">
+        <content>
+            <uctrl:CYN ID="Create_Survey" runat="server" />
+        </content>
+        <buttons>
+        </buttons>
+    </uctrl:PopUp>--%>
 </asp:Content>
+

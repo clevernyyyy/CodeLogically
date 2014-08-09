@@ -50,3 +50,5 @@ CodeLogically.suo
 *.xml
 *.suo
 *.cache
+*.xml
+CodeLogically/obj/Debug/Package/PackageTmp/bin/CodeLogically.xml

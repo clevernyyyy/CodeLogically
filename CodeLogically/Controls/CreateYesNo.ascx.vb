@@ -4,6 +4,8 @@
     Public Sub New(S As Survey)
         ParentSurvey = S
     End Sub
+    Public Sub New()
+    End Sub
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub

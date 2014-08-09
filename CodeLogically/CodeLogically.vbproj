@@ -92,6 +92,8 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Controls\TextInput.ascx" />
+    <Content Include="Controls\YesNoIDK.ascx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Gruntfile.js" />
@@ -174,6 +176,24 @@
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Classes\Enums.vb" />
+    <Compile Include="Classes\QuestionControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TextInput.ascx.designer.vb">
+      <DependentUpon>TextInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextInput.ascx.vb">
+      <DependentUpon>TextInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\YesNoIDK.ascx.designer.vb">
+      <DependentUpon>YesNoIDK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\YesNoIDK.ascx.vb">
+      <DependentUpon>YesNoIDK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -243,6 +263,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Forms\" />
     <Folder Include="img\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -178,6 +178,9 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Classes\Enums.vb" />
+    <Compile Include="Classes\Question.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Classes\QuestionControl.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

@@ -179,13 +179,12 @@
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Classes\Connections.vb" />
     <Compile Include="Classes\CreateQuestion.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Classes\Enums.vb" />
-    <Compile Include="Classes\Question.vb">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Classes\Question.vb" />
     <Compile Include="Classes\QuestionControl.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

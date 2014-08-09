@@ -48,3 +48,5 @@ CodeLogically.suo
 *.pdb
 *.dll
 *.xml
+*.suo
+*.cache

@@ -41,3 +41,10 @@ Icon
 .Trashes
 CodeLogically/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 CodeLogically.suo
+*.cache
+*.xml
+*.cache
+*.cache
+*.pdb
+*.dll
+*.xml

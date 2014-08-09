@@ -22,6 +22,14 @@ RegisterUserWizardStep control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:CodeLogically.TextInput.txtQuestionAnswer">
+	<summary>
+txtQuestionAnswer control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CodeLogically.Login.RegisterHyperLink">
 	<summary>
 RegisterHyperLink control.
@@ -106,6 +114,38 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeLogically.ChangePassword.ChangeUserPassword">
 	<summary>
 ChangeUserPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.YesNoIDK.lblQuestionText">
+	<summary>
+lblQuestionText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.YesNoIDK.rbtYes">
+	<summary>
+rbtYes control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.YesNoIDK.rbtNo">
+	<summary>
+rbtNo control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.YesNoIDK.rbtIDKMyBFFJill">
+	<summary>
+rbtIDKMyBFFJill control.
 </summary>
 	<remarks>
 Auto-generated field.

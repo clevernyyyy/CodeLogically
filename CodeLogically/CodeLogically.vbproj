@@ -92,6 +92,38 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Gruntfile.js" />
+    <Content Include="Scripts\holder.js" />
+    <Content Include="Scripts\interact.js" />
+    <Content Include="Scripts\jquery-1.10.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-func.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\jquery.fancybox-media.js" />
+    <Content Include="Scripts\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Scripts\modernizr.custom.js" />
+    <Content Include="Scripts\retina.js" />
+    <Content Include="Scripts\smoothscroll.js" />
+    <Content Include="Styles\animate-custom.css" />
+    <Content Include="Styles\animations.css" />
+    <Content Include="Styles\bootstrap-theme.css" />
+    <Content Include="Styles\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\custom.css" />
+    <Content Include="Styles\icomoon.css" />
+    <Content Include="Styles\icomoon\icomoon.svg" />
+    <Content Include="Styles\jquery.fancybox-buttons.css" />
+    <Content Include="Styles\jquery.fancybox-thumbs.css" />
+    <Content Include="Styles\jquery.fancybox.css" />
+    <Content Include="Styles\main.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -199,9 +231,18 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Site.Master" />
+    <None Include="Styles\bootstrap-theme.css.map" />
+    <None Include="Styles\bootstrap.css.map" />
+    <None Include="Styles\icomoon\.DS_Store" />
+    <None Include="Styles\icomoon\icomoon-.eot" />
+    <None Include="Styles\icomoon\icomoon.eot" />
+    <None Include="Styles\icomoon\icomoon.ttf" />
+    <None Include="Styles\icomoon\icomoon.woff" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Forms\" />
+    <Folder Include="img\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -6,3 +6,11 @@ C:\Users\atschaal\Documents\Visual Studio 2010\Projects\CodeLogically\CodeLogica
 C:\Users\atschaal\Documents\Visual Studio 2010\Projects\CodeLogically\CodeLogically\obj\Debug\CodeLogically.dll
 C:\Users\atschaal\Documents\Visual Studio 2010\Projects\CodeLogically\CodeLogically\obj\Debug\CodeLogically.xml
 C:\Users\atschaal\Documents\Visual Studio 2010\Projects\CodeLogically\CodeLogically\obj\Debug\CodeLogically.pdb
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\bin\CodeLogically.dll
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\bin\CodeLogically.pdb
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\bin\CodeLogically.xml
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.Resources.resources
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.vbproj.GenerateResource.Cache
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.dll
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.xml
+C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.pdb

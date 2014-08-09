@@ -94,7 +94,8 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Controls\TextInput.ascx" />
     <Content Include="Controls\YesNoIDK.ascx" />
-    <Content Include="Forms\Survey.aspx" />
+    <Content Include="Forms\CreateSurvey.aspx" />
+    <Content Include="Forms\TakeSurvey.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Gruntfile.js" />
@@ -205,11 +206,18 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Survey.aspx.designer.vb">
-      <DependentUpon>Survey.aspx</DependentUpon>
+    <Compile Include="Forms\CreateSurvey.aspx.designer.vb">
+      <DependentUpon>CreateSurvey.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Survey.aspx.vb">
-      <DependentUpon>Survey.aspx</DependentUpon>
+    <Compile Include="Forms\CreateSurvey.aspx.vb">
+      <DependentUpon>CreateSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TakeSurvey.aspx.designer.vb">
+      <DependentUpon>TakeSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TakeSurvey.aspx.vb">
+      <DependentUpon>TakeSurvey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">

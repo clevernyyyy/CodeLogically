@@ -28,7 +28,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul runat="server" id="mnuHome" class="nav navbar-nav navbar-right">
-            <li><a href="/Forms/Survey.aspx">Survey</a></li>
+            <li><a href="/Forms/CreateSurvey.aspx">Create Survey</a></li>
+            <li><a href="/Forms/TakeSurvey.aspx">Take a Survey!</a></li>
           </ul>
         </div>
       </div>

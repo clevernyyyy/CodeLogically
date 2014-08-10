@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Take Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
-CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey" %>
+CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEventValidation="false" %>
 
+<%@ Register Src="~/Controls/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CS" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -24,6 +25,7 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey" %>
     <link href='/Styles/custom.css' rel='stylesheet' type='text/css' />
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/PerPage/CreateSurvey.js?cachebreak=08092014"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -41,25 +43,22 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey" %>
                 Select from our list of surveys!</p>
             
         <!-- Survery Gridview -->
-        <div id="Retrieve">
+        <div id="Retrieve" class="centered">
         <div class="rowClassSpace">
             &nbsp;</div>
             <div id="Retrieve_GridViewContainer" class="gridViewContainer">
                 <asp:GridView ID="dvgPack" runat="server" CssClass="tableClass" AutoGenerateColumns="false"
-                    OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" Width="880" TabIndex="6"
+                    OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="4"
                     PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
-                    <%--runat="server" CssClass="tableClass" AutoGenerateColumns="false"
-                    DataKeyNames="nPID" Width="895" TabIndex="7" PageSize="50" AllowPaging="true"
-                    PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">--%>
-                    <HeaderStyle ForeColor="Navy" Font-Underline="false" />
+                    <HeaderStyle ForeColor="Navy" Font-Underline="false"/>
                     <Columns>
                         <%--0--%><asp:BoundField DataField="cDescription" HeaderText="Survey Title" SortExpression="cDescription"
                             ItemStyle-Width="430" />
-                        <%--1--%><asp:BoundField DataField="nUserNum" HeaderText="Survey Author" SortExpression="nUserNum"
-                            ItemStyle-Width="230" />
+                        <%--1--%><asp:BoundField DataField="cUserName" HeaderText="Survey Author" SortExpression="cUserName"
+                            ItemStyle-Width="200" />
                         <%--2--%><asp:BoundField DataField="dCreated" HeaderText="Date Created" DataFormatString="{0:d}"
-                            SortExpression="dCreated" ItemStyle-Width="100" />
-                        <%--3--%><asp:BoundField DataField="nSurveyType" HeaderText="SurveyID" ItemStyle-Width="40"
+                            SortExpression="dCreated" ItemStyle-Width="120" />
+                        <%--3--%><asp:BoundField DataField="nSurveyType" HeaderText="SurveyID" ItemStyle-Width="50"
                             SortExpression="nSurveyType" />
                         <%-- HeaderStyle-CssClass="nodisplay" ItemStyle-CssClass="nodisplay" />--%>
                     </Columns>
@@ -80,4 +79,11 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey" %>
             </div>
         </div>
     </div>
+
+    <div style="clear: both;" />
+
+    <div class="none border" id="divCreateSurvey" title="Create Survey">
+        <uctrl:CS ID="Create_Survey" runat="server" />
+    </div>
+
 </asp:Content>

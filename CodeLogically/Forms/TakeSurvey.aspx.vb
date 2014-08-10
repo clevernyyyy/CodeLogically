@@ -49,8 +49,19 @@ Public Class TakeSurvey
 
     Private Sub LoadSelectedSurvey(ByVal cTitle As String, ByVal cUser As String, ByVal dCreated As DateTime, ByVal nSurveryID As Integer)
         'FillSession(cTitle, cUser, dCreated, nSurveyID)
+
+        OpenSurveyEditor()
+
+
     End Sub
 
+#End Region
+
+#Region "Popup"
+    Private Sub OpenSurveyEditor()
+        Dim strJava As String = "OpenSurveyEditor();"
+        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenSurveyEditor", strJava, True)
+    End Sub
 #End Region
 
 
@@ -65,8 +76,8 @@ Public Class TakeSurvey
 
         strTitle = Server.HtmlDecode(dvgPack.SelectedRow.Cells(0).Text)
         strUser = Server.HtmlDecode(dvgPack.SelectedRow.Cells(1).Text)
-        dCreated = dvgPack.SelectedRow.Cells(3).Text
-        nSurveyType = dvgPack.SelectedRow.Cells(4).Text
+        dCreated = dvgPack.SelectedRow.Cells(2).Text
+        nSurveyType = dvgPack.SelectedRow.Cells(3).Text
 
         LoadSelectedSurvey(strTitle, strUser, dCreated, nSurveyType)
     End Sub

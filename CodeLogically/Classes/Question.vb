@@ -72,12 +72,16 @@ Public Class Survey
     Private nSurveyType As Integer = 1
     Private nSurveySubType As Integer = 0
     Private cSurveyName As String = ""
+    Private nUserNum As Integer
+    Private dCreated As Date
 
-    Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyName As String)
+    Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyName As String, nUserNum As Integer, dCreated As Date)
         Questions = New Questions
         Me.nSurveyType = nSurveyType
         Me.nSurveySubType = nSurveySubType
         Me.cSurveyName = cSurveyName
+        Me.nUserNum = nUserNum
+        Me.dCreated = dCreated
     End Sub
 
     Public Sub LoadQuestions(dt As DataTable)

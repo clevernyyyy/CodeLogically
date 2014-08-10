@@ -6,7 +6,7 @@
         If Not IsPostBack Then
             If Session("Survey") Is Nothing Then
                 Dim intSurveyID As Integer = FillDataTable(SqlCommand("Lookup.usp_Get_NewSurvey")).Rows(0).Item("nSurveyID")
-                objSurvey = New Survey(intSurveyID, 0, "Test Survey")
+                objSurvey = New Survey(intSurveyID, 0, lblTitle.Text, 1, Date.Now())
                 Session("Survey") = objSurvey
             Else
                 objSurvey = Session("Survey")
@@ -71,15 +71,13 @@
             If nQuestionType = Enums.enmQuestionType.DropDown Or nQuestionType = Enums.enmQuestionType.MultiRadio Then
                 objOptions = New QuestionOptions
                 Dim txtOptions = From ri As RepeaterItem In uctrlCreateQuestion.OptionsRepeater.Items
-                                    Where ri.ItemType = ListItemType.Item Or ri.ItemType = ListItemType.AlternatingItem
-                                    Select DirectCast(ri.FindControl("ctrlUO"), UserOption).OptionText
+                                 Where ri.ItemType = ListItemType.Item Or ri.ItemType = ListItemType.AlternatingItem
+                                 Select DirectCast(ri.FindControl("ctrlUO"), UserOption).OptionText
 
                 If txtOptions.Count > 0 Then
                     Dim lstOptions As List(Of String) = txtOptions.ToList
-                    Dim i As Integer = 1
                     For Each strOption In lstOptions
-                        objOptions.Add(New QuestionOption(strOption, 1))
-                        i += 1
+                        objOptions.Add(New QuestionOption(strOption, 0))
                     Next
                 End If
             End If

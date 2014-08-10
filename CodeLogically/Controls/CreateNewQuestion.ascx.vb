@@ -49,7 +49,7 @@
     End Sub
     Public Sub New()
         Dim intSurveyID As Integer = FillDataTable(SqlCommand("Lookup.usp_Get_NewSurvey")).Rows(0).Item("nSurveyID")
-        ParentSurvey = New Survey(intSurveyID, 0, "Test Survey")
+        ParentSurvey = New Survey(intSurveyID, 0, "", 1, Date.Now())
         _QuestionType = 0
     End Sub
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

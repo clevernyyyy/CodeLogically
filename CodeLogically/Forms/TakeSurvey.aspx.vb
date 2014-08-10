@@ -25,14 +25,15 @@ Public Class TakeSurvey
                             Optional ByVal lSetFocusToTop As Boolean = False)
         Dim dt As DataTable = Nothing
 
-        'Call SQL to get data - feel free to change this as needed
-        Dim proc As New SqlClient.SqlCommand("[Lookup].[usp_Retrieve_Surveys]", NewConnection)
-        proc.CommandTimeout = 120
-        proc.Parameters.AddWithValue("@cTitle", cTitle)
-        proc.Parameters.AddWithValue("@cUser", cUser)
-        proc.Parameters.AddWithValue("@dCreated", dCreated)
+        Dim cmd = SqlCommand("Lookup.usp_Get_SurveyTypes")
 
-        dt = FillDataTable(proc)
+        With cmd.Parameters
+            '.AddWithValue("@cDescription", cDescription)
+            '.AddWithValue("@nUserNum", nUser)
+            '.AddWithValue("@dCreated", dCreated)
+        End With
+
+        dt = FillDataTable(cmd)
 
         dvgPack.DataSource = dt
         dvgPack.DataBind()

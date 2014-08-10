@@ -53,9 +53,9 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey" %>
                     PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">--%>
                     <HeaderStyle ForeColor="Navy" Font-Underline="false" />
                     <Columns>
-                        <%--0--%><asp:BoundField DataField="cTitle" HeaderText="Survey Title" SortExpression="cTitle"
+                        <%--0--%><asp:BoundField DataField="cDescription" HeaderText="Survey Title" SortExpression="cDescription"
                             ItemStyle-Width="430" />
-                        <%--1--%><asp:BoundField DataField="cUser" HeaderText="Survey Author" SortExpression="cUser"
+                        <%--1--%><asp:BoundField DataField="nUserNum" HeaderText="Survey Author" SortExpression="nUserNum"
                             ItemStyle-Width="230" />
                         <%--2--%><asp:BoundField DataField="dCreated" HeaderText="Date Created" DataFormatString="{0:d}"
                             SortExpression="dCreated" ItemStyle-Width="100" />

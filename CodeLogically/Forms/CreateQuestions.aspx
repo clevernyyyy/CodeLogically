@@ -7,8 +7,8 @@ Inherits="CodeLogically.CreateQuestions" %>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-        <uctrl:CreateQuestion runat="server" id="uctrlCreateQuestion" />
     <asp:Button runat="server" ID="btnAddAnother" Text="Add Another Question" />
+        <uctrl:CreateQuestion runat="server" id="uctrlCreateQuestion" />
 <asp:Repeater runat="server" ID="rptCurrentQuestions">
     <HeaderTemplate>
         <div>

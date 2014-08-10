@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="Create Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master"
     CodeBehind="CreateSurvey.aspx.vb" Inherits="CodeLogically.CreateSurvey" %>
         
-<%@ Register Src="~/Controls/PopUp.ascx" TagPrefix="uctrl" TagName="PopUp" %>
-<%@ Register Src="~/Controls/CreateYesNo.ascx" TagPrefix="uctrl" TagName="CYN" %>
+<%@ Register Src="~/Controls/CreateNewQuestion.ascx" TagPrefix="uctrl" TagName="CNQ" %>
+<%--<%@ Register Src="~/Controls/CreateYesNo.ascx" TagPrefix="uctrl" TagName="CYN" %>--%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -48,7 +48,6 @@
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Dynamic Survey!</h4>
-                            <%--<uctrl:CustomButton ID="btnDynamicSurvey" runat="server" Text="Search" />--%>
                             <a ID="btnDynamicSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-md-2">
@@ -56,31 +55,31 @@
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Yes/No Survey!</h4>
-                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
+                            <a ID="btnYesNoSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Multiple Choice Survey!</h4>
-                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
+                            <a ID="btnMCSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-md-2">
                     </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Rating Scale Survey!</h4>
-                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
+                            <a ID="btnRatingSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create an Agree/Disagree Survey!</h4>
-                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
+                            <a ID="btnADSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-md-2">
                     </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Chain/Tree Survey!</h4>
-                            <a class="btn btn-default" href="" role="button">Create &raquo;</a>
+                            <a ID="btnChainSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                 </div>
             </div>
@@ -92,7 +91,8 @@
     <div style="clear: both;" />
 
     <div class="none border" id="divCreateSurvey" title="Create Survey">
-        <uctrl:CYN ID="Create_Survey" runat="server" />    
+        <uctrl:CNQ ID="Create_Survey" runat="server" />
+    <asp:Button runat="server" ID="btnAddAnother" Text="Add Another Question" />    
     </div>
 
 

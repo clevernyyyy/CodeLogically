@@ -7,8 +7,8 @@ function OpenSurveyEditor() {
         appendTo: "#CreateSurveyPage",
         modal: true,
         dialogClass: "no-close",
-        width: 900,
-        height: 'auto',
+        width: 1100,
+        height: 750,
         title: "Survey Editor",
         closeOnEscape: false,
     }).css('z-index', '1005');

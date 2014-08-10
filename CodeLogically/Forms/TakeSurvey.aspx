@@ -33,8 +33,10 @@
     </style>
     <div id="playingField" class="col-md-12">
         <h2 class="centered" style="color: #3399FF; font-size: 36px;">
-            Survey
+            Take a Survey
         </h2>
+        <p>
+            Select from our list of surveys!</p>
         <!-- Four columns of text below the carousel -->
         <div class="row centered">
             <div class="col-md-3">

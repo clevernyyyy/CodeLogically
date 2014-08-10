@@ -51,85 +51,119 @@ p
 }
 
 
-
 /*----------------------------------------------------------*/
-/*  JQuery Popups Layout Styles								*/
+/*  Gridview Retrieve       								*/
 /*----------------------------------------------------------*/
-.backgroundPopup
-{  
-	display:none;  
-	position:fixed;  
-	_position:absolute; /* hack for internet explorer 6*/  
-	height:100%;  
-	width:100%;  
-	top:0%;  
-	left:0%;  
-	background:#BCBCBC;  
-	border:1px solid #cecece;  
-	z-index:500;  
-}  
 
-.popup
-{  
-	width:455px; 
-	padding:12px;  
-	font-size:13px;
-	display:none;  
-	position:absolute;  
-	_position:absolute; /* hack for internet explorer 6*/  
-	top:30%;  
-	left:33%;  
-	background:#FFFFFF;  
-	border:1px solid #3C6994;  
-	z-index:501;  
-}  
-
-.popupWide
-{  
-	width:655px; 
-	padding:12px;  
-	font-size:13px;
-	display:none;  
-	position:absolute;  
-	_position:absolute; /* hack for internet explorer 6*/  
-	top:30%;  
-	left:25%;  
-	background:#FFFFFF;  
-	border:1px solid #3C6994;  
-	z-index:501;  
-} 
-
-.popup h1,
-.popupWide h1
-{  
-	text-align:left;  
-	color:#31689C;  
-	font-size:16px;  
-	font-weight:700;  
-	border-bottom:1px dotted #D3D3D3;  
-	padding-bottom:2px;  
-	margin-bottom:20px;  
-}  
-
-.popupClose
-{  
-	font-size:14px;  
-	line-height:14px;  
-	right:6px;  
-	top:4px;  
-	position:absolute;  
-	color:#31689C;  
-	font-weight:700;  
-	display:block;  
-	cursor:pointer;
-}
-
-.popupArea
+#Retrieve .labelColName
 {
-	line-height:18px;
-	overflow: visible !important;
+	float:left;
+	width:50px;	
 }
 
+#Retrieve .textColName
+{
+	float:left;
+	width:310px;	
+}
+
+#Retrieve .textfieldName
+{
+	width:290px;
+}
+
+#Retrieve .labelColID
+{
+	float:left;
+	width:80px;	
+}
+
+#Retrieve .textColID
+{
+	float:left;
+	width:120px;	
+}
+
+#Retrieve .textfieldID
+{
+	width:100px;
+}
+
+#Retrieve .labelColEffective
+{
+	float:left;
+	padding-right:4px;
+}
+
+#Retrieve .labelColEffective2
+{
+	float:left;
+	padding-left:4px;
+	padding-right:4px;
+}
+
+#Retrieve .ColEffective
+{
+	float:left;
+	width:360px;
+}
+
+#Retrieve .textfieldDate
+{
+	width:80px;
+}
+
+#Retrieve .labelColPolicy
+{
+	/*float:left;*/
+	width:100px;	
+}
+
+#Retrieve .textfieldPolicy
+{
+	width:130px;
+}
+
+#Retrieve .rightColButton
+{
+	float:right;
+	padding-right:20px;
+}
+
+#Retrieve_SearchContainer
+{
+	/*padding-top:5px;*/
+	padding-left:10px;
+	padding-bottom:15px;
+	border-top-style:solid;
+	border-top-color:#BCBCBC;
+	border-top-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#BCBCBC;
+	border-bottom-width:thin;
+	border-right-style:solid;
+	border-right-color:#BCBCBC;
+	border-right-width:thin;
+	border-left-style:solid;
+	border-left-color:#BCBCBC;
+	border-left-width:thin;
+	height:55px;
+}
+
+.floatRight
+{
+	float:right;
+}
+
+#Retrieve .gridViewContainer
+{
+	margin-bottom:20px;
+	padding-left:10px;
+}
+
+/*----------------------------------------------------------*/
+/*  /Gridview Retrieve       								*/
+/*----------------------------------------------------------*/
 
 .none 
 {

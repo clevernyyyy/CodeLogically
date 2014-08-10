@@ -1,4 +1,5 @@
-﻿<%@ Page Title="Take Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey" %>
+﻿<%@ Page Title="Take Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
+CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
@@ -21,8 +22,8 @@
         type='text/css' />
     <!-- Custom styles for this template -->
     <link href='/Styles/custom.css' rel='stylesheet' type='text/css' />
-    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/Scripts/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -31,25 +32,51 @@
             background: white !important;
         }
     </style>
-    <div id="playingField" class="col-md-12">
-        <h2 class="centered" style="color: #3399FF; font-size: 36px;">
+    <div id="CreateSurveyPage" class="container centered">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <h2 class="centered" style="color: #3399FF; font-size: 36px;">
             Take a Survey
-        </h2>
-        <p>
-            Select from our list of surveys!</p>
-        <!-- Four columns of text below the carousel -->
-        <div class="row centered">
-            <div class="col-md-3">
-
-            </div>
-            <div class="col-md-3">
-
-            </div>
-            <div class="col-md-3">
-
-            </div>
-            <div class="col-md-3">
-
+            </h2>
+            <p>
+                Select from our list of surveys!</p>
+            
+        <!-- Survery Gridview -->
+        <div id="Retrieve">
+        <div class="rowClassSpace">
+            &nbsp;</div>
+            <div id="Retrieve_GridViewContainer" class="gridViewContainer">
+                <asp:GridView ID="dvgPack" runat="server" CssClass="tableClass" AutoGenerateColumns="false"
+                    OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" Width="880" TabIndex="6"
+                    PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
+                    <%--runat="server" CssClass="tableClass" AutoGenerateColumns="false"
+                    DataKeyNames="nPID" Width="895" TabIndex="7" PageSize="50" AllowPaging="true"
+                    PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">--%>
+                    <HeaderStyle ForeColor="Navy" Font-Underline="false" />
+                    <Columns>
+                        <%--0--%><asp:BoundField DataField="cTitle" HeaderText="Survey Title" SortExpression="cTitle"
+                            ItemStyle-Width="430" />
+                        <%--1--%><asp:BoundField DataField="cUser" HeaderText="Survey Author" SortExpression="cUser"
+                            ItemStyle-Width="230" />
+                        <%--2--%><asp:BoundField DataField="dCreated" HeaderText="Date Created" DataFormatString="{0:d}"
+                            SortExpression="dCreated" ItemStyle-Width="100" />
+                        <%--3--%><asp:BoundField DataField="nSurveyType" HeaderText="SurveyID" ItemStyle-Width="40"
+                            SortExpression="nSurveyType" />
+                        <%-- HeaderStyle-CssClass="nodisplay" ItemStyle-CssClass="nodisplay" />--%>
+                    </Columns>
+                    <PagerStyle CssClass="pager" />
+                    <PagerTemplate>
+<%--                        <uctrl:CustomButton ID="btnPrev" Text="<<" Width="75px" runat="server" CausesValidation="true"
+                            OnClick="dgvPackPrev_Click" />--%>
+                        <span style="display: inline-block; text-align: center; font-weight: bold;">Page
+                            <asp:DropDownList ID="dgvPackDDL" AutoPostBack="true" OnSelectedIndexChanged="dgvPackDDL_SelectedIndexChanged"
+                                runat="server" />
+                            out of
+                            <asp:Label ID="lblPages" runat="server"></asp:Label>
+                        </span>
+<%--                        <uctrl:CustomButton ID="btnNext" Text=">>" Width="75px" runat="server" CausesValidation="true"
+                            OnClick="dgvPackNext_Click" />--%>
+                    </PagerTemplate>
+                </asp:GridView>
             </div>
         </div>
     </div>

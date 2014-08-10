@@ -18,6 +18,13 @@
     End Property
 
     Public Property QuestionText As String
+        Get
+            Return lblQuestionText.Text
+        End Get
+        Set(value As String)
+            lblQuestionText.Text = value
+        End Set
+    End Property
 
 
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -39,6 +46,7 @@
     End Function
     Public Overrides Sub LoadQuestion(Q As Question)
         Me.QuestionType = Q.QuestionType
+        Me.QuestionText = Q.QuestionText
         If Me.QuestionType = Enums.enmQuestionType.DropDown Then
             Q.QuestionOptions.Add(New QuestionOption("", 0))
             Dim dvOptions As New DataView(Q.QuestionOptions.ToDataTable())
@@ -49,11 +57,11 @@
             ddlOptions.DataBind()
         ElseIf Me.QuestionType = Enums.enmQuestionType.MultiRadio Then
             For Each O As QuestionOption In Q.QuestionOptions
-                AddNewRadioButton(O.OptionOrder, O.OptionText)
+                AddNewRadioButton(O.OptionOrder, O.OptionText, Q.QuestionNumber)
             Next
         End If
     End Sub
-    Private Sub AddNewRadioButton(ByVal name As String, ByVal cText As String)
+    Private Sub AddNewRadioButton(ByVal name As String, ByVal cText As String, ByVal QNumber As Integer)
 
         '   Create a new radio button 
         Dim MyRadioButton As New RadioButton
@@ -62,9 +70,14 @@
             .ID = "txtRadioText" & name.ToString
             .AutoPostBack = False
             .Text = cText
+            .GroupName = "RadiosQuestion" & QNumber.ToString
         End With
-
-        FindControl("pnlRadioButtons").Controls.Add(MyRadioButton)
+        Dim rbl As RadioButtonList = FindControl("rblRadioButtons")
+        rbl.Controls.Add(MyRadioButton)
     End Sub
-
+    Public Sub New()
+        Me.ddlOptions = New DropDownList
+        Me.pnlRadioButtons = New Panel
+        Me.lblQuestionText = New Label
+    End Sub
 End Class

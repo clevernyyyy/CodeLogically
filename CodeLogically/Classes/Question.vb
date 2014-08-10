@@ -54,13 +54,13 @@ Public Class QuestionOptions
     Public Function ToDataTable() As DataTable
         Dim dt As New DataTable
         For Each p As Reflection.PropertyInfo In GetType(QuestionOption).GetProperties()
-            Dim dc As New DataColumn(p.PropertyType.Name)
+            Dim dc As New DataColumn(p.Name)
             dt.Columns.Add(dc)
         Next
         For Each Q As QuestionOption In Me
             Dim dr As DataRow = dt.NewRow
             For Each p As Reflection.PropertyInfo In GetType(QuestionOption).GetProperties()
-                dr.Item(p.PropertyType.Name) = p.GetValue(Q, Nothing)
+                dr.Item(p.Name) = p.GetValue(Q, Nothing)
             Next
             dt.Rows.Add(dr)
         Next
@@ -216,36 +216,39 @@ Public Class Survey
         End With
 
         For Each q As Question In Questions
-            For Each o As QuestionOption In q.QuestionOptions
-                Dim dr As DataRow = dtSurveyOption.NewRow
-                With dr
-                    .Item("nSurveyType") = nSurveyType
-                    .Item("nSurveySubType") = nSurveySubType
-                    .Item("nSurveyOption") = q.QuestionType
-                    .Item("nSurveyQuestion") = q.QuestionNumber
-                    .Item("cOption") = o.OptionText
-                    .Item("nOrder") = o.OptionOrder
-                End With
+            If q.QuestionOptions IsNot Nothing Then
+                For Each o As QuestionOption In q.QuestionOptions
+                    Dim dr As DataRow = dtSurveyOption.NewRow
+                    With dr
+                        .Item("nSurveyType") = nSurveyType
+                        .Item("nSurveySubType") = nSurveySubType
+                        .Item("nSurveyOption") = q.QuestionType
+                        .Item("nSurveyQuestion") = q.QuestionNumber
+                        .Item("cOption") = o.OptionText
+                        .Item("nOrder") = o.OptionOrder
+                    End With
 
-                dtSurveyOption.Rows.Add(dr)
-            Next
+                    dtSurveyOption.Rows.Add(dr)
+                Next
+            End If
         Next
+        If dtSurveyOption.Rows.Count > 0 Then
+            With cmd.Parameters
+                .AddWithValue("@nSurveyType", nSurveyType)
+                .AddWithValue("@nSurveySubType", nSurveySubType)
+                Dim tvp As SqlClient.SqlParameter = .AddWithValue("@SurveyOption", dtSurveyOption)
+                tvp.SqlDbType = SqlDbType.Structured
+                tvp.TypeName = "[LookUp].[SurveyOption_Type]"
+            End With
 
-        With cmd.Parameters
-            .AddWithValue("@nSurveyType", nSurveyType)
-            .AddWithValue("@nSurveySubType", nSurveySubType)
-            Dim tvp As SqlClient.SqlParameter = .AddWithValue("@SurveyOption", dtSurveyOption)
-            tvp.SqlDbType = SqlDbType.Structured
-            tvp.TypeName = "[LookUp].[SurveyOption_Type]"
-        End With
-
-        Try
-            cmd.Connection.Open()
-            cmd.ExecuteNonQuery()
-        Catch ex As Exception
-        Finally
-            cmd.Connection.Close()
-        End Try
+            Try
+                cmd.Connection.Open()
+                cmd.ExecuteNonQuery()
+            Catch ex As Exception
+            Finally
+                cmd.Connection.Close()
+            End Try
+        End If
     End Sub
     Private Sub SaveSurveyAnswers()
 

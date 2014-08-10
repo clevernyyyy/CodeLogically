@@ -2,5 +2,5 @@
 
 
 <h3><asp:Label runat="server" ID="lblQuestionText" /></h3>
-<br />&gt;&gt;
+&gt;&gt;
 <asp:TextBox runat="server" ID="txtQuestionAnswer" />

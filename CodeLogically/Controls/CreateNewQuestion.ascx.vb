@@ -77,16 +77,16 @@
                 Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
                     chkMultiLine.Visible = True
                     chkMultiLine.Checked = (QuestionType = Enums.enmQuestionType.MultiLine)
-                Case Enums.enmQuestionType.DropDown
+                Case Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio
                     Dim lstOptions As New List(Of String)
                     lstOptions.Add("")
                     rptUserOptions.Visible = True
                     rptUserOptions.DataSource = lstOptions
                     rptUserOptions.DataBind()
                     btnAddOption.Visible = True
-                Case Enums.enmQuestionType.MultiRadio
-                    txtRadioAmount.Visible = True
-                    pnlRadioButtons.Visible = True
+                    'Case Enums.enmQuestionType.MultiRadio
+                    '    txtRadioAmount.Visible = True
+                    '    pnlRadioButtons.Visible = True
             End Select
         End If
     End Sub

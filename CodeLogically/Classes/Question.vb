@@ -56,10 +56,14 @@ Public Class Survey
         Questions = New Questions
     End Sub
 
-    Public Sub Load(dt As DataTable)
+    Public Sub LoadQuestions(dt As DataTable)
         Me.Questions = New Questions
         For Each dr As DataRow In dt.Rows
             Dim objQ As New Question(Me, dr.Item("cText"), dr.Item("nSurveyOptionControl"), Nothing)
+            For Each drO As DataRow In FillOptions(objQ.QuestionType, objQ.QuestionNumber).Rows
+                Dim objO As New QuestionOption(dr.Item("cOption"), dr.Item("nOrder"))
+                objQ.QuestionOptions.Add(objO)
+            Next
             Questions.Add(objQ)
         Next
     End Sub
@@ -67,7 +71,49 @@ Public Class Survey
         Q.QuestionNumber = Me.Questions.Count + 1
         Me.Questions.Add(Q)
     End Sub
-    Public Sub SaveSurvey() 'ByVal questions As Questions, ByVal nSurveyType As Integer, ByVal nSurveySubType As Integer)
+    Public Sub LoadSurvey()
+
+        Dim dtSurveyAnswers As DataTable = FillSurveyAnswers()
+        Dim dtQuestions As DataTable = FillQuestions()
+
+        If dtQuestions IsNot Nothing AndAlso dtQuestions.Rows.Count > 0 Then
+            LoadQuestions(dtQuestions)
+        End If
+    End Sub
+    Private Function FillSurveyAnswers() As DataTable
+        Dim cmd = SqlCommand("Survey.usp_Get_SurveyAnswers")
+
+        With cmd.Parameters
+            .AddWithValue("@nUserNum", 1)
+            .AddWithValue("@nSurveyType", nSurveyType)
+            .AddWithValue("@nSurveySubType", nSurveySubType)
+        End With
+
+        Return FillDataTable(cmd)
+    End Function
+    Private Function FillQuestions() As DataTable
+        Dim cmd = SqlCommand("LookUp.usp_Get_SurveyQuestions")
+
+        With cmd.Parameters
+            .AddWithValue("@nSurveyType", nSurveyType)
+            .AddWithValue("@nSurveySubType", nSurveySubType)
+        End With
+
+        Return FillDataTable(cmd)
+    End Function
+    Private Function FillOptions(ByVal nSurveyOptionControl As Integer, ByVal nSurveyQuestion As Integer) As DataTable
+        Dim cmd = SqlCommand("LookUp.usp_Get_SurveyOptions")
+
+        With cmd.Parameters
+            .AddWithValue("@nSurveyType", nSurveyType)
+            .AddWithValue("@nSurveySubType", nSurveySubType)
+            .AddWithValue("@nSurveyOptionControl", nSurveyOptionControl)
+            .AddWithValue("@nSurveyQuestion", nSurveyQuestion)
+        End With
+
+        Return FillDataTable(cmd)
+    End Function
+    Public Sub SaveSurvey()
 
         SaveSurveyType()
         SaveSurveyText()
@@ -84,10 +130,13 @@ Public Class Survey
             .AddWithValue("@lLocked", 0)
         End With
 
-        cmd.Connection.Open()
-        cmd.ExecuteNonQuery()
-        cmd.Connection.Close()
-        cmd.Dispose()
+        Try
+            cmd.Connection.Open()
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            cmd.Connection.Close()
+        End Try
     End Sub
     Private Sub SaveSurveyText()
 
@@ -123,10 +172,13 @@ Public Class Survey
             tvp.TypeName = "[LookUp].[SurveyText_Type]"
         End With
 
-        cmd.Connection.Open()
-        cmd.ExecuteNonQuery()
-        cmd.Connection.Close()
-        cmd.Dispose()
+        Try
+            cmd.Connection.Open()
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            cmd.Connection.Close()
+        End Try
     End Sub
     Private Sub SaveSurveyOption()
 
@@ -166,10 +218,13 @@ Public Class Survey
             tvp.TypeName = "[LookUp].[SurveyOption_Type]"
         End With
 
-        cmd.Connection.Open()
-        cmd.ExecuteNonQuery()
-        cmd.Connection.Close()
-        cmd.Dispose()
+        Try
+            cmd.Connection.Open()
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            cmd.Connection.Close()
+        End Try
     End Sub
     Private Sub SaveSurveyAnswers()
 
@@ -205,10 +260,13 @@ Public Class Survey
             tvp.TypeName = "[Survey].[SurveyAnswers_Type]"
         End With
 
-        cmd.Connection.Open()
-        cmd.ExecuteNonQuery()
-        cmd.Connection.Close()
-        cmd.Dispose()
+        Try
+            cmd.Connection.Open()
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+        Finally
+            cmd.Connection.Close()
+        End Try
     End Sub
 End Class
 

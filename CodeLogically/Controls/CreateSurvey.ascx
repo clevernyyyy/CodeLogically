@@ -15,12 +15,6 @@
                     <td>
                         <asp:Label ID="Label1" runat="server" Text="#" />
                     </td>
-                    <td>
-                        <asp:Label ID="Label2" runat="server" Text="Text" />
-                    </td>
-                    <td>
-                        <asp:Label ID="Label3" runat="server" Text="Type" />
-                    </td>
                 </th>
             </div>
         </HeaderTemplate>
@@ -29,12 +23,7 @@
                 <tr>
                     <td>
                         <asp:Label runat="server" ID="lblQuestionNumber" />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="lblQuestionText" />
-                    </td>
-                    <td>
-                        <asp:Label runat="server" ID="lblQuestionType" />
+                        <asp:Panel runat="server" ID="pnlQuestionControl" ></asp:Panel>
                     </td>
                 </tr>
             </div>

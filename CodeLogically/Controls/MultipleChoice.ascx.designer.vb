@@ -23,22 +23,13 @@ Partial Public Class MultipleChoice
     Protected WithEvents lblQuestionText As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''radioForm control.
+    '''rblRadioButtons control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents radioForm As Global.System.Web.UI.HtmlControls.HtmlForm
-
-    '''<summary>
-    '''pnlRadioButtons control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents pnlRadioButtons As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents rblRadioButtons As Global.System.Web.UI.WebControls.RadioButtonList
 
     '''<summary>
     '''ddlOptions control.

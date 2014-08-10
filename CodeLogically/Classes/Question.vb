@@ -84,6 +84,7 @@ Public Class Survey
         Me.Questions = New Questions
         For Each dr As DataRow In dt.Rows
             Dim objQ As New Question(Me, dr.Item("cText"), dr.Item("nSurveyOptionControl"), Nothing)
+            objQ.QuestionNumber = dr.Item("nSurveyQuestion")
             For Each drO As DataRow In FillOptions(objQ.QuestionType, objQ.QuestionNumber).Rows
                 Dim objO As New QuestionOption(dr.Item("cOption"), dr.Item("nOrder"))
                 objQ.QuestionOptions.Add(objO)

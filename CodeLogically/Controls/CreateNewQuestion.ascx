@@ -11,7 +11,8 @@
     <ContentTemplate>
         <asp:CheckBox runat="server" ID="chkIDKMyBFFJill" Text="Check to allow 'I don't know' result"></asp:CheckBox>
         <asp:CheckBox runat="server" ID="chkMultiLine" Text="Check to allow Multi-Line entry"></asp:CheckBox>
-        <asp:Button runat="server" ID="btnAddOption" Text="Add Option" Width="100px" />
+        <asp:Button runat="server" ID="btnAddOption" Text="Add Option" Width="100px" ></asp:Button>
+        <asp:TextBox ID="txtRadioAmount" runat="server" AutoPostBack="true" ></asp:TextBox>
         <div runat="server" id="divOptions">
             <asp:Repeater runat="server" ID="rptUserOptions">
                 <ItemTemplate>
@@ -21,6 +22,7 @@
                 </ItemTemplate>
             </asp:Repeater>        
         </div>
+        <asp:Panel ID="RadioButtonsPanel" runat="server" AutoPostBack ="false"/>
     </ContentTemplate>
     <Triggers>
         <asp:AsyncPostBackTrigger ControlID="btnAddOption" />

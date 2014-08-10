@@ -58,7 +58,10 @@
                 rptUserOptions.Visible = True
                 rptUserOptions.DataSource = lstOptions
                 rptUserOptions.DataBind()
-                btnAddOption.visible = True
+                btnAddOption.Visible = True
+            Case Enums.enmQuestionType.MultiRadio
+                txtRadioAmount.Visible = True
+                RadioButtonsPanel.Visible = True
         End Select
     End Sub
     Private Sub HideTheQuestionStuff()
@@ -66,6 +69,8 @@
         chkMultiLine.Visible = False
         rptUserOptions.Visible = False
         btnAddOption.Visible = False
+        txtRadioAmount.Visible = False
+        txtRadioAmount.Text = ""
     End Sub
 
     Private Sub rptUserOptions_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptUserOptions.ItemDataBound
@@ -94,5 +99,28 @@
 
     Private Sub btnAddOption_Click(sender As Object, e As System.EventArgs) Handles btnAddOption.Click
         AddOptionRow()
+    End Sub
+
+    Private Sub txtRadioAmount_TextChanged(sender As Object, e As EventArgs) Handles txtRadioAmount.TextChanged
+        If IsNumeric(txtRadioAmount.Text.ToString) Then
+            For i As Integer = 0 To txtRadioAmount.Text - 1
+                AddNewRadioButton(i)
+            Next
+        End If
+    End Sub
+
+    Private Sub AddNewRadioButton(ByVal name As String)
+
+        '   Create a new radio button 
+        Dim MyRadioButton As New RadioButton
+
+        Dim txtRadioText As New TextBox
+        With txtRadioText
+            .ID = "txtRadioText" & name.ToString
+            .AutoPostBack = True
+            .Text = String.Format("Radio Button - {0}", name.ToString)
+        End With
+
+        FindControl("RadioButtonsPanel").Controls.Add(txtRadioText)
     End Sub
 End Class

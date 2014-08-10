@@ -48,7 +48,9 @@
         Me.QuestionType = Q.QuestionType
         Me.QuestionText = Q.QuestionText
         If Me.QuestionType = Enums.enmQuestionType.DropDown Then
-            Q.QuestionOptions.Add(New QuestionOption("", 0))
+            If Q.QuestionOptions.Contains("") = False Then
+                Q.QuestionOptions.Add(New QuestionOption("", 0))
+            End If
             Dim dvOptions As New DataView(Q.QuestionOptions.ToDataTable())
             dvOptions.Sort = "OptionOrder"
             ddlOptions.DataSource = dvOptions

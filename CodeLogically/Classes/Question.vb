@@ -66,6 +66,17 @@ Public Class QuestionOptions
         Next
         Return dt
     End Function
+    Public Overloads Function Contains(ByVal cString As String) As Boolean
+        Dim Q = From Qs As QuestionOption In Me
+                Where Qs.OptionText = cString
+                Select Qs
+
+        If Q.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 End Class
 Public Class Survey
     Public Questions As Questions

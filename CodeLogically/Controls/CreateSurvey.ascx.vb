@@ -6,7 +6,7 @@
         If Not IsPostBack Then
             If Session("Survey") Is Nothing Then
                 Dim intSurveyID As Integer = FillDataTable(SqlCommand("Lookup.usp_Get_NewSurvey")).Rows(0).Item("nSurveyID")
-                objSurvey = New Survey(intSurveyID, 0, lblTitle.Text, 1, Date.Now())
+                objSurvey = New Survey(intSurveyID, 0, txtTitle.Text, 1, Date.Now())
                 Session("Survey") = objSurvey
             Else
                 objSurvey = Session("Survey")

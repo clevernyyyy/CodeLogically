@@ -14,29 +14,11 @@ Option Explicit On
 Partial Public Class CreateQuestions
 
     '''<summary>
-    '''btnAddAnother control.
+    '''uctrlCreateSurvey control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnAddAnother As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''uctrlCreateQuestion control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents uctrlCreateQuestion As Global.CodeLogically.CreateNewQuestion
-
-    '''<summary>
-    '''rptCurrentQuestions control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rptCurrentQuestions As Global.System.Web.UI.WebControls.Repeater
+    Protected WithEvents uctrlCreateSurvey As Global.CodeLogically.CreateNewSurvey
 End Class

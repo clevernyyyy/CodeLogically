@@ -2,32 +2,10 @@
 MasterPageFile="~/Site.Master" CodeBehind="CreateQuestions.aspx.vb" 
 Inherits="CodeLogically.CreateQuestions" %>
 
-<%@ Register Src="~/Controls/CreateNewQuestion.ascx" TagPrefix="uctrl" TagName="CreateQuestion" %>
+<%@ Register Src="~/Controls/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CreateSurvey" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <asp:Button runat="server" ID="btnAddAnother" Text="Add Another Question" />
-        <uctrl:CreateQuestion runat="server" id="uctrlCreateQuestion" />
-<asp:Repeater runat="server" ID="rptCurrentQuestions">
-    <HeaderTemplate>
-        <div>
-            <th>
-                <td><asp:Label runat="server" Text="#" /></td>
-                <td><asp:Label runat="server" Text="Text" /></td>
-                <td><asp:Label runat="server" Text="Type" /></td>
-            </th>
-        </div>
-    </HeaderTemplate>
-    <ItemTemplate>
-        <div>
-            <tr>
-                <td><asp:Label runat="server" ID="lblQuestionNumber" /></td>
-                <td><asp:Label runat="server" ID="lblQuestionText" /></td>
-                <td><asp:Label runat="server" ID="lblQuestionType" /></td>
-            </tr>
-        </div>
-    </ItemTemplate>
-</asp:Repeater>
-
+        <uctrl:CreateSurvey runat="server" id="uctrlCreateSurvey" />
 </asp:Content>

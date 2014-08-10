@@ -50,6 +50,7 @@
     End Function
     Public Sub New()
         Me.txtQuestionAnswer = New TextBox
+        Me.lblQuestionText = New Label
     End Sub
     Public Overrides Sub LoadQuestion(Q As Question)
         Me.QuestionText = Q.QuestionText

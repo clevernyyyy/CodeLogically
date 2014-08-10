@@ -48,7 +48,7 @@
         End If
     End Sub
     Public Sub New()
-        ParentSurvey = New Survey(1, 0)
+        ParentSurvey = New Survey(1, 0, "Test Survey")
         _QuestionType = 0
     End Sub
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

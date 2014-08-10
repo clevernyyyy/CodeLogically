@@ -5,7 +5,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             If Session("Survey") Is Nothing Then
-                objSurvey = New Survey(1, 0)
+                objSurvey = New Survey(1, 0, "Test Survey")
                 Session("Survey") = objSurvey
             Else
                 objSurvey = Session("Survey")
@@ -58,7 +58,7 @@
                     If txtOptions.Count > 0 Then
                         Dim lstOptions As List(Of String) = txtOptions.ToList
                         For Each strOption In lstOptions
-                            objOptions.Add(New QuestionOption(strOption))
+                            objOptions.Add(New QuestionOption(strOption, 0))
                         Next
                     End If
                 ElseIf nQuestionType = Enums.enmQuestionType.MultiRadio Then
@@ -70,7 +70,7 @@
                     If txtOptions.Count > 0 Then
                         Dim lstOptions As List(Of String) = txtOptions.ToList
                         For Each strOption In lstOptions
-                            objOptions.Add(New QuestionOption(strOption))
+                            objOptions.Add(New QuestionOption(strOption, 0))
                         Next
                     End If
                 End If

@@ -48,9 +48,17 @@
     End Sub
 
     Private Sub btnAddAnother_Click(sender As Object, e As System.EventArgs) Handles btnAddAnother.Click
+        OpenSurveyEditor()
         SaveCurrentList()
         NewQuestion()
     End Sub
+
+    Private Sub OpenSurveyEditor()
+        Dim strJava As String = "OpenSurveyEditor();"
+        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenSurveyEditor", strJava, True)
+    End Sub
+
+
     Private Sub SaveCurrentList()
         If ValidPage() Then
             Dim nQuestionType As Enums.enmQuestionType = uctrlCreateQuestion.QuestionTypeBox.SelectedValue

@@ -70,16 +70,18 @@
             Dim objOptions As QuestionOptions = Nothing
             If nQuestionType = Enums.enmQuestionType.DropDown Or nQuestionType = Enums.enmQuestionType.MultiRadio Then
                 objOptions = New QuestionOptions
-                    Dim txtOptions = From ri As RepeaterItem In uctrlCreateQuestion.OptionsRepeater.Items
-                                     Where ri.ItemType = ListItemType.Item Or ri.ItemType = ListItemType.AlternatingItem
-                                     Select DirectCast(ri.FindControl("ctrlUO"), UserOption).OptionText
+                Dim txtOptions = From ri As RepeaterItem In uctrlCreateQuestion.OptionsRepeater.Items
+                                    Where ri.ItemType = ListItemType.Item Or ri.ItemType = ListItemType.AlternatingItem
+                                    Select DirectCast(ri.FindControl("ctrlUO"), UserOption).OptionText
 
-                    If txtOptions.Count > 0 Then
-                        Dim lstOptions As List(Of String) = txtOptions.ToList
-                        For Each strOption In lstOptions
-                            objOptions.Add(New QuestionOption(strOption, 0))
-                        Next
-                    End If
+                If txtOptions.Count > 0 Then
+                    Dim lstOptions As List(Of String) = txtOptions.ToList
+                    Dim i As Integer = 1
+                    For Each strOption In lstOptions
+                        objOptions.Add(New QuestionOption(strOption, 1))
+                        i += 1
+                    Next
+                End If
             End If
             Dim Q As New Question(objSurvey, uctrlCreateQuestion.QuestionText, nQuestionType, objOptions)
             objSurvey.AddQuestion(Q)

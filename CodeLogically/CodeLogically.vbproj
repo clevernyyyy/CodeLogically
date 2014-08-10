@@ -103,6 +103,7 @@
     <Content Include="Forms\CreateSurvey.aspx" />
     <Content Include="Forms\TakeSurvey.aspx" />
     <Content Include="Scripts\PerPage\CreateSurvey.js" />
+    <Content Include="Scripts\PerPage\TakeSurvey.js" />
     <Content Include="Scripts\site_scripts\bootstrap.js" />
     <Content Include="Scripts\site_scripts\bootstrap.min.js" />
     <Content Include="Scripts\site_scripts\Gruntfile.js" />

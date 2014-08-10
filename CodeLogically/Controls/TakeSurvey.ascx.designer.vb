@@ -14,15 +14,6 @@ Option Explicit On
 Partial Public Class TakeSurveyControl
 
     '''<summary>
-    '''upQuestions control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents upQuestions As Global.System.Web.UI.UpdatePanel
-
-    '''<summary>
     '''rptSurvey control.
     '''</summary>
     '''<remarks>

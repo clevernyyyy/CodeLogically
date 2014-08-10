@@ -23,11 +23,11 @@ Partial Public Class TakeSurvey
     Protected WithEvents dvgPack As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Create_Survey control.
+    '''Take_Survey control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Create_Survey As Global.CodeLogically.TakeSurveyControl
+    Protected WithEvents Take_Survey As Global.CodeLogically.TakeSurveyControl
 End Class

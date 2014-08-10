@@ -24,6 +24,7 @@
 
     <!-- Custom styles for this template -->
     <link href="/Styles/main.css" rel="stylesheet" />
+    <link href="/Styles/Site.css" rel="stylesheet" />
     <link href="/Styles/icomoon.css" rel="stylesheet" />
     <link href="/Styles/animate-custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Styles/custom.css" />

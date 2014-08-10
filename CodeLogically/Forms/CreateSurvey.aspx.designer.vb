@@ -74,14 +74,5 @@ Partial Public Class CreateSurvey
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Create_Survey As Global.CodeLogically.CreateNewQuestion
-
-    '''<summary>
-    '''btnAddAnother control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnAddAnother As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Create_Survey As Global.CodeLogically.CreateNewSurvey
 End Class

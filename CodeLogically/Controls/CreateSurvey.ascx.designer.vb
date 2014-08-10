@@ -14,13 +14,22 @@ Option Explicit On
 Partial Public Class CreateNewSurvey
 
     '''<summary>
-    '''btnAddAnother control.
+    '''Label4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnAddAnother As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''TextBox1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''uctrlCreateQuestion control.
@@ -32,6 +41,15 @@ Partial Public Class CreateNewSurvey
     Protected WithEvents uctrlCreateQuestion As Global.CodeLogically.CreateNewQuestion
 
     '''<summary>
+    '''btnAddAnother control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnAddAnother As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''rptCurrentQuestions control.
     '''</summary>
     '''<remarks>
@@ -39,4 +57,22 @@ Partial Public Class CreateNewSurvey
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rptCurrentQuestions As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''btnCancel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCancel As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnFinish control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnFinish As Global.System.Web.UI.WebControls.Button
 End Class

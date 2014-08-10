@@ -158,9 +158,6 @@
     <Content Include="Styles\jquery-ui-redmond\images\ui-icons_f9bd01_256x240.png" />
     <Content Include="Styles\jquery-ui-redmond\jquery-ui-1.10.4.custom.css" />
     <Content Include="Styles\jquery-ui-redmond\jquery-ui-1.10.4.custom.min.css" />
-    <Content Include="Styles\jquery.fancybox-buttons.css" />
-    <Content Include="Styles\jquery.fancybox-thumbs.css" />
-    <Content Include="Styles\jquery.fancybox.css" />
     <Content Include="Styles\jQueryUIFixes.css" />
     <Content Include="Styles\main.css" />
     <Content Include="Styles\Site.css" />

@@ -1,8 +1,7 @@
 ﻿<%@ Page Title="Create Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master"
     CodeBehind="CreateSurvey.aspx.vb" Inherits="CodeLogically.CreateSurvey" %>
         
-<%@ Register Src="~/Controls/CreateNewQuestion.ascx" TagPrefix="uctrl" TagName="CNQ" %>
-<%--<%@ Register Src="~/Controls/CreateYesNo.ascx" TagPrefix="uctrl" TagName="CYN" %>--%>
+<%@ Register Src="~/Controls/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CS" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -91,19 +90,8 @@
     <div style="clear: both;" />
 
     <div class="none border" id="divCreateSurvey" title="Create Survey">
-        <uctrl:CNQ ID="Create_Survey" runat="server" />
-    <asp:Button runat="server" ID="btnAddAnother" Text="Add Another Question" />    
+        <uctrl:CS ID="Create_Survey" runat="server" />
     </div>
 
-
-
-
-<%--    <uctrl:PopUp runat="server" ID="popupSurvey" PopupId="Create_Survey" Title="">
-        <content>
-            <uctrl:CYN ID="Create_Survey" runat="server" />
-        </content>
-        <buttons>
-        </buttons>
-    </uctrl:PopUp>--%>
 </asp:Content>
 

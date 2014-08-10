@@ -95,6 +95,7 @@
     <Content Include="Controls\CreateNewQuestion.ascx" />
     <Content Include="Controls\CreateSurvey.ascx" />
     <Content Include="Controls\MultipleChoice.ascx" />
+    <Content Include="Controls\TakeSurvey.ascx" />
     <Content Include="Controls\TextInput.ascx" />
     <Content Include="Controls\UserOption.ascx" />
     <Content Include="Controls\YesNoIDK.ascx" />
@@ -239,6 +240,13 @@
     </Compile>
     <Compile Include="Controls\MultipleChoice.ascx.vb">
       <DependentUpon>MultipleChoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TakeSurvey.ascx.designer.vb">
+      <DependentUpon>TakeSurvey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TakeSurvey.ascx.vb">
+      <DependentUpon>TakeSurvey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\TextInput.ascx.designer.vb">

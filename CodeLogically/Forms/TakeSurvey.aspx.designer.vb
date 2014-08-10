@@ -29,5 +29,5 @@ Partial Public Class TakeSurvey
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Create_Survey As Global.CodeLogically.CreateNewSurvey
+    Protected WithEvents Create_Survey As Global.CodeLogically.TakeSurveyControl
 End Class

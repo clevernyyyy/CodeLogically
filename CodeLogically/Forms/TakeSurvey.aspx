@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Take Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
 CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEventValidation="false" %>
 
-<%@ Register Src="~/Controls/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CS" %>
+<%@ Register Src="~/Controls/TakeSurvey.ascx" TagPrefix="uctrl" TagName="TS" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -83,7 +83,7 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
     <div style="clear: both;" />
 
     <div class="none border" id="divCreateSurvey" title="Create Survey">
-        <uctrl:CS ID="Create_Survey" runat="server" />
+        <uctrl:TS ID="Create_Survey" runat="server" />
     </div>
 
 </asp:Content>

@@ -6,7 +6,23 @@ CodeLogically
 </name>
 </assembly>
 <members>
-<member name="F:CodeLogically.Register.RegisterUser">
+<member name="F:CodeLogically.UserOption.lblOptionText">
+	<summary>
+lblOptionText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.UserOption.txtOptionText">
+	<summary>
+txtOptionText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.Register.RegisterUser">
 	<summary>
 RegisterUser control.
 </summary>
@@ -17,30 +33,6 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeLogically.Register.RegisterUserWizardStep">
 	<summary>
 RegisterUserWizardStep control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeLogically.TextInput.txtQuestionAnswer">
-	<summary>
-txtQuestionAnswer control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeLogically.Login.RegisterHyperLink">
-	<summary>
-RegisterHyperLink control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:CodeLogically.Login.LoginUser">
-	<summary>
-LoginUser control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -79,41 +71,201 @@ To modify move field declaration from designer file to code-behind file.
  Module used to define the properties that are available in the My Namespace for Web projects.
  </summary>
 	<remarks></remarks>
-</member><member name="F:CodeLogically.Site.Head1">
+</member><member name="F:CodeLogically.Login.RegisterHyperLink">
 	<summary>
-Head1 control.
+RegisterHyperLink control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeLogically.Site.HeadContent">
+</member><member name="F:CodeLogically.Login.LoginUser">
 	<summary>
-HeadContent control.
+LoginUser control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeLogically.Site.mnuHome">
+</member><member name="F:CodeLogically.CreateNewSurvey.lblTitle">
 	<summary>
-mnuHome control.
+lblTitle control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeLogically.Site.MainContent">
+</member><member name="F:CodeLogically.CreateNewSurvey.txtTitle">
 	<summary>
-MainContent control.
+txtTitle control.
 </summary>
 	<remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeLogically.ChangePassword.ChangeUserPassword">
+</member><member name="F:CodeLogically.CreateNewSurvey.uctrlCreateQuestion">
 	<summary>
-ChangeUserPassword control.
+uctrlCreateQuestion control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewSurvey.btnAddAnother">
+	<summary>
+btnAddAnother control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewSurvey.upQuestions">
+	<summary>
+upQuestions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewSurvey.rptCurrentQuestions">
+	<summary>
+rptCurrentQuestions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewSurvey.btnCancel">
+	<summary>
+btnCancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewSurvey.btnFinish">
+	<summary>
+btnFinish control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.MultipleChoice.lblQuestionText">
+	<summary>
+lblQuestionText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.MultipleChoice.rblRadioButtons">
+	<summary>
+rblRadioButtons control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.MultipleChoice.ddlOptions">
+	<summary>
+ddlOptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.lblQuestionText">
+	<summary>
+lblQuestionText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.txtQuestionText">
+	<summary>
+txtQuestionText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.ddlQuestionType">
+	<summary>
+ddlQuestionType control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.chkIDKMyBFFJill">
+	<summary>
+chkIDKMyBFFJill control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.chkMultiLine">
+	<summary>
+chkMultiLine control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.btnAddOption">
+	<summary>
+btnAddOption control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.txtRadioAmount">
+	<summary>
+txtRadioAmount control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.divOptions">
+	<summary>
+divOptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.rptUserOptions">
+	<summary>
+rptUserOptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateNewQuestion.pnlRadioButtons">
+	<summary>
+pnlRadioButtons control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.TextInput.lblQuestionText">
+	<summary>
+lblQuestionText control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.TextInput.txtQuestionAnswer">
+	<summary>
+txtQuestionAnswer control.
 </summary>
 	<remarks>
 Auto-generated field.
@@ -146,6 +298,126 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CodeLogically.YesNoIDK.rbtIDKMyBFFJill">
 	<summary>
 rbtIDKMyBFFJill control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.Site.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.Site.HeadContent">
+	<summary>
+HeadContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.Site.mnuHome">
+	<summary>
+mnuHome control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.Site.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.TakeSurvey.dvgPack">
+	<summary>
+dvgPack control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.TakeSurvey.Create_Survey">
+	<summary>
+Create_Survey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.ChangePassword.ChangeUserPassword">
+	<summary>
+ChangeUserPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateQuestions.uctrlCreateSurvey">
+	<summary>
+uctrlCreateSurvey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateSurvey.btnDynamicSurvey">
+	<summary>
+btnDynamicSurvey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateSurvey.btnYesNoSurvey">
+	<summary>
+btnYesNoSurvey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateSurvey.btnMCSurvey">
+	<summary>
+btnMCSurvey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateSurvey.btnRatingSurvey">
+	<summary>
+btnRatingSurvey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateSurvey.btnADSurvey">
+	<summary>
+btnADSurvey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateSurvey.btnChainSurvey">
+	<summary>
+btnChainSurvey control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CodeLogically.CreateSurvey.Create_Survey">
+	<summary>
+Create_Survey control.
 </summary>
 	<remarks>
 Auto-generated field.

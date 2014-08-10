@@ -9,9 +9,9 @@
             MyBase.QuestionType = value
             If value = Enums.enmQuestionType.DropDown Then
                 ddlOptions.Visible = True
-                pnlRadioButtons.Visible = False
+                rblRadioButtons.Visible = False
             Else
-                pnlRadioButtons.Visible = True
+                rblRadioButtons.Visible = True
                 ddlOptions.Visible = False
             End If
         End Set
@@ -63,21 +63,24 @@
     End Sub
     Private Sub AddNewRadioButton(ByVal name As String, ByVal cText As String, ByVal QNumber As Integer)
 
-        '   Create a new radio button 
-        Dim MyRadioButton As New RadioButton
+        ''   Create a new radio button 
+        'Dim MyRadioButton As New RadioButton
 
-        With MyRadioButton
-            .ID = "txtRadioText" & name.ToString
-            .AutoPostBack = False
-            .Text = cText
-            .GroupName = "RadiosQuestion" & QNumber.ToString
-        End With
-        Dim rbl As RadioButtonList = FindControl("rblRadioButtons")
-        rbl.Controls.Add(MyRadioButton)
+        'With MyRadioButton
+        '    .ID = "txtRadioText" & name.ToString
+        '    .AutoPostBack = False
+        '    .Text = cText
+        '    .GroupName = "RadiosQuestion" & QNumber.ToString
+        'End With
+
+        Dim li As New ListItem(cText)
+        rblRadioButtons.Items.Add(li)
+
+        'rbl.Controls.Add(MyRadioButton)
     End Sub
     Public Sub New()
         Me.ddlOptions = New DropDownList
-        Me.pnlRadioButtons = New Panel
+        Me.rblRadioButtons = New RadioButtonList
         Me.lblQuestionText = New Label
     End Sub
 End Class

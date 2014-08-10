@@ -5,7 +5,8 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             If Session("Survey") Is Nothing Then
-                objSurvey = New Survey(1, 0, "Test Survey")
+                Dim intSurveyID As Integer = FillDataTable(SqlCommand("Lookup.usp_Get_NewSurvey")).Rows(0).Item("nSurveyID")
+                objSurvey = New Survey(intSurveyID, 0, "Test Survey")
                 Session("Survey") = objSurvey
             Else
                 objSurvey = Session("Survey")

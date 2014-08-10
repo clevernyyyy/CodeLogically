@@ -75,6 +75,9 @@ Public Class Survey
 
     Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyName As String)
         Questions = New Questions
+        Me.nSurveyType = nSurveyType
+        Me.nSurveySubType = nSurveySubType
+        Me.cSurveyName = cSurveyName
     End Sub
 
     Public Sub LoadQuestions(dt As DataTable)

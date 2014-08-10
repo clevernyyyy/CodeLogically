@@ -18,9 +18,15 @@
             End If
         End Set
     End Property
-
+    Private Property _QuestionText As String
     Public Property QuestionText As String
-
+        Get
+            Return lblQuestionText.Text
+        End Get
+        Set(value As String)
+            lblQuestionText.Text = value
+        End Set
+    End Property
     ReadOnly Property YesID As String
         Get
             Return rbtYes.ClientID
@@ -47,5 +53,11 @@
         Me.rbtIDKMyBFFJill = New RadioButton
         Me.rbtNo = New RadioButton
         Me.rbtYes = New RadioButton
+        Me.lblQuestionText = New Label
+    End Sub
+    Public Overrides Sub LoadQuestion(Q As Question)
+        Me.QuestionType = Q.QuestionType
+        Me.AllowIDK = Q.QuestionType = Enums.enmQuestionType.YesNoIDK
+        Me.QuestionText = Q.QuestionText
     End Sub
 End Class

@@ -94,7 +94,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Controls\CreateNewQuestion.ascx" />
     <Content Include="Controls\CreateSurvey.ascx" />
-    <Content Include="Controls\CreateYesNo.ascx" />
+    <Content Include="Controls\MultipleChoice.ascx" />
     <Content Include="Controls\TextInput.ascx" />
     <Content Include="Controls\UserOption.ascx" />
     <Content Include="Controls\YesNoIDK.ascx" />
@@ -234,11 +234,11 @@
       <DependentUpon>CreateSurvey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\CreateYesNo.ascx.designer.vb">
-      <DependentUpon>CreateYesNo.ascx</DependentUpon>
+    <Compile Include="Controls\MultipleChoice.ascx.designer.vb">
+      <DependentUpon>MultipleChoice.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CreateYesNo.ascx.vb">
-      <DependentUpon>CreateYesNo.ascx</DependentUpon>
+    <Compile Include="Controls\MultipleChoice.ascx.vb">
+      <DependentUpon>MultipleChoice.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\TextInput.ascx.designer.vb">

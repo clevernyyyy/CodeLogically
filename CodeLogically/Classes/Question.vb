@@ -14,11 +14,13 @@ Public Class Question
         Select Case Me.QuestionType
             Case Enums.enmQuestionType.YesNo, Enums.enmQuestionType.YesNoIDK
                 Dim objYN As New YesNoIDK
+                objYN.QuestionText = Me.QuestionText
                 objYN.AllowIDK = (Me.QuestionType = Enums.enmQuestionType.YesNoIDK)
                 Me.QuestionControl = objYN
 
             Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
                 Dim objTI As New TextInput
+                objTI.QuestionText = Me.QuestionText
                 objTI.MultiLine = (Me.QuestionType = Enums.enmQuestionType.MultiLine)
                 Me.QuestionControl = objTI
         End Select

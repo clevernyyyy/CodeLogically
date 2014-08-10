@@ -1,4 +1,4 @@
-﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="MultiRadio.ascx.vb" Inherits="CodeLogically.MultiRadio" %>
+﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="MultipleChoice.ascx.vb" Inherits="CodeLogically.MultipleChoice" %>
 
 <h3><asp:Label runat="server" ID="lblQuestionText" /></h3>
 <br />&gt;&gt;

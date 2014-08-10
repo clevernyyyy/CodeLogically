@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class TextInput
 
     '''<summary>
+    '''lblQuestionText control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblQuestionText As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''txtQuestionAnswer control.
     '''</summary>
     '''<remarks>

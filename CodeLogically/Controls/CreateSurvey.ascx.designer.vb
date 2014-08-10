@@ -50,6 +50,15 @@ Partial Public Class CreateNewSurvey
     Protected WithEvents btnAddAnother As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''upQuestions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents upQuestions As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
     '''rptCurrentQuestions control.
     '''</summary>
     '''<remarks>

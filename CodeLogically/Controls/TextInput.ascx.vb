@@ -16,6 +16,15 @@
         End Set
     End Property
 
+    Private Property _QuestionText As String
+    Public Property QuestionText As String
+        Get
+            Return lblQuestionText.Text
+        End Get
+        Set(value As String)
+            lblQuestionText.Text = value
+        End Set
+    End Property
     Private _MultiLine As Boolean = False
     Public Property MultiLine As Boolean
         Get
@@ -40,4 +49,12 @@
     Public Overrides Function SaveAnswer() As Boolean
         Return True
     End Function
+    Public Sub New()
+        Me.txtQuestionAnswer = New TextBox
+    End Sub
+    Public Overrides Sub LoadQuestion(Q As Question)
+        Me.QuestionText = Q.QuestionText
+        Me.QuestionType = Q.QuestionType
+        Me.MultiLine = (Q.QuestionType = Enums.enmQuestionType.MultiLine)
+    End Sub
 End Class

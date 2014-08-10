@@ -8,5 +8,6 @@ Public MustInherit Class QuestionControl
 
     Public MustOverride Function SaveAnswer() As Boolean
     Public Overridable Property QuestionType As Enums.enmQuestionType
+    Public MustOverride Sub LoadQuestion(Q As Question)
 
 End Class

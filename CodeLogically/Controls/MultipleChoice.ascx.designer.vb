@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class CreateYesNo
+Partial Public Class MultipleChoice
 
     '''<summary>
     '''lblQuestionText control.
@@ -23,20 +23,20 @@ Partial Public Class CreateYesNo
     Protected WithEvents lblQuestionText As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtQuestionText control.
+    '''radioForm control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtQuestionText As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents radioForm As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''chkDunnoBox control.
+    '''RadioButtonsPanel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents chkDunnoBox As Global.System.Web.UI.WebControls.CheckBox
+    Protected WithEvents RadioButtonsPanel As Global.System.Web.UI.WebControls.Panel
 End Class

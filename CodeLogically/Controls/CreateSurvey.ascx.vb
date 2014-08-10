@@ -25,14 +25,22 @@
         If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
             Dim Q As Question = e.Item.DataItem
             Dim lblNum As Label = e.Item.FindControl("lblQuestionNumber")
-            'Dim lblText As Label = e.Item.FindControl("lblQuestionText")
-            'Dim lblType As Label = e.Item.FindControl("lblQuestionType")
-            Dim pnlControl As Panel = e.Item.FindControl("pnlQuestionControl")
+            'Dim pnlControl As Panel = e.Item.FindControl("pnlQuestionControl")
             lblNum.Text = Q.QuestionNumber
-            'lblText.Text = Q.QuestionText
-            'lblType.Text = [Enum].GetName(GetType(Enums.enmQuestionType), Q.QuestionType)
-            pnlControl.Controls.Add(Q.QuestionControl)
-
+            Dim ctrl As QuestionControl
+            'pnlControl.Controls.Clear()
+            Select Case Q.QuestionType
+                Case Enums.enmQuestionType.YesNo, Enums.enmQuestionType.YesNoIDK
+                    ctrl = e.Item.FindControl("ctrlYesNoIDK")
+                    ctrl.LoadQuestion(Q)
+                    ctrl.Visible = True
+                Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
+                    ctrl = e.Item.FindControl("ctrlTextInput")
+                    ctrl.LoadQuestion(Q)
+                    ctrl.Visible = True
+            End Select
+            'pnlControl.Controls.Add(Q.QuestionControl)
+            'upQuestions.Update()
 
         End If
 
@@ -50,10 +58,9 @@
             If nQuestionType = Enums.enmQuestionType.DropDown Or nQuestionType = Enums.enmQuestionType.MultiRadio Then
                 objOptions = New QuestionOptions
                 If nQuestionType = Enums.enmQuestionType.DropDown Then
-                    Dim txtOptions = From txtOption As UserOption In uctrlCreateQuestion.OptionsRepeater.Items
-                                     Where txtOption.ID.Contains("ctrlUO") _
-                                     AndAlso txtOption.OptionText.Trim <> ""
-                                     Select txtOption.OptionText
+                    Dim txtOptions = From ri As RepeaterItem In uctrlCreateQuestion.OptionsRepeater.Items
+                                     Where ri.ItemType = ListItemType.Item Or ri.ItemType = ListItemType.AlternatingItem
+                                     Select DirectCast(ri.FindControl("ctrlUO"), UserOption).OptionText
 
                     If txtOptions.Count > 0 Then
                         Dim lstOptions As List(Of String) = txtOptions.ToList

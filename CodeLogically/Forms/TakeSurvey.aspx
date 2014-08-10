@@ -21,11 +21,9 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
         rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
-    <!-- Custom styles for this template -->
-    <link href='/Styles/custom.css' rel='stylesheet' type='text/css' />
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
-    <script type="text/javascript" src="/Scripts/PerPage/CreateSurvey.js?cachebreak=08092014"></script>
+    <script type="text/javascript" src="/Scripts/PerPage/TakeSurvey.js?cachebreak=08092014"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style>
@@ -34,8 +32,7 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
             background: white !important;
         }
     </style>
-    <div id="CreateSurveyPage" class="container centered">
-        <div class="row row-offcanvas row-offcanvas-right">
+    <div id="TakeSurveyPage" class="container centered">
             <h2 class="centered" style="color: #3399FF; font-size: 36px;">
             Take a Survey
             </h2>
@@ -78,12 +75,11 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
                 </asp:GridView>
             </div>
         </div>
-    </div>
 
     <div style="clear: both;" />
 
-    <div class="none border" id="divCreateSurvey" title="Create Survey">
-        <uctrl:TS ID="Create_Survey" runat="server" />
+    <div class="none border" id="divTakeSurvey" title="Take Survey">
+        <uctrl:TS ID="Take_Survey" runat="server" />
     </div>
 
 </asp:Content>

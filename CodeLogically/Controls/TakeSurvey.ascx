@@ -16,7 +16,7 @@
                         </tr>
                     </div>--%>
                     <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false"/>
-                    <uctrl:TextInput runat="server" ID="ctrlText" visible="false"/>
+                    <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
                     <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>                                
                 </ItemTemplate>
             </asp:Repeater>

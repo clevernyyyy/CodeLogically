@@ -10,6 +10,13 @@ Module MiscFunctions
         cmd.CommandType = CommandType.StoredProcedure
         Return cmd
     End Function
+    Public Function AddEmptyRowToBegining(ByRef dtTable As DataTable, Optional ByVal cSortCol As String = "", Optional ByVal FixNulls As Boolean = True)
+        Dim dr As DataRow = dtTable.NewRow
+
+        dtTable.Rows.InsertAt(dr, 0)
+
+        Return dtTable
+    End Function
     Public Function FillDataTable(cmd As SqlCommand) As DataTable
         Dim dt As New DataTable
         Dim da As New SqlDataAdapter(cmd)

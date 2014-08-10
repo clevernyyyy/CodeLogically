@@ -22,7 +22,7 @@
                 </ItemTemplate>
             </asp:Repeater>        
         </div>
-        <asp:Panel ID="RadioButtonsPanel" runat="server" AutoPostBack ="false"/>
+        <asp:Panel ID="pnlRadioButtons" runat="server" AutoPostBack ="false"/>
     </ContentTemplate>
     <Triggers>
         <asp:AsyncPostBackTrigger ControlID="btnAddOption" />

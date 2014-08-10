@@ -25,12 +25,14 @@
         If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
             Dim Q As Question = e.Item.DataItem
             Dim lblNum As Label = e.Item.FindControl("lblQuestionNumber")
-            Dim lblText As Label = e.Item.FindControl("lblQuestionText")
-            Dim lblType As Label = e.Item.FindControl("lblQuestionType")
-
+            'Dim lblText As Label = e.Item.FindControl("lblQuestionText")
+            'Dim lblType As Label = e.Item.FindControl("lblQuestionType")
+            Dim pnlControl As Panel = e.Item.FindControl("pnlQuestionControl")
             lblNum.Text = Q.QuestionNumber
-            lblText.Text = Q.QuestionText
-            lblType.Text = [Enum].GetName(GetType(Enums.enmQuestionType), Q.QuestionType)
+            'lblText.Text = Q.QuestionText
+            'lblType.Text = [Enum].GetName(GetType(Enums.enmQuestionType), Q.QuestionType)
+            pnlControl.Controls.Add(Q.QuestionControl)
+
 
         End If
 
@@ -43,7 +45,37 @@
     End Sub
     Private Sub SaveCurrentList()
         If ValidPage() Then
-            Dim Q As New Question(uctrlCreateQuestion.QuestionText, uctrlCreateQuestion.QuestionTypeBox.SelectedValue)
+            Dim nQuestionType As Enums.enmQuestionType = uctrlCreateQuestion.QuestionTypeBox.SelectedValue
+            Dim objOptions As QuestionOptions = Nothing
+            If nQuestionType = Enums.enmQuestionType.DropDown Or nQuestionType = Enums.enmQuestionType.MultiRadio Then
+                objOptions = New QuestionOptions
+                If nQuestionType = Enums.enmQuestionType.DropDown Then
+                    Dim txtOptions = From txtOption As UserOption In uctrlCreateQuestion.OptionsRepeater.Items
+                                     Where txtOption.ID.Contains("ctrlUO") _
+                                     AndAlso txtOption.OptionText.Trim <> ""
+                                     Select txtOption.OptionText
+
+                    If txtOptions.Count > 0 Then
+                        Dim lstOptions As List(Of String) = txtOptions.ToList
+                        For Each strOption In lstOptions
+                            objOptions.Add(New QuestionOption(strOption))
+                        Next
+                    End If
+                ElseIf nQuestionType = Enums.enmQuestionType.MultiRadio Then
+                    Dim txtOptions = From txtOption As TextBox In uctrlCreateQuestion.RadioButtonsPanel.Controls
+                                     Where txtOption.ID.Contains("txtRadioText") _
+                                     AndAlso txtOption.Text.Trim <> ""
+                                     Select txtOption.Text
+
+                    If txtOptions.Count > 0 Then
+                        Dim lstOptions As List(Of String) = txtOptions.ToList
+                        For Each strOption In lstOptions
+                            objOptions.Add(New QuestionOption(strOption))
+                        Next
+                    End If
+                End If
+            End If
+            Dim Q As New Question(objSurvey, uctrlCreateQuestion.QuestionText, nQuestionType, objOptions)
             objSurvey.AddQuestion(Q)
         End If
     End Sub

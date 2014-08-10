@@ -15,13 +15,23 @@
             Return ddlQuestionType
         End Get
     End Property
+    Public ReadOnly Property OptionsRepeater As Repeater
+        Get
+            Return rptUserOptions
+        End Get
+    End Property
+    Public ReadOnly Property RadioButtonsPanel As Panel
+        Get
+            Return pnlRadioButtons
+        End Get
+    End Property
     Public ReadOnly Property QuestionText As String
         Get
             Return txtQuestionText.Text
         End Get
     End Property
     Private Sub LoadQuestionTypes()
-        Dim dt As DataTable = FillDataTable(SqlCommand("Lookup.usp_Get_SurveyQuestionTypes"))
+        Dim dt As DataTable = AddEmptyRowToBegining(FillDataTable(SqlCommand("Lookup.usp_Get_SurveyQuestionTypes")))
 
         SetDataSource(ddlQuestionType, dt, "cDescription", "nQuestionType")
         ddlQuestionType.SelectedIndex = -1
@@ -76,7 +86,7 @@
                     btnAddOption.Visible = True
                 Case Enums.enmQuestionType.MultiRadio
                     txtRadioAmount.Visible = True
-                    RadioButtonsPanel.Visible = True
+                    pnlRadioButtons.Visible = True
             End Select
         End If
     End Sub
@@ -87,6 +97,7 @@
         btnAddOption.Visible = False
         txtRadioAmount.Visible = False
         txtRadioAmount.Text = ""
+        pnlRadioButtons.Visible = False
     End Sub
 
     Private Sub rptUserOptions_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptUserOptions.ItemDataBound
@@ -137,7 +148,7 @@
             .Text = String.Format("Radio Button - {0}", name.ToString)
         End With
 
-        FindControl("RadioButtonsPanel").Controls.Add(txtRadioText)
+        FindControl("pnlRadioButtons").Controls.Add(txtRadioText)
     End Sub
     Public Function ValidPage() As Boolean
         Dim lValid As Boolean = True
@@ -153,7 +164,7 @@
                 If txtRadioAmount.Text.Trim = "" Then
                     lValid = False
                 Else
-                    Dim ctrl = From txt As Control In RadioButtonsPanel.Controls
+                    Dim ctrl = From txt As Control In pnlRadioButtons.Controls
                                Where txt.ID.Contains("txtRadioText") And DirectCast(txt, TextBox).Text.Trim = ""
                                Select txt
 

@@ -43,5 +43,9 @@
     Public Overrides Function SaveAnswer() As Boolean
         Return True
     End Function
-
+    Public Sub New()
+        Me.rbtIDKMyBFFJill = New RadioButton
+        Me.rbtNo = New RadioButton
+        Me.rbtYes = New RadioButton
+    End Sub
 End Class

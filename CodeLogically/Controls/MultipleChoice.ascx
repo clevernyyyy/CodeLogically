@@ -5,6 +5,7 @@
 
 <body>
     <form id="radioForm" runat="server">
-        <asp:Panel ID="RadioButtonsPanel" runat="server" />
+        <asp:Panel ID="pnlRadioButtons" runat="server" visible="false"/>
+        <asp:DropDownList ID="ddlOptions" runat="server" visible="false"/>
     </form>
 </body>

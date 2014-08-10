@@ -1,17 +1,16 @@
 ﻿Public Class TextInput
     Inherits QuestionControl
 
-    Private Property _QuestionType As Enums.enmQuestionType
     Public Overrides Property QuestionType As Enums.enmQuestionType
         Get
-            Return _QuestionType
+            Return MyBase.QuestionType
         End Get
         Set(value As Enums.enmQuestionType)
-            _QuestionType = value
-            If value = Enums.enmQuestionType.SingleLine Then
-                MultiLine = False
-            Else
+            MyBase.QuestionType = value
+            If value = Enums.enmQuestionType.MultiLine Then
                 MultiLine = True
+            Else
+                MultiLine = False
             End If
         End Set
     End Property

@@ -14,3 +14,11 @@ C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLog
 C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.dll
 C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.xml
 C:\Users\atschaal\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.pdb
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\bin\CodeLogically.dll
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\bin\CodeLogically.pdb
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\bin\CodeLogically.xml
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.Resources.resources
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.vbproj.GenerateResource.Cache
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.dll
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.xml
+C:\Users\lmeash\Documents\GitHub\CodeLogically\CodeLogically\obj\Debug\CodeLogically.pdb

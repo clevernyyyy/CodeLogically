@@ -32,11 +32,20 @@ Partial Public Class MultipleChoice
     Protected WithEvents radioForm As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''RadioButtonsPanel control.
+    '''pnlRadioButtons control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioButtonsPanel As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents pnlRadioButtons As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''ddlOptions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlOptions As Global.System.Web.UI.WebControls.DropDownList
 End Class

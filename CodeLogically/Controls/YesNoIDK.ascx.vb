@@ -2,8 +2,19 @@
     Inherits QuestionControl
 
 
-    Private Property QuestionType As Enums.enmQuestionType = Enums.enmQuestionType.YesNoIDK
-
+    Public Overrides Property QuestionType As Enums.enmQuestionType
+        Get
+            Return MyBase.QuestionType
+        End Get
+        Set(value As Enums.enmQuestionType)
+            MyBase.QuestionType = value
+            If value = Enums.enmQuestionType.YesNoIDK Then
+                AllowIDK = True
+            Else
+                AllowIDK = False
+            End If
+        End Set
+    End Property
     Private _AllowIDK As Boolean = False
     Public Property AllowIDK As Boolean
         Get

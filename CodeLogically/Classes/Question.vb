@@ -23,6 +23,11 @@ Public Class Question
                 objTI.QuestionText = Me.QuestionText
                 objTI.MultiLine = (Me.QuestionType = Enums.enmQuestionType.MultiLine)
                 Me.QuestionControl = objTI
+            Case Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio
+                Dim objMC As New MultipleChoice
+                objMC.QuestionText = Me.QuestionText
+                objMC.QuestionType = Me.QuestionType
+                Me.QuestionControl = objMC
         End Select
         Me.QuestionOptions = objOptions
     End Sub
@@ -46,7 +51,21 @@ Public Class QuestionOption
 End Class
 Public Class QuestionOptions
     Inherits Collection(Of QuestionOption)
-
+    Public Function ToDataTable() As DataTable
+        Dim dt As New DataTable
+        For Each p As Reflection.PropertyInfo In GetType(QuestionOption).GetProperties()
+            Dim dc As New DataColumn(p.PropertyType.Name)
+            dt.Columns.Add(dc)
+        Next
+        For Each Q As QuestionOption In Me
+            Dim dr As DataRow = dt.NewRow
+            For Each p As Reflection.PropertyInfo In GetType(QuestionOption).GetProperties()
+                dr.Item(p.PropertyType.Name) = p.GetValue(Q, Nothing)
+            Next
+            dt.Rows.Add(dr)
+        Next
+        Return dt
+    End Function
 End Class
 Public Class Survey
     Public Questions As Questions

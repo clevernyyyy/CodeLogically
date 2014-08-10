@@ -10,16 +10,30 @@
             _QuestionType = value
         End Set
     End Property
+    Public ReadOnly Property QuestionTypeBox As DropDownList
+        Get
+            Return ddlQuestionType
+        End Get
+    End Property
+    Public ReadOnly Property QuestionText As String
+        Get
+            Return txtQuestionText.Text
+        End Get
+    End Property
     Private Sub LoadQuestionTypes()
         Dim dt As DataTable = FillDataTable(SqlCommand("Lookup.usp_Get_SurveyQuestionTypes"))
+
         SetDataSource(ddlQuestionType, dt, "cDescription", "nQuestionType")
+        ddlQuestionType.SelectedIndex = -1
     End Sub
     Public Sub New(S As Survey, Optional ByVal enmQType As Enums.enmQuestionType = 0)
+        MyBase.New()
         ParentSurvey = S
         If enmQType > 0 Then
             QuestionType = enmQType
             ddlQuestionType.Visible = False
         Else
+            ddlQuestionType = New DropDownList
             ddlQuestionType.Visible = True
         End If
     End Sub
@@ -43,26 +57,28 @@
     End Function
 
     Private Sub ddlQuestionType_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles ddlQuestionType.SelectedIndexChanged
-        Dim nType As Enums.enmQuestionType = ddlQuestionType.SelectedValue
-        HideTheQuestionStuff()
-        Select Case nType
-            Case Enums.enmQuestionType.YesNo, Enums.enmQuestionType.YesNoIDK
-                chkIDKMyBFFJill.Visible = True
-                chkIDKMyBFFJill.Checked = (nType = Enums.enmQuestionType.YesNoIDK)
-            Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
-                chkMultiLine.Visible = True
-                chkMultiLine.Checked = (nType = Enums.enmQuestionType.MultiLine)
-            Case Enums.enmQuestionType.DropDown
-                Dim lstOptions As New List(Of String)
-                lstOptions.Add("")
-                rptUserOptions.Visible = True
-                rptUserOptions.DataSource = lstOptions
-                rptUserOptions.DataBind()
-                btnAddOption.Visible = True
-            Case Enums.enmQuestionType.MultiRadio
-                txtRadioAmount.Visible = True
-                RadioButtonsPanel.Visible = True
-        End Select
+        If ddlQuestionType.SelectedIndex >= 0 Then
+            QuestionType = ddlQuestionType.SelectedValue
+            HideTheQuestionStuff()
+            Select Case QuestionType
+                Case Enums.enmQuestionType.YesNo, Enums.enmQuestionType.YesNoIDK
+                    chkIDKMyBFFJill.Visible = True
+                    chkIDKMyBFFJill.Checked = (QuestionType = Enums.enmQuestionType.YesNoIDK)
+                Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
+                    chkMultiLine.Visible = True
+                    chkMultiLine.Checked = (QuestionType = Enums.enmQuestionType.MultiLine)
+                Case Enums.enmQuestionType.DropDown
+                    Dim lstOptions As New List(Of String)
+                    lstOptions.Add("")
+                    rptUserOptions.Visible = True
+                    rptUserOptions.DataSource = lstOptions
+                    rptUserOptions.DataBind()
+                    btnAddOption.Visible = True
+                Case Enums.enmQuestionType.MultiRadio
+                    txtRadioAmount.Visible = True
+                    RadioButtonsPanel.Visible = True
+            End Select
+        End If
     End Sub
     Private Sub HideTheQuestionStuff()
         chkIDKMyBFFJill.Visible = False
@@ -122,5 +138,36 @@
         End With
 
         FindControl("RadioButtonsPanel").Controls.Add(txtRadioText)
+    End Sub
+    Public Function ValidPage() As Boolean
+        Dim lValid As Boolean = True
+        If txtQuestionText.Text.Trim = "" Then
+            lValid = False
+        End If
+        Select Case _QuestionType
+            Case Enums.enmQuestionType.DropDown
+                If rptUserOptions.Items.Count < 2 Then
+                    lValid = False
+                End If
+            Case Enums.enmQuestionType.MultiRadio
+                If txtRadioAmount.Text.Trim = "" Then
+                    lValid = False
+                Else
+                    Dim ctrl = From txt As Control In RadioButtonsPanel.Controls
+                               Where txt.ID.Contains("txtRadioText") And DirectCast(txt, TextBox).Text.Trim = ""
+                               Select txt
+
+                    If ctrl.Count <> 0 Then
+                        lValid = False
+                    End If
+                End If
+        End Select
+        Return lValid
+    End Function
+    Public Sub ClearControls()
+        txtQuestionText.Text = ""
+        ddlQuestionType.SelectedIndex = -1
+        HideTheQuestionStuff()
+
     End Sub
 End Class

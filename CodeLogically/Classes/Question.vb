@@ -32,7 +32,7 @@ Public Class Questions
 
 End Class
 Public Class Survey
-    Private Questions As Questions
+    Public Questions As Questions
     Private nSurveyType As Integer = 1
     Private nSurveySubType As Integer = 0
 
@@ -48,6 +48,7 @@ Public Class Survey
         Next
     End Sub
     Public Sub AddQuestion(Q As Question)
+        Q.QuestionNumber = Me.Questions.Count + 1
         Me.Questions.Add(Q)
     End Sub
 End Class

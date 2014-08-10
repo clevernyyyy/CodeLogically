@@ -23,9 +23,6 @@
     Private Sub rptSurvey_ItemDataBound(sender As Object, e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptSurvey.ItemDataBound
         If e.Item.ItemType = ListItemType.Item Or e.Item.ItemType = ListItemType.AlternatingItem Then
             Dim Q As Question = e.Item.DataItem
-            Dim lblNum As Label = e.Item.FindControl("lblQuestionNumber")
-            'Dim pnlControl As Panel = e.Item.FindControl("pnlQuestionControl")
-            lblNum.Text = Q.QuestionNumber
             Dim ctrl As QuestionControl
             'pnlControl.Controls.Clear()
             Select Case Q.QuestionType

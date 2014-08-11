@@ -95,7 +95,7 @@
     <Content Include="Controls\AgreeDisagree.ascx" />
     <Content Include="Controls\CreateNewQuestion.ascx" />
     <Content Include="Controls\CreateSurvey.ascx" />
-    <Content Include="Controls\Date.ascx" />
+    <Content Include="Controls\Inputs\Date.ascx" />
     <Content Include="Controls\MultipleChoice.ascx" />
     <Content Include="Controls\TakeSurvey.ascx" />
     <Content Include="Controls\TextInput.ascx" />
@@ -104,6 +104,7 @@
     <Content Include="Forms\CreateQuestions.aspx" />
     <Content Include="Forms\CreateSurvey.aspx" />
     <Content Include="Forms\TakeSurvey.aspx" />
+    <Content Include="img\cal.gif" />
     <Content Include="Scripts\PerPage\CreateSurvey.js" />
     <Content Include="Scripts\PerPage\TakeSurvey.js" />
     <Content Include="Scripts\site_scripts\bootstrap.js" />
@@ -244,10 +245,10 @@
       <DependentUpon>CreateSurvey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Date.ascx.designer.vb">
+    <Compile Include="Controls\Inputs\Date.ascx.designer.vb">
       <DependentUpon>Date.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Date.ascx.vb">
+    <Compile Include="Controls\Inputs\Date.ascx.vb">
       <DependentUpon>Date.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -374,7 +375,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="img\" />
+    <Folder Include="Controls\Questions\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

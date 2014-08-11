@@ -1,34 +1,5 @@
 // JavaScript Document
 
-$(document).ready(function () {
-    InitSiteJS();
-});
-
-$(function () {
-    $('.curve').corner();
-    $('.bottomCurve').corner('bottom');
-    $('.topCurve').corner('top');
-});
-
-function InitSiteJS() {
-    InitSiteFieldMasking();
-})
-
-function InitSiteFieldMasking() {
-    //Standard date picker & masking
-    $('input[type="text"][id$="Date"],.dateField').datepicker({
-        buttonImage: '../site_img/cal.gif',
-        buttonText: "Choose",
-        buttonImageOnly: true,
-        showOn: 'both',
-        changeYear: true,
-        changeMonth: true,
-        yearRange: 'c-100:c+100'
-        //minDate: new Date(), //today
-    }).mask("99/99/9999");
-}
-
-
 function showAsPopup(content, buttonName, buttonWidth) {
     buttonName = buttonName || "OK";
     buttonWidth = buttonWidth || "80px";

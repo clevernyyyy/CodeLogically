@@ -2,7 +2,7 @@
 CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEventValidation="false" %>
 
 <%@ Register Src="~/Controls/TakeSurvey.ascx" TagPrefix="uctrl" TagName="TS" %>
-<%@ Register Src="~/Controls/Date.ascx" TagPrefix="uctrl" TagName="Date" %>
+<%@ Register Src="~/Controls/Inputs/Date.ascx" TagPrefix="uctrl" TagName="Date" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">

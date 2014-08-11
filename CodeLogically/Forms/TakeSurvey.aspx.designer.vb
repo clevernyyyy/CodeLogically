@@ -41,6 +41,69 @@ Partial Public Class TakeSurvey
     Protected WithEvents txtSearchSurveyID As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''lblDateCreated control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblDateCreated As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblFrom control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblFrom As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''minDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents minDate As Global.CodeLogically._Date
+
+    '''<summary>
+    '''lblTo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblTo As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''maxDate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents maxDate As Global.CodeLogically._Date
+
+    '''<summary>
+    '''btnFilter control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnFilter As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnOpenSurvey control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnOpenSurvey As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''lblVersion control.
     '''</summary>
     '''<remarks>

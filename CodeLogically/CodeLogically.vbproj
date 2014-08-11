@@ -95,6 +95,7 @@
     <Content Include="Controls\AgreeDisagree.ascx" />
     <Content Include="Controls\CreateNewQuestion.ascx" />
     <Content Include="Controls\CreateSurvey.ascx" />
+    <Content Include="Controls\Date.ascx" />
     <Content Include="Controls\MultipleChoice.ascx" />
     <Content Include="Controls\TakeSurvey.ascx" />
     <Content Include="Controls\TextInput.ascx" />
@@ -216,6 +217,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Classes\Enums.vb" />
+    <Compile Include="Classes\Modules\Formatting.vb" />
     <Compile Include="Classes\MiscFunctions.vb" />
     <Compile Include="Classes\Question.vb" />
     <Compile Include="Classes\QuestionControl.vb">
@@ -240,6 +242,13 @@
     </Compile>
     <Compile Include="Controls\CreateSurvey.ascx.vb">
       <DependentUpon>CreateSurvey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Date.ascx.designer.vb">
+      <DependentUpon>Date.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Date.ascx.vb">
+      <DependentUpon>Date.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\MultipleChoice.ascx.designer.vb">

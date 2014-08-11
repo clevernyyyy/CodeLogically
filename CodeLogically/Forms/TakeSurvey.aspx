@@ -2,6 +2,7 @@
 CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEventValidation="false" %>
 
 <%@ Register Src="~/Controls/TakeSurvey.ascx" TagPrefix="uctrl" TagName="TS" %>
+<%@ Register Src="~/Controls/Date.ascx" TagPrefix="uctrl" TagName="Date" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -52,15 +53,17 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
                             <asp:TextBox ID="txtSearchSurveyID" runat="server" CssClass="textfield" /></span>
                     </div>
                     <div class="rowClass" style="width: 790px">
-                        <span class="ColEffective"><span class="labelColEffective">Date Created from</span>
-<%--                            <uctrl:DateTime ID="uctrlEffDate" runat="server" HideLabel="true" HideTime="true"
-                                MinDate="01/01/2010" YearRange="1900:+0" />--%>
-                            <span class="labelColEffective2">to</span>
-<%--                            <uctrl:DateTime ID="uctrlExpDate" runat="server" HideLabel="true" HideTime="true"
-                                MinDate="01/01/2010" YearRange="1900:+0" />--%>
-                        </span><span class="rightColButton">
-    <%--                        <uctrl:CustomButton runat="server" ID="btnFilter" Text="Filter" />
-                            <uctrl:CustomButton ID="btnOpenClaim" runat="server" Text="Open Claim" />--%>
+                        <span class="ColEffective">
+                            <asp:Label ID="lblDateCreated" runat="server" Text="Date Created:"></asp:Label>
+                            <br />
+                            <asp:Label ID="lblFrom" runat="server" Text="From:"></asp:Label>
+                                <uctrl:Date runat="server" ID="minDate" />
+                            <asp:Label ID="lblTo" runat="server" Text="To:"></asp:Label>
+                                <uctrl:Date runat="server" ID="maxDate" />
+                        </span>
+                        <span class="right" style="float:right">
+                            <asp:Button ID="btnFilter" Text="Filter" runat="server" />
+                            <asp:Button ID="btnOpenSurvey" Text="Open Survey" runat="server" />
                         </span>
                     </div>
                 </div>

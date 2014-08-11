@@ -18,6 +18,8 @@
         <link type="text/css" rel="stylesheet" href="/Styles/bootstrap.min.css" />
     <link rel="stylesheet" href="/Styles/animations.css">
     
+    
+    <script type="text/javascript" src="/Scripts/site_scripts/scripts.js"></script>
 	<script type="text/javascript" src="/Scripts/site_scripts/jquery.numeric.js"></script>
 	<script type="text/javascript" src="/Scripts/site_scripts/jquery.watermarkinput.js"></script>
     <link type="text/css" rel="Stylesheet" href="~/Styles/jquery-ui-redmond/jquery-ui-1.10.4.custom.min.css"  />

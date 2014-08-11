@@ -13,6 +13,14 @@ function OpenSurveyEditor() {
         show: { effect: "size", duration: 800 },
         hide: { effect: "clip", duration: 800 },
         closeOnEscape: false,
+//        buttons: {
+//            Cancel: function () {
+//                $(this).dialog("close");
+//            },
+//            "Finish Survey": function () {
+//                $(this).dialog("close");
+//            }
+//        },
     }).css('z-index', '1005');
     return false;
 }

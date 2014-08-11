@@ -66,6 +66,7 @@
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                         <h4>
                             Create a Rating Scale Survey!</h4>
+                            <%--http://jqueryui.com/slider/#steps--%>
                             <a ID="btnRatingSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
                     </div>
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">

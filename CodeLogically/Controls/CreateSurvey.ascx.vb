@@ -43,6 +43,10 @@
                     ctrl = e.Item.FindControl("ctrlMultipleChoice")
                     ctrl.LoadQuestion(Q)
                     ctrl.Visible = True
+                Case Enums.enmQuestionType.AgreeDisagree
+                    ctrl = e.Item.FindControl("ctrlAgreeDisagree")
+                    ctrl.LoadQuestion(Q)
+                    ctrl.Visible = True
             End Select
             'pnlControl.Controls.Add(Q.QuestionControl)
             'upQuestions.Update()
@@ -68,7 +72,7 @@
         If ValidPage() Then
             Dim nQuestionType As Enums.enmQuestionType = uctrlCreateQuestion.QuestionTypeBox.SelectedValue
             Dim objOptions As QuestionOptions = Nothing
-            If nQuestionType = Enums.enmQuestionType.DropDown Or nQuestionType = Enums.enmQuestionType.MultiRadio Then
+            If QuestionAllowsOptions(nQuestionType) Then
                 objOptions = New QuestionOptions
                 Dim txtOptions = From ri As RepeaterItem In uctrlCreateQuestion.OptionsRepeater.Items
                                  Where ri.ItemType = ListItemType.Item Or ri.ItemType = ListItemType.AlternatingItem

@@ -78,7 +78,7 @@
                 Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
                     chkMultiLine.Visible = True
                     chkMultiLine.Checked = (QuestionType = Enums.enmQuestionType.MultiLine)
-                Case Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio
+                Case Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio, Enums.enmQuestionType.AgreeDisagree
                     Dim lstOptions As New List(Of String)
                     lstOptions.Add("")
                     rptUserOptions.Visible = True

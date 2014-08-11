@@ -55,5 +55,12 @@ Module MiscFunctions
 
         ScriptManager.RegisterClientScriptBlock(page, page.GetType, "ErrorPopup", strJava, True)
     End Sub
-
+    Public Function QuestionAllowsOptions(ByVal enmQuestionType As Enums.enmQuestionType)
+        Select Case enmQuestionType
+            Case Enums.enmQuestionType.AgreeDisagree, Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio
+                Return True
+            Case Else
+                Return False
+        End Select
+    End Function
 End Module

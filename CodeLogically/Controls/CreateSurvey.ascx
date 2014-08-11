@@ -5,6 +5,7 @@
 <%@ Register Src="~/Controls/YesNoIDK.ascx" TagPrefix="uctrl" TagName="YesNoIDK" %>
 <%@ Register Src="~/Controls/TextInput.ascx" TagPrefix="uctrl" TagName="TextInput" %>
 <%@ Register Src="~/Controls/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
+<%@ Register Src="~/Controls/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
 
     <asp:Label ID="lblTitle" runat="server" Text="Please enter a descriptive title for your Survey!"></asp:Label>
     <br />
@@ -33,7 +34,8 @@
                     </div>
                     <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false"/>
                     <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
-                    <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>
+                    <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>   
+                    <uctrl:AgreeDisagree runat="server" ID="ctrlAgreeDisagree" visible="false"/>   
                                 
                 </ItemTemplate>
             </asp:Repeater>

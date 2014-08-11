@@ -92,6 +92,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Controls\AgreeDisagree.ascx" />
     <Content Include="Controls\CreateNewQuestion.ascx" />
     <Content Include="Controls\CreateSurvey.ascx" />
     <Content Include="Controls\MultipleChoice.ascx" />
@@ -218,6 +219,13 @@
     <Compile Include="Classes\MiscFunctions.vb" />
     <Compile Include="Classes\Question.vb" />
     <Compile Include="Classes\QuestionControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AgreeDisagree.ascx.designer.vb">
+      <DependentUpon>AgreeDisagree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AgreeDisagree.ascx.vb">
+      <DependentUpon>AgreeDisagree.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\CreateNewQuestion.ascx.designer.vb">

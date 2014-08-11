@@ -6,5 +6,6 @@
         DropDown = 4
         MultiRadio = 5
         YesNo = 6
+        AgreeDisagree = 7
     End Enum
 End Class

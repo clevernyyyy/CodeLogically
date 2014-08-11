@@ -38,6 +38,10 @@
                     ctrl = e.Item.FindControl("ctrlMultipleChoice")
                     ctrl.LoadQuestion(Q)
                     ctrl.Visible = True
+                Case Enums.enmQuestionType.AgreeDisagree
+                    ctrl = e.Item.FindControl("ctrlAgreeDisagree")
+                    ctrl.LoadQuestion(Q)
+                    ctrl.Visible = True
             End Select
             'pnlControl.Controls.Add(Q.QuestionControl)
             'upQuestions.Update()

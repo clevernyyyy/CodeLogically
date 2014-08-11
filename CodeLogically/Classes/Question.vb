@@ -28,6 +28,10 @@ Public Class Question
                 objMC.QuestionText = Me.QuestionText
                 objMC.QuestionType = Me.QuestionType
                 Me.QuestionControl = objMC
+            Case Enums.enmQuestionType.AgreeDisagree
+                Dim objAD As New AgreeDisagree
+                objAD.QuestionType = Me.QuestionType
+                Me.QuestionControl = objAD
         End Select
         Me.QuestionOptions = objOptions
     End Sub

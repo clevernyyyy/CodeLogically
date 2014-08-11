@@ -50,7 +50,7 @@ Public Class TakeSurvey
     Private Sub LoadSelectedSurvey(ByVal cTitle As String, ByVal cUser As String, ByVal dCreated As DateTime, ByVal nSurveryID As Integer)
         'FillSession(cTitle, cUser, dCreated, nSurveyID)
 
-        Dim objSurvey = New Survey(nSurveryID, 0, "cTitle", 1, Date.Now())
+        Dim objSurvey = New Survey(nSurveryID, 0, cTitle, 1, dCreated)
         objSurvey.LoadSurvey()
         Session("Survey") = objSurvey
 

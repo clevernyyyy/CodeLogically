@@ -84,19 +84,32 @@ Public Class QuestionOptions
 End Class
 Public Class Survey
     Public Questions As Questions
-    Private nSurveyType As Integer = 1
-    Private nSurveySubType As Integer = 0
-    Private cSurveyName As String = ""
-    Private nUserNum As Integer
-    Private dCreated As Date
+    Private SurveyType As Integer = 1
+    Private SurveySubType As Integer = 0
+    Private SurveyTitle As String = ""
+    Private Locked As Boolean
+    Private UserNum As Integer
+    Private Created As Date
 
-    Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyName As String, nUserNum As Integer, dCreated As Date)
+    Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyTitle As String, nUserNum As Integer, dCreated As Date, Optional lLocked As Boolean = False)
         Questions = New Questions
-        Me.nSurveyType = nSurveyType
-        Me.nSurveySubType = nSurveySubType
-        Me.cSurveyName = cSurveyName
-        Me.nUserNum = nUserNum
-        Me.dCreated = dCreated
+        Me.SurveyType = nSurveyType
+        Me.SurveySubType = nSurveySubType
+        Me.SurveyTitle = cSurveyTitle
+        Me.Locked = lLocked
+        Me.UserNum = nUserNum
+        Me.Created = dCreated
+    End Sub
+
+    Sub New(ByVal dtSurvey As DataTable)
+        For Each dr In dtSurvey.Rows
+            Me.SurveyType = dr.item("nSurveyType")
+            Me.SurveySubType = dr.item("nSurveySubType")
+            Me.SurveyTitle = dr.item("cDescription")
+            Me.Locked = dr.item("lLocked")
+            Me.UserNum = dr.item("nUserNum")
+            Me.Created = dr.item("dCreated")
+        Next
     End Sub
 
     Public Sub LoadQuestions(dt As DataTable)
@@ -130,8 +143,8 @@ Public Class Survey
 
         With cmd.Parameters
             .AddWithValue("@nUserNum", 1)
-            .AddWithValue("@nSurveyType", nSurveyType)
-            .AddWithValue("@nSurveySubType", nSurveySubType)
+            .AddWithValue("@nSurveyType", SurveyType)
+            .AddWithValue("@nSurveySubType", SurveySubType)
         End With
 
         Return FillDataTable(cmd)
@@ -140,8 +153,8 @@ Public Class Survey
         Dim cmd = SqlCommand("LookUp.usp_Get_SurveyQuestions")
 
         With cmd.Parameters
-            .AddWithValue("@nSurveyType", nSurveyType)
-            .AddWithValue("@nSurveySubType", nSurveySubType)
+            .AddWithValue("@nSurveyType", SurveyType)
+            .AddWithValue("@nSurveySubType", SurveySubType)
         End With
 
         Return FillDataTable(cmd)
@@ -150,8 +163,8 @@ Public Class Survey
         Dim cmd = SqlCommand("LookUp.usp_Get_SurveyOptions")
 
         With cmd.Parameters
-            .AddWithValue("@nSurveyType", nSurveyType)
-            .AddWithValue("@nSurveySubType", nSurveySubType)
+            .AddWithValue("@nSurveyType", SurveyType)
+            .AddWithValue("@nSurveySubType", SurveySubType)
             .AddWithValue("@nSurveyOptionControl", nSurveyOptionControl)
             .AddWithValue("@nSurveyQuestion", nSurveyQuestion)
         End With
@@ -169,10 +182,12 @@ Public Class Survey
         Dim cmd = SqlCommand("Lookup.usp_Upsert_SurveyTypes")
 
         With cmd.Parameters
-            .AddWithValue("@nSurveyType", nSurveyType)
-            .AddWithValue("@nSurveySubType", nSurveySubType)
-            .AddWithValue("@cDescription", cSurveyName)
-            .AddWithValue("@lLocked", 0)
+            .AddWithValue("@nSurveyType", SurveyType)
+            .AddWithValue("@nSurveySubType", SurveySubType)
+            .AddWithValue("@cDescription", SurveyTitle)
+            .AddWithValue("@lLocked", Locked)
+            .AddWithValue("@nUserNum", UserNum)
+            .AddWithValue("@dCreated", Created)
         End With
 
         Try
@@ -199,8 +214,8 @@ Public Class Survey
         For Each q As Question In Questions
             Dim dr As DataRow = dtSurveyText.NewRow
             With dr
-                .Item("nSurveyType") = nSurveyType
-                .Item("nSurveySubType") = nSurveySubType
+                .Item("nSurveyType") = SurveyType
+                .Item("nSurveySubType") = SurveySubType
                 .Item("nSurveyQuestion") = q.QuestionNumber
                 .Item("cText") = q.QuestionText
                 .Item("nSurveyOptionControl") = q.QuestionType
@@ -210,8 +225,8 @@ Public Class Survey
         Next
 
         With cmd.Parameters
-            .AddWithValue("@nSurveyType", nSurveyType)
-            .AddWithValue("@nSurveySubType", nSurveySubType)
+            .AddWithValue("@nSurveyType", SurveyType)
+            .AddWithValue("@nSurveySubType", SurveySubType)
             Dim tvp As SqlClient.SqlParameter = .AddWithValue("@SurveyText", dtSurveyText)
             tvp.SqlDbType = SqlDbType.Structured
             tvp.TypeName = "[LookUp].[SurveyText_Type]"
@@ -244,8 +259,8 @@ Public Class Survey
                 For Each o As QuestionOption In q.QuestionOptions
                     Dim dr As DataRow = dtSurveyOption.NewRow
                     With dr
-                        .Item("nSurveyType") = nSurveyType
-                        .Item("nSurveySubType") = nSurveySubType
+                        .Item("nSurveyType") = SurveyType
+                        .Item("nSurveySubType") = SurveySubType
                         .Item("nSurveyOption") = q.QuestionType
                         .Item("nSurveyQuestion") = q.QuestionNumber
                         .Item("cOption") = o.OptionText
@@ -258,8 +273,8 @@ Public Class Survey
         Next
         If dtSurveyOption.Rows.Count > 0 Then
             With cmd.Parameters
-                .AddWithValue("@nSurveyType", nSurveyType)
-                .AddWithValue("@nSurveySubType", nSurveySubType)
+                .AddWithValue("@nSurveyType", SurveyType)
+                .AddWithValue("@nSurveySubType", SurveySubType)
                 Dim tvp As SqlClient.SqlParameter = .AddWithValue("@SurveyOption", dtSurveyOption)
                 tvp.SqlDbType = SqlDbType.Structured
                 tvp.TypeName = "[LookUp].[SurveyOption_Type]"
@@ -291,8 +306,8 @@ Public Class Survey
             Dim dr As DataRow = dtSurveyAnswers.NewRow
             With dr
                 .Item("nUserNum") = 1
-                .Item("nSurveyType") = nSurveyType
-                .Item("nSurveySubType") = nSurveySubType
+                .Item("nSurveyType") = SurveyType
+                .Item("nSurveySubType") = SurveySubType
                 .Item("nSurveyQuestion") = q.QuestionNumber
                 '.Item("cSaveValue") = q.QuestionAnswer
             End With
@@ -301,8 +316,8 @@ Public Class Survey
         Next
 
         With cmd.Parameters
-            .AddWithValue("@nSurveyType", nSurveyType)
-            .AddWithValue("@nSurveySubType", nSurveySubType)
+            .AddWithValue("@nSurveyType", SurveyType)
+            .AddWithValue("@nSurveySubType", SurveySubType)
             Dim tvp As SqlClient.SqlParameter = .AddWithValue("@SurveyAnswers", dtSurveyAnswers)
             tvp.SqlDbType = SqlDbType.Structured
             tvp.TypeName = "[Survey].[SurveyAnswers_Type]"

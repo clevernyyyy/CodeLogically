@@ -59,8 +59,8 @@
     End Sub
 
     Private Sub OpenSurveyEditor()
-        Dim strJava As String = "OpenSurveyEditor();"
-        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenSurveyEditor", strJava, True)
+        Dim strJava As String = "OpenSurveyEditorFast();"
+        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenSurveyEditorFast", strJava, True)
     End Sub
 
 

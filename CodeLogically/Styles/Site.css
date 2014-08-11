@@ -72,6 +72,13 @@ p
     border: 0;
 }
 
+/* TEXT for QUESTIONS */
+.questionText
+{
+    font-size:small;
+}
+
+
 /* HEADINGS   
 ----------------------------------------------------------*/
 

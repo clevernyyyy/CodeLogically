@@ -25,3 +25,19 @@ function OpenSurveyEditor() {
     return false;
 }
 
+
+
+function OpenSurveyEditorFast() {
+    $("#divCreateSurvey").dialog({
+        appendTo: "#CreateSurveyPage",
+        modal: true,
+        dialogClass: "no-close",
+        width: 950,
+        height: 750,
+        title: "Survey Editor",
+        hide: { effect: "clip", duration: 800 },
+        closeOnEscape: false,
+    }).css('z-index', '1005');
+    return false;
+}
+

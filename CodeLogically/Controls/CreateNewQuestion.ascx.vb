@@ -39,6 +39,7 @@
     Public Sub New(S As Survey, Optional ByVal enmQType As Enums.enmQuestionType = 0)
         MyBase.New()
         ParentSurvey = S
+        ParentSurvey.SurveySubType = enmQType
         If enmQType > 0 Then
             QuestionType = enmQType
             ddlQuestionType.Visible = False
@@ -47,10 +48,15 @@
             ddlQuestionType.Visible = True
         End If
     End Sub
-    Public Sub New(ByVal n As Integer)
-        Dim objSurvey As New Survey(FillDataTable(SqlCommand("Lookup.usp_Create_NewSurvey")))
-        ParentSurvey = objSurvey
-        _QuestionType = 0
+    Public Sub New()
+        ParentSurvey = Session("Survey")
+        QuestionType = ParentSurvey.SurveySubType
+        If QuestionType > 0 Then
+            ddlQuestionType.Visible = False
+        Else
+            ddlQuestionType = New DropDownList
+            ddlQuestionType.Visible = True
+        End If
     End Sub
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then

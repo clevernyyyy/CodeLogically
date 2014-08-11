@@ -44,19 +44,19 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
         <div class="rowClassSpace">
             &nbsp;</div>
             <div id="Retrieve_GridViewContainer" class="gridViewContainer">
-                <asp:GridView ID="dvgPack" runat="server" CssClass="tableClass" AutoGenerateColumns="false"
+                <asp:GridView ID="dvgPack" runat="server" CssClass="tableClass center-block" AutoGenerateColumns="false"
                     OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="4"
                     PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
                     <HeaderStyle ForeColor="Navy" Font-Underline="false"/>
                     <Columns>
                         <%--0--%><asp:BoundField DataField="cDescription" HeaderText="Survey Title" SortExpression="cDescription"
-                            ItemStyle-Width="430" />
+                            ItemStyle-Width="430" HeaderStyle-CssClass="centered" ItemStyle-CssClass="left"/>
                         <%--1--%><asp:BoundField DataField="cUserName" HeaderText="Survey Author" SortExpression="cUserName"
                             ItemStyle-Width="200" />
                         <%--2--%><asp:BoundField DataField="dCreated" HeaderText="Date Created" DataFormatString="{0:d}"
                             SortExpression="dCreated" ItemStyle-Width="120" />
-                        <%--3--%><asp:BoundField DataField="nSurveyType" HeaderText="SurveyID" ItemStyle-Width="50"
-                            SortExpression="nSurveyType" />
+                        <%--3--%><asp:BoundField DataField="nSurveyType" HeaderText="SurveyID" 
+                            SortExpression="nSurveyType" ItemStyle-Width="60"/>
                         <%-- HeaderStyle-CssClass="nodisplay" ItemStyle-CssClass="nodisplay" />--%>
                     </Columns>
                     <PagerStyle CssClass="pager" />

@@ -34,84 +34,21 @@ p
 }
 
 
-/*----------------------------------------------------------*/
-/*  JQuery Popups Layout Styles								*/
-/*----------------------------------------------------------*/
-.backgroundPopup
-{  
-	display:none;  
-	position:fixed;  
-	_position:absolute; /* hack for internet explorer 6*/  
-	height:100%;  
-	width:100%;  
-	top:0%;  
-	left:0%;  
-	background:#BCBCBC;  
-	border:1px solid #cecece;  
-	z-index:500;  
-}  
-
-.popup
-{  
-	width:455px; 
-	padding:12px;  
-	font-size:13px;
-	display:none;  
-	position:absolute;  
-	_position:absolute; /* hack for internet explorer 6*/  
-	top:30%;  
-	left:33%;  
-	background:#FFFFFF;  
-	border:1px solid #3C6994;  
-	z-index:501;  
-}  
-
-.popupWide
-{  
-	width:655px; 
-	padding:12px;  
-	font-size:13px;
-	display:none;  
-	position:absolute;  
-	_position:absolute; /* hack for internet explorer 6*/  
-	top:30%;  
-	left:25%;  
-	background:#FFFFFF;  
-	border:1px solid #3C6994;  
-	z-index:501;  
-} 
-
-.popup h1,
-.popupWide h1
-{  
-	text-align:left;  
-	color:#31689C;  
-	font-size:16px;  
-	font-weight:700;  
-	border-bottom:1px dotted #D3D3D3;  
-	padding-bottom:2px;  
-	margin-bottom:20px;  
-}  
-
-.popupClose
-{  
-	font-size:14px;  
-	line-height:14px;  
-	right:6px;  
-	top:4px;  
-	position:absolute;  
-	color:#31689C;  
-	font-weight:700;  
-	display:block;  
-	cursor:pointer;
-}
-
-.popupArea
+.bottomPopupLeft
 {
-	line-height:18px;
-	overflow: visible !important;
+    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
 }
-
+.bottomPopupRight
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10px;
+}
 
 .none 
 {

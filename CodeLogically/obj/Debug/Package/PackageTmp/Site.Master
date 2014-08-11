@@ -21,11 +21,10 @@
 	<script type="text/javascript" src="/Scripts/site_scripts/jquery.numeric.js"></script>
 	<script type="text/javascript" src="/Scripts/site_scripts/jquery.watermarkinput.js"></script>
     <link type="text/css" rel="Stylesheet" href="~/Styles/jquery-ui-redmond/jquery-ui-1.10.4.custom.min.css"  />
-	<script type="text/javascript" src="/Scripts/site_scripts/popupJQuery.js"></script>
-	<script type="text/javascript" src="/Scripts/site_scripts/popupWindow.js"></script>	
 
     <!-- Custom styles for this template -->
     <link href="/Styles/main.css" rel="stylesheet" />
+    <link href="/Styles/Site.css" rel="stylesheet" />
     <link href="/Styles/icomoon.css" rel="stylesheet" />
     <link href="/Styles/animate-custom.css" rel="stylesheet" />
     <link rel="stylesheet" href="/Styles/custom.css" />

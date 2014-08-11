@@ -127,8 +127,6 @@
     <Content Include="Scripts\site_scripts\jquery.watermarkinput.js" />
     <Content Include="Scripts\site_scripts\json2.js" />
     <Content Include="Scripts\site_scripts\modernizr.custom.js" />
-    <Content Include="Scripts\site_scripts\popupJQuery.js" />
-    <Content Include="Scripts\site_scripts\popupWindow.js" />
     <Content Include="Scripts\site_scripts\retina.js" />
     <Content Include="Scripts\site_scripts\scripts.js" />
     <Content Include="Scripts\site_scripts\smoothscroll.js" />

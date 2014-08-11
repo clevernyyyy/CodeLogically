@@ -68,8 +68,6 @@ Public Class TakeSurvey
     End Sub
 #End Region
 
-
-
 #Region "Search Grid Stuff"
     Private Sub dvgPackages_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles dvgPack.SelectedIndexChanged
         'This might be where I start search
@@ -88,7 +86,7 @@ Public Class TakeSurvey
 
     Private Sub dvgPack_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dvgPack.RowDataBound
         If e.Row.RowType = DataControlRowType.DataRow Then
-            e.Row.Height = 35
+            e.Row.Height = 25
             Dim d As DateTime = e.Row.Cells(2).Text
             e.Row.Cells(2).Text = d.ToShortDateString
             ''This code allows the gridview to be selectable
@@ -196,7 +194,5 @@ Public Class TakeSurvey
         LoadSurveys(cTitle, cUser, dCreated, lSetFocusToTop)
     End Sub
 #End Region
-
-
 
 End Class

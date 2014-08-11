@@ -1,4 +1,5 @@
-﻿Public Class CreateNewQuestion
+﻿
+Public Class CreateNewQuestion
     Inherits CreateQuestion
 
     Private Property _QuestionType As Enums.enmQuestionType
@@ -49,13 +50,16 @@
         End If
     End Sub
     Public Sub New()
-        ParentSurvey = Session("Survey")
-        QuestionType = ParentSurvey.SurveySubType
-        If QuestionType > 0 Then
-            ddlQuestionType.Visible = False
-        Else
-            ddlQuestionType = New DropDownList
-            ddlQuestionType.Visible = True
+
+        If HttpContext.Current.Session("Survey") IsNot Nothing Then
+            ParentSurvey = HttpContext.Current.Session("Survey")
+            QuestionType = ParentSurvey.SurveySubType
+            If QuestionType > 0 Then
+                ddlQuestionType.Visible = False
+            Else
+                ddlQuestionType = New DropDownList
+                ddlQuestionType.Visible = True
+            End If
         End If
     End Sub
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

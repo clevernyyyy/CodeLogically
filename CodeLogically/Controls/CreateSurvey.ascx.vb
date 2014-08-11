@@ -4,13 +4,10 @@
     Private objSurvey As Survey
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
-            If Session("Survey") Is Nothing Then
-                objSurvey = New Survey(FillDataTable(SqlCommand("Lookup.usp_Create_NewSurvey")))
-                Session("Survey") = objSurvey
-            Else
+            If Session("Survey") IsNot Nothing Then
                 objSurvey = Session("Survey")
+                NewQuestion()
             End If
-            NewQuestion()
         Else
             objSurvey = Session("Survey")
         End If

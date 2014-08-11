@@ -8,6 +8,9 @@ Public Class CreateSurvey
 
     Private Sub btnDyanmicSurvey_Click(sender As Object, e As System.EventArgs) Handles btnDynamicSurvey.ServerClick
         Dim dt As DataTable = Nothing
+        Dim objSurvey As New Survey(FillDataTable(SqlCommand("Lookup.usp_Create_NewSurvey")))
+        objSurvey.SurveySubType = 0
+        Session("Survey") = objSurvey
 
         OpenSurveyEditor()
 

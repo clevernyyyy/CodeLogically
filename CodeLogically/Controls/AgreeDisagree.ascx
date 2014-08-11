@@ -16,16 +16,16 @@
             <ul>
     </HeaderTemplate>
     <ItemTemplate>
-                <li>
                     <tr>
+                <li>
                         <td><asp:Label runat="server" ID="lblQuestionText" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtSD" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtD" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtN" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtA" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtSA" /></td>
-                    </tr>
                 </li>
+                    </tr>
     </ItemTemplate>
     <FooterTemplate>
             </ul>

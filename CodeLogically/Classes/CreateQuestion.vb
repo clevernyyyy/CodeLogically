@@ -9,5 +9,4 @@ Public MustInherit Class CreateQuestion
 
     End Sub
     Public MustOverride Function SaveQuestion() As Boolean
-
 End Class

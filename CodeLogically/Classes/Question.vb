@@ -85,7 +85,7 @@ End Class
 Public Class Survey
     Public Questions As Questions
     Private SurveyType As Integer = 1
-    Private SurveySubType As Integer = 0
+    Public SurveySubType As Integer = 0
     Private SurveyTitle As String = ""
     Private Locked As Boolean
     Private UserNum As Integer
@@ -110,6 +110,7 @@ Public Class Survey
             Me.UserNum = dr.item("nUserNum")
             Me.Created = dr.item("dCreated")
         Next
+        Questions = New Questions
     End Sub
 
     Public Sub LoadQuestions(dt As DataTable)

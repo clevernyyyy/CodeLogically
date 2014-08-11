@@ -32,22 +32,53 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
             background: white !important;
         }
     </style>
-    <div id="TakeSurveyPage" class="container centered">
+    <div id="TakeSurveyPage" class="container">
             <h2 class="centered" style="color: #3399FF; font-size: 36px;">
             Take a Survey
             </h2>
-            <p>
+            <p class="centered">
                 Select from our list of surveys!</p>
-            
+        
+        
+            <div id="Search" class="container border">
+                <h2>Find a particular survey!</h2>
+                <div id="Retrieve_SearchContainer">
+                    <div class="rowClass">
+                        <span class="lblColTitle">Title:</span> <span class="textColName">
+                            <asp:TextBox ID="txtSearchTitle" runat="server" CssClass="textfield" /></span>
+                        <span class="lblColAuthor">Author:</span> <span class="Col">
+                            <asp:TextBox ID="txtSearchAuthor" runat="server" CssClass="textfield" /></span>
+                        <span class="lblSurveyID">Survey ID:</span> <span class="Col">
+                            <asp:TextBox ID="txtSearchSurveyID" runat="server" CssClass="textfield" /></span>
+                    </div>
+                    <div class="rowClass" style="width: 790px">
+                        <span class="ColEffective"><span class="labelColEffective">Date Created from</span>
+<%--                            <uctrl:DateTime ID="uctrlEffDate" runat="server" HideLabel="true" HideTime="true"
+                                MinDate="01/01/2010" YearRange="1900:+0" />--%>
+                            <span class="labelColEffective2">to</span>
+<%--                            <uctrl:DateTime ID="uctrlExpDate" runat="server" HideLabel="true" HideTime="true"
+                                MinDate="01/01/2010" YearRange="1900:+0" />--%>
+                        </span><span class="rightColButton">
+    <%--                        <uctrl:CustomButton runat="server" ID="btnFilter" Text="Filter" />
+                            <uctrl:CustomButton ID="btnOpenClaim" runat="server" Text="Open Claim" />--%>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div id="divVersion" class="right" style="float:right">
+                <asp:Label ID="lblVersion" runat="server" Text="Version 1.0.0" CssClass="right"></asp:Label>
+            </div>    
         <!-- Survery Gridview -->
         <div id="Retrieve" class="centered">
+        
+
         <div class="rowClassSpace">
             &nbsp;</div>
             <div id="Retrieve_GridViewContainer" class="gridViewContainer">
                 <asp:GridView ID="dvgPack" runat="server" CssClass="table table-hover table-striped table-bordered table-condensed" 
                     AutoGenerateColumns="false"
                     OnSorting="dgvPack_Sorting" AllowSorting="true" CellPadding="3" TabIndex="4"
-                    PageSize="10" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
+                    PageSize="50" AllowPaging="true" PagerSettings-Position="TopAndBottom" PagerStyle-HorizontalAlign="Center">
                     <HeaderStyle ForeColor="Navy" Font-Underline="false" BorderColor="Black"/>
                     <Columns>
                         <%--0--%><asp:BoundField DataField="cDescription" HeaderText="Survey Title" SortExpression="cDescription"

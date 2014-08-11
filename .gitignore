@@ -3,8 +3,8 @@ Thumbs.db
 ehthumbs.db
 
 # Ignore bin folder
-CodeLogically/bin/
-CodeLogically/obj/
+CodeLogically/bin/*
+CodeLogically/obj/*
 
 # Folder config file
 Desktop.ini
@@ -39,7 +39,6 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-CodeLogically.suo
 *.cache
 *.xml
 *.cache

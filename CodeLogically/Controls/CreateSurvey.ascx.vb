@@ -81,7 +81,8 @@
                     Next
                 End If
             End If
-            Dim Q As New Question(objSurvey, uctrlCreateQuestion.QuestionText, nQuestionType, objOptions)
+            Dim dicQuestionAnswers = New Dictionary(Of Integer, String)
+            Dim Q As New Question(objSurvey, uctrlCreateQuestion.QuestionText, nQuestionType, objOptions, dicQuestionAnswers)
             objSurvey.AddQuestion(Q)
         End If
     End Sub

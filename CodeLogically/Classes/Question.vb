@@ -5,9 +5,10 @@ Public Class Question
     Public Property QuestionType As Enums.enmQuestionType
     Public Property QuestionControl As QuestionControl
     Public Property QuestionOptions As QuestionOptions
+    Public Property QuestionAnswers As Dictionary(Of Integer, String)
     Private Property SurveyParent As Survey
 
-    Public Sub New(objSurvey As Survey, cText As String, enmType As Enums.enmQuestionType, objOptions As QuestionOptions)
+    Public Sub New(objSurvey As Survey, cText As String, enmType As Enums.enmQuestionType, objOptions As QuestionOptions, dicQuestionAnswers As Dictionary(Of Integer, String))
         Me.SurveyParent = objSurvey
         Me.QuestionText = cText
         Me.QuestionType = enmType
@@ -34,6 +35,7 @@ Public Class Question
                 Me.QuestionControl = objAD
         End Select
         Me.QuestionOptions = objOptions
+        Me.QuestionAnswers = dicQuestionAnswers
     End Sub
     Public Sub New(cText As String, enmType As Enums.enmQuestionType)
         Me.QuestionText = cText
@@ -116,7 +118,8 @@ Public Class Survey
     Public Sub LoadQuestions(dt As DataTable)
         Me.Questions = New Questions
         For Each dr As DataRow In dt.Rows
-            Dim objQ As New Question(Me, dr.Item("cText"), dr.Item("nSurveyOptionControl"), Nothing)
+            Dim dicQuestionAnswers = New Dictionary(Of Integer, String)
+            Dim objQ As New Question(Me, dr.Item("cText"), dr.Item("nSurveyOptionControl"), Nothing, dicQuestionAnswers)
             objQ.QuestionNumber = dr.Item("nSurveyQuestion")
             objQ.QuestionOptions = New QuestionOptions
             For Each drO As DataRow In FillOptions(objQ.QuestionType, objQ.QuestionNumber).Rows
@@ -132,7 +135,7 @@ Public Class Survey
     End Sub
     Public Sub LoadSurvey()
 
-        Dim dtSurveyAnswers As DataTable = FillSurveyAnswers()
+        'Dim dtSurveyAnswers As DataTable = FillSurveyAnswers()
         Dim dtQuestions As DataTable = FillQuestions()
 
         If dtQuestions IsNot Nothing AndAlso dtQuestions.Rows.Count > 0 Then

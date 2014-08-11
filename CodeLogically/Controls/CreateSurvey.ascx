@@ -41,9 +41,9 @@
             </asp:Repeater>
         </ContentTemplate>
     </asp:UpdatePanel>
-<%--    <div id="divBottomLeft" class="bottomPopupLeft">
+    <div id="divBottomLeft" class="bottomPopupLeft">
         <asp:Button runat="server" ID="btnCancel" Text="Cancel Survey" />
-    </div>--%>
+    </div>
     <div id="divBottomRight" class="bottomPopupRight">
         <asp:Button runat="server" ID="btnFinish" Text="Finish Survey" />
     </div>

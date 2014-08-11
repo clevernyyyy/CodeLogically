@@ -14,6 +14,42 @@ Option Explicit On
 Partial Public Class TakeSurvey
 
     '''<summary>
+    '''txtSearchTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtSearchTitle As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtSearchAuthor control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtSearchAuthor As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtSearchSurveyID control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtSearchSurveyID As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''lblVersion control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblVersion As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''dvgPack control.
     '''</summary>
     '''<remarks>

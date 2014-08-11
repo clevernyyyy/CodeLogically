@@ -40,7 +40,7 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
                 Select from our list of surveys!</p>
         
         
-            <div id="Search" class="container border">
+            <div id="Search" class="container border" style="background-color:#f9f9f9">
                 <h2>Find a particular survey!</h2>
                 <div id="Retrieve_SearchContainer">
                     <div class="rowClass">

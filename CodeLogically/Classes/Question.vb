@@ -91,9 +91,9 @@ Public Class Survey
     Public SurveyTitle As String = ""
     Public Locked As Boolean
     Public UserNum As Integer
-    Public Created As Date
+    Public Created As DateTime
 
-    Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyTitle As String, nUserNum As Integer, dCreated As Date, Optional lLocked As Boolean = False)
+    Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyTitle As String, nUserNum As Integer, dCreated As DateTime, Optional lLocked As Boolean = False)
         Questions = New Questions
         Me.SurveyType = nSurveyType
         Me.SurveySubType = nSurveySubType

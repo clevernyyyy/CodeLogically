@@ -107,6 +107,7 @@
     <Content Include="Forms\Surveys\Surveys.aspx" />
     <Content Include="Forms\Surveys\TakeSurvey.aspx" />
     <Content Include="img\cal.gif" />
+    <Content Include="img\favicon.ico" />
     <Content Include="Scripts\PerPage\CreateSurvey.js" />
     <Content Include="Scripts\PerPage\TakeSurvey.js" />
     <Content Include="Scripts\site_scripts\bootstrap.js" />
@@ -393,6 +394,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controls\PopUp Controls\" />
     <Folder Include="Controls\Questions\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

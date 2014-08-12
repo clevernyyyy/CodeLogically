@@ -8,6 +8,7 @@
     <meta name="author" content="Adam Schaal">
     <link rel="shortcut icon" href="">
     <title>CodeOne Test Site</title>
+    
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/site_css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
@@ -20,9 +21,13 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
     <link href='/Styles/site_css/custom.css' rel='stylesheet' type='text/css' />
+    
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />    
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div id="playArea">

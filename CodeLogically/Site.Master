@@ -30,6 +30,9 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />    
+
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 

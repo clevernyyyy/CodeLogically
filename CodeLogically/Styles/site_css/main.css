@@ -321,7 +321,6 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/HDpix/cloudSunset.jpg) no-repeat center top;
 	margin-top: 0px;
 	padding-top:120px;
 	text-align:center;
@@ -339,10 +338,12 @@ a:after {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+    background-color: transparent;
+    background-image: url('../../img/HDpix/cloudSunset.jpg');
+    background-repeat: no-repeat;
 }
 
 #headerwrapAdamAndCol {
-	background: url(../img/HDpix/boraBora.jpg) no-repeat center top;
 	margin-top: 0px;
 	padding-top:130px;
 	text-align:center;
@@ -360,6 +361,9 @@ a:after {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+    background-color: transparent;
+    background-image: url('../../img/HDpix/boraBora.jpg');
+    background-repeat: no-repeat;
 }
 
 #headerwrapAdamAndCol h1 {
@@ -405,7 +409,6 @@ a:after {
 }
 
 #subwrap {
-	background: url(../img/PersonalPictures/NewYork/DSC05281.JPG) no-repeat center top;
 	margin-top: -50px;
 	padding-top:120px;
 	text-align:center;
@@ -423,6 +426,9 @@ a:after {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+    background-color: transparent;
+    background-image: url('../../img/PersonalPictures/NewYork/DSC05281.JPG');
+    background-repeat: no-repeat;
 }
 
 #subwrap h1 {
@@ -447,7 +453,6 @@ a:after {
 }
 
 #constructionwrap {
-	background: url(../img/HDpix/Seattle.jpg) no-repeat center top;
 	margin-top: 30px;
 	padding-top:120px;
 	text-align:center;
@@ -465,6 +470,9 @@ a:after {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+    background-color: transparent;
+    background-image: url('../../img/HDpix/Seattle.jpg');
+    background-repeat: no-repeat;
 }
 
 #constructionwrap h1 {
@@ -601,24 +609,24 @@ a:after {
 /* Section Dividers Backgrounds */
 
 .divider1 {
-	background-image: url('../img/HDpix/red angels.jpg')
+	background-image: url('../../img/HDpix/red%20angels.jpg')
 }
 
 .divider2 {
-	background-image: url('../img/HDpix/train tunnel.jpg')
+	background-image: url('../../img/HDpix/train%20tunnel.jpg')
 }
 
 .divider3 {
-	background-image: url('../img/HDpix/Seattle.jpg');
+	background-image: url('../../img/HDpix/Seattle.jpg');
 	margin-top: 0px;
 }
 
 .divider4 {
-	background-image: url('../img/HDpix/Winter.jpg')
+	background-image: url('../../img/HDpix/Winter.jpg')
 }
 
 .divider6 {
-	background-image: url('../img/HDpix/Sweet Hills, MT.jpg')
+	background-image: url('../../img/HDpix/Sweet%20Hills,%20MT.jpg')
 }
 
 

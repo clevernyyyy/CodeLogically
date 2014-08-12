@@ -57,8 +57,11 @@
 
     <div id="footerwrap">
         <div class="container">
-            <h4 class="centered">
-                Created by <a href="http://www.adamschaal.com">Cyborg Pirate Ninjas</a></h4>
+            <h2 class="centered" style="color:white;">
+                Created by <a href="http://www.adamschaal.com">A/</a>
+                <a href="">S/</a>
+                <a href="http://www.leightoneash.com">L/</a>
+            </h2>
         </div>
     </div>
 

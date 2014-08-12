@@ -8,8 +8,8 @@
 <br />
 <asp:Label runat="server" ID="lblQuestionText" CssClass="questionText" Text="Please type your question." ></asp:Label>
 <br />
-<asp:TextBox runat="server" ID="txtQuestionText" Width="600px"></asp:TextBox>
-<asp:DropDownList runat="server" ID="ddlQuestionType" Width="100px" AutoPostBack="true"></asp:DropDownList>
+<asp:TextBox runat="server" ID="txtQuestionText" Width="600px" style="font-size:small" CssClass="smallBox"></asp:TextBox>
+<asp:DropDownList runat="server" ID="ddlQuestionType" Width="100px" style="font-size:small" CssClass="smallBox" AutoPostBack="true"></asp:DropDownList>
 
 <asp:ScriptManager runat="server"></asp:ScriptManager>
 <asp:UpdatePanel runat="server">

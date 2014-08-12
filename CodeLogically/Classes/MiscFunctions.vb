@@ -63,4 +63,18 @@ Module MiscFunctions
                 Return False
         End Select
     End Function
+    Public Function NewSurveyID() As Integer
+        Dim intReturn As Integer
+        Dim cmd As SqlCommand = SqlCommand("[LookUp].usp_SurveyType_NewID")
+
+        Try
+            cmd.Connection.Open()
+            intReturn = cmd.ExecuteScalar()
+        Catch ex As Exception
+        Finally
+            cmd.Connection.Close()
+        End Try
+
+        Return intReturn
+    End Function
 End Module

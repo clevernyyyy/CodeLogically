@@ -86,12 +86,12 @@ Public Class QuestionOptions
 End Class
 Public Class Survey
     Public Questions As Questions
-    Private SurveyType As Integer = 1
+    Public SurveyType As Integer = 0
     Public SurveySubType As Integer = 0
-    Private SurveyTitle As String = ""
-    Private Locked As Boolean
-    Private UserNum As Integer
-    Private Created As Date
+    Public SurveyTitle As String = ""
+    Public Locked As Boolean
+    Public UserNum As Integer
+    Public Created As Date
 
     Public Sub New(nSurveyType As Integer, nSurveySubType As Integer, cSurveyTitle As String, nUserNum As Integer, dCreated As Date, Optional lLocked As Boolean = False)
         Questions = New Questions
@@ -176,6 +176,9 @@ Public Class Survey
         Return FillDataTable(cmd)
     End Function
     Public Sub SaveSurvey()
+        If SurveyType = 0 Then
+            SurveyType = NewSurveyID()
+        End If
 
         SaveSurveyType()
         SaveSurveyText()

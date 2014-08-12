@@ -31,7 +31,7 @@ function InitSiteJS() {
 function InitSiteFieldMasking() {
     //Standard date picker & masking
     $('input[type="text"][id$="Date"],.dateField').datepicker({
-        buttonImage: '../img/cal.gif',
+        buttonImage: '../../img/cal.gif',
         buttonText: "Choose",
         buttonImageOnly: true,
         showOn: 'both',

@@ -42,10 +42,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul runat="server" id="mnuRight" class="nav navbar-nav navbar-right">
-            <li id="mnuSurveys" runat="server"><a href="/Forms/Surveys.aspx">Surveys</a></li>
-            <li id="mnuCreateSurveys" runat="server"><a href="/Forms/CreateSurvey.aspx">Create Survey</a></li>
-            <li id="mnuTakeSurveys" runat="server"><a href="/Forms/TakeSurvey.aspx">Take a Survey!</a></li>
-            <li id="mnuSurveyAnalytics" runat="server"><a href="/Forms/SurveyAnalytics.aspx">Analytics</a></li>
+            <li id="mnuSurveys" runat="server"><a href="/Forms/Surveys/Surveys.aspx">Surveys</a></li>
+            <li id="mnuCreateSurveys" runat="server"><a href="/Forms/Surveys/CreateSurvey.aspx">Create Survey</a></li>
+            <li id="mnuTakeSurveys" runat="server"><a href="/Forms/Surveys/TakeSurvey.aspx">Take a Survey!</a></li>
+            <li id="mnuSurveyAnalytics" runat="server"><a href="/Forms/Surveys/SurveyAnalytics.aspx">Analytics</a></li>
           </ul>
         </div>
       </div>

@@ -1,11 +1,13 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="SurveyAnalytics.aspx.vb" Inherits="CodeLogically.SurveyAnalytics" %>
+﻿<%@ Page Title="Survey Analytics" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master"
+ CodeBehind="SurveyAnalytics.aspx.vb" Inherits="CodeLogically.SurveyAnalytics" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CodeOne Test Site">
     <meta name="author" content="Adam Schaal">
     <link rel="shortcut icon" href="">
-    <title>Survey</title>
+    <title>Survey Analytics</title>
 
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/site_css/bootstrap.min.css" />

@@ -23,20 +23,20 @@ Partial Public Class Surveys
     Protected WithEvents divSurveyMainPage As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''btnDynamicSurvey control.
+    '''btnCreateSurvey control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnDynamicSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents btnCreateSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
 
     '''<summary>
-    '''btnYesNoSurvey control.
+    '''btnTakeSurvey control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnYesNoSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents btnTakeSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
 End Class

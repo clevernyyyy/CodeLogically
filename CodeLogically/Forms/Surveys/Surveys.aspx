@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
+﻿<%@ Page Title="Surveys" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -6,7 +6,7 @@
     <meta name="description" content="CodeOne Test Site">
     <meta name="author" content="Adam Schaal">
     <link rel="shortcut icon" href="">
-    <title>Survey</title>
+    <title>Surveys</title>
 
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/site_css/bootstrap.min.css" />
@@ -54,14 +54,14 @@
                 <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                     <h4>
                         Create a Survey!</h4>
-                        <a ID="btnCreateSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
+                        <a ID="btnCreateSurvey" runat="server" class="btn btn-default" href="/Forms/Surveys/CreateSurvey.aspx" role="button">Create &raquo;</a>
                 </div>
                 <div class="col-md-2">
                 </div>
                 <div class="col-8 col-sm-8 col-lg-5 jumbotron">
                     <h4>
                         Take a Survey!</h4>
-                        <a ID="btnTakeSurvey" runat="server" class="btn btn-default" href="" role="button">Take &raquo;</a>
+                        <a ID="btnTakeSurvey" runat="server" class="btn btn-default" href="/Forms/Surveys/TakeSurvey.aspx" role="button">Take &raquo;</a>
                 </div>
             </div>
         </div>

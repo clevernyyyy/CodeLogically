@@ -101,11 +101,11 @@
     <Content Include="Controls\TextInput.ascx" />
     <Content Include="Controls\UserOption.ascx" />
     <Content Include="Controls\YesNoIDK.ascx" />
-    <Content Include="Forms\CreateQuestions.aspx" />
-    <Content Include="Forms\CreateSurvey.aspx" />
-    <Content Include="Forms\SurveyAnalytics.aspx" />
-    <Content Include="Forms\Surveys.aspx" />
-    <Content Include="Forms\TakeSurvey.aspx" />
+    <Content Include="Forms\Surveys\CreateQuestions.aspx" />
+    <Content Include="Forms\Surveys\CreateSurvey.aspx" />
+    <Content Include="Forms\Surveys\SurveyAnalytics.aspx" />
+    <Content Include="Forms\Surveys\Surveys.aspx" />
+    <Content Include="Forms\Surveys\TakeSurvey.aspx" />
     <Content Include="img\cal.gif" />
     <Content Include="Scripts\PerPage\CreateSurvey.js" />
     <Content Include="Scripts\PerPage\TakeSurvey.js" />
@@ -298,38 +298,38 @@
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CreateQuestions.aspx.designer.vb">
+    <Compile Include="Forms\Surveys\CreateQuestions.aspx.designer.vb">
       <DependentUpon>CreateQuestions.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CreateQuestions.aspx.vb">
+    <Compile Include="Forms\Surveys\CreateQuestions.aspx.vb">
       <DependentUpon>CreateQuestions.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Forms\CreateSurvey.aspx.designer.vb">
+    <Compile Include="Forms\Surveys\CreateSurvey.aspx.designer.vb">
       <DependentUpon>CreateSurvey.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CreateSurvey.aspx.vb">
+    <Compile Include="Forms\Surveys\CreateSurvey.aspx.vb">
       <DependentUpon>CreateSurvey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\SurveyAnalytics.aspx.designer.vb">
+    <Compile Include="Forms\Surveys\SurveyAnalytics.aspx.designer.vb">
       <DependentUpon>SurveyAnalytics.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SurveyAnalytics.aspx.vb">
+    <Compile Include="Forms\Surveys\SurveyAnalytics.aspx.vb">
       <DependentUpon>SurveyAnalytics.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Forms\Surveys.aspx.designer.vb">
+    <Compile Include="Forms\Surveys\Surveys.aspx.designer.vb">
       <DependentUpon>Surveys.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Surveys.aspx.vb">
+    <Compile Include="Forms\Surveys\Surveys.aspx.vb">
       <DependentUpon>Surveys.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="Forms\TakeSurvey.aspx.designer.vb">
+    <Compile Include="Forms\Surveys\TakeSurvey.aspx.designer.vb">
       <DependentUpon>TakeSurvey.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\TakeSurvey.aspx.vb">
+    <Compile Include="Forms\Surveys\TakeSurvey.aspx.vb">
       <DependentUpon>TakeSurvey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

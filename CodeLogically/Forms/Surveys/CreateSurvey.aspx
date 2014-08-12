@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Create Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master"
     CodeBehind="CreateSurvey.aspx.vb" Inherits="CodeLogically.CreateSurvey" %>
         
-<%@ Register Src="~/Controls/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CS" %>
+<%@ Register Src="~/Controls/PopUp/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CS" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">

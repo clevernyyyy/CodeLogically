@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Take Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
 CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEventValidation="false" %>
 
-<%@ Register Src="~/Controls/TakeSurvey.ascx" TagPrefix="uctrl" TagName="TS" %>
+<%@ Register Src="~/Controls/PopUp/TakeSurvey.ascx" TagPrefix="uctrl" TagName="TS" %>
 <%@ Register Src="~/Controls/Inputs/Date.ascx" TagPrefix="uctrl" TagName="Date" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">

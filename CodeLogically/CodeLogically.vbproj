@@ -92,15 +92,15 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="Controls\AgreeDisagree.ascx" />
-    <Content Include="Controls\CreateNewQuestion.ascx" />
-    <Content Include="Controls\CreateSurvey.ascx" />
+    <Content Include="Controls\Questions\AgreeDisagree.ascx" />
+    <Content Include="Controls\PopUp\CreateNewQuestion.ascx" />
+    <Content Include="Controls\PopUp\CreateSurvey.ascx" />
     <Content Include="Controls\Inputs\Date.ascx" />
-    <Content Include="Controls\MultipleChoice.ascx" />
-    <Content Include="Controls\TakeSurvey.ascx" />
-    <Content Include="Controls\TextInput.ascx" />
-    <Content Include="Controls\UserOption.ascx" />
-    <Content Include="Controls\YesNoIDK.ascx" />
+    <Content Include="Controls\Questions\MultipleChoice.ascx" />
+    <Content Include="Controls\PopUp\TakeSurvey.ascx" />
+    <Content Include="Controls\Questions\TextInput.ascx" />
+    <Content Include="Controls\Inputs\UserOption.ascx" />
+    <Content Include="Controls\Questions\YesNoIDK.ascx" />
     <Content Include="Forms\Surveys\CreateQuestions.aspx" />
     <Content Include="Forms\Surveys\CreateSurvey.aspx" />
     <Content Include="Forms\Surveys\SurveyAnalytics.aspx" />
@@ -229,24 +229,24 @@
     <Compile Include="Classes\QuestionControl.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\AgreeDisagree.ascx.designer.vb">
+    <Compile Include="Controls\Questions\AgreeDisagree.ascx.designer.vb">
       <DependentUpon>AgreeDisagree.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\AgreeDisagree.ascx.vb">
+    <Compile Include="Controls\Questions\AgreeDisagree.ascx.vb">
       <DependentUpon>AgreeDisagree.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\CreateNewQuestion.ascx.designer.vb">
+    <Compile Include="Controls\PopUp\CreateNewQuestion.ascx.designer.vb">
       <DependentUpon>CreateNewQuestion.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CreateNewQuestion.ascx.vb">
+    <Compile Include="Controls\PopUp\CreateNewQuestion.ascx.vb">
       <DependentUpon>CreateNewQuestion.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\CreateSurvey.ascx.designer.vb">
+    <Compile Include="Controls\PopUp\CreateSurvey.ascx.designer.vb">
       <DependentUpon>CreateSurvey.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CreateSurvey.ascx.vb">
+    <Compile Include="Controls\PopUp\CreateSurvey.ascx.vb">
       <DependentUpon>CreateSurvey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -257,38 +257,38 @@
       <DependentUpon>Date.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\MultipleChoice.ascx.designer.vb">
+    <Compile Include="Controls\Questions\MultipleChoice.ascx.designer.vb">
       <DependentUpon>MultipleChoice.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\MultipleChoice.ascx.vb">
+    <Compile Include="Controls\Questions\MultipleChoice.ascx.vb">
       <DependentUpon>MultipleChoice.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\TakeSurvey.ascx.designer.vb">
+    <Compile Include="Controls\PopUp\TakeSurvey.ascx.designer.vb">
       <DependentUpon>TakeSurvey.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TakeSurvey.ascx.vb">
+    <Compile Include="Controls\PopUp\TakeSurvey.ascx.vb">
       <DependentUpon>TakeSurvey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\TextInput.ascx.designer.vb">
+    <Compile Include="Controls\Questions\TextInput.ascx.designer.vb">
       <DependentUpon>TextInput.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\TextInput.ascx.vb">
+    <Compile Include="Controls\Questions\TextInput.ascx.vb">
       <DependentUpon>TextInput.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\UserOption.ascx.designer.vb">
+    <Compile Include="Controls\Inputs\UserOption.ascx.designer.vb">
       <DependentUpon>UserOption.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UserOption.ascx.vb">
+    <Compile Include="Controls\Inputs\UserOption.ascx.vb">
       <DependentUpon>UserOption.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\YesNoIDK.ascx.designer.vb">
+    <Compile Include="Controls\Questions\YesNoIDK.ascx.designer.vb">
       <DependentUpon>YesNoIDK.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\YesNoIDK.ascx.vb">
+    <Compile Include="Controls\Questions\YesNoIDK.ascx.vb">
       <DependentUpon>YesNoIDK.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -394,8 +394,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controls\PopUp Controls\" />
-    <Folder Include="Controls\Questions\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

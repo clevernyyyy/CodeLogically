@@ -103,6 +103,8 @@
     <Content Include="Controls\YesNoIDK.ascx" />
     <Content Include="Forms\CreateQuestions.aspx" />
     <Content Include="Forms\CreateSurvey.aspx" />
+    <Content Include="Forms\SurveyAnalytics.aspx" />
+    <Content Include="Forms\Surveys.aspx" />
     <Content Include="Forms\TakeSurvey.aspx" />
     <Content Include="img\cal.gif" />
     <Content Include="Scripts\PerPage\CreateSurvey.js" />
@@ -309,6 +311,20 @@
     <Compile Include="Forms\CreateSurvey.aspx.vb">
       <DependentUpon>CreateSurvey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\SurveyAnalytics.aspx.designer.vb">
+      <DependentUpon>SurveyAnalytics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SurveyAnalytics.aspx.vb">
+      <DependentUpon>SurveyAnalytics.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Surveys.aspx.designer.vb">
+      <DependentUpon>Surveys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys.aspx.vb">
+      <DependentUpon>Surveys.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Forms\TakeSurvey.aspx.designer.vb">
       <DependentUpon>TakeSurvey.aspx</DependentUpon>

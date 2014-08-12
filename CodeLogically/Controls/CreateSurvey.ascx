@@ -20,7 +20,7 @@
                     <div>
                         <th>
                             <td>
-                                <asp:Label ID="Label1" runat="server" Text="#" />
+                                <asp:Label ID="lblNumber" runat="server" Text="#" />
                             </td>
                         </th>
                     </div>
@@ -36,8 +36,7 @@
                     <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false"/>
                     <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
                     <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>   
-                    <uctrl:AgreeDisagree runat="server" ID="ctrlAgreeDisagree" visible="false"/>   
-                                
+                    <uctrl:AgreeDisagree runat="server" ID="ctrlAgreeDisagree" visible="false"/>                                   
                 </ItemTemplate>
             </asp:Repeater>
         </ContentTemplate>

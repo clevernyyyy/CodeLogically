@@ -43,7 +43,7 @@
             </h2>
             <p>
                 Use our software to create simple surveys!</p>
-            <!-- Four columns of text below the carousel -->
+            <!-- Four columns of text below the header -->
             <div class="col-xs-12 col-sm-12">
                 <div id="gridDetails" class="row">
                     <div class="col-8 col-sm-8 col-lg-5 jumbotron">

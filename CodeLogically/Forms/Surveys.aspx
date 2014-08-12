@@ -42,5 +42,28 @@
         <br />
         <p>I can even create a second database specifically for logins and user management</p>
         <p>logins can be another one of our "modules"</p>
+        
+        <br />
+        <p>If they succesfully login in they'll see something like below, but bigger, bolder and cooler looking</p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="col-xs-12 col-sm-12">
+            <div id="gridDetails" class="row">
+                <div class="col-8 col-sm-8 col-lg-5 jumbotron">
+                    <h4>
+                        Create a Survey!</h4>
+                        <a ID="btnCreateSurvey" runat="server" class="btn btn-default" href="" role="button">Create &raquo;</a>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-8 col-sm-8 col-lg-5 jumbotron">
+                    <h4>
+                        Take a Survey!</h4>
+                        <a ID="btnTakeSurvey" runat="server" class="btn btn-default" href="" role="button">Take &raquo;</a>
+                </div>
+            </div>
+        </div>
     </div>
 </asp:Content>

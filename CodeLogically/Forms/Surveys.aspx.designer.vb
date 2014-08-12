@@ -21,4 +21,22 @@ Partial Public Class Surveys
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents divSurveyMainPage As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''btnDynamicSurvey control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnDynamicSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnYesNoSurvey control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnYesNoSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
 End Class

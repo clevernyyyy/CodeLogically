@@ -2,6 +2,9 @@
 
 <%@ Register Src="~/Controls/UserOption.ascx" TagPrefix="uctrl" TagName="UserOption" %>
 
+ <!-- Custom styles for this control -->
+ <link href="/Styles/PerControl/CreateControl.css" rel="stylesheet" />
+
 <br />
 <asp:Label runat="server" ID="lblQuestionText" CssClass="questionText" Text="Please type your question." ></asp:Label>
 <br />

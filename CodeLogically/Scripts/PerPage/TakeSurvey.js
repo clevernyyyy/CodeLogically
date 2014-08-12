@@ -3,7 +3,6 @@ $(document).ready(function () {
     InitSiteJS();
 });
 
-
 function OpenSurveyEditor() {
     $("#divTakeSurvey").dialog({
         appendTo: "#TakeSurveyPage",

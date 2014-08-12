@@ -134,14 +134,16 @@
     <Content Include="Scripts\site_scripts\scripts.js" />
     <Content Include="Scripts\site_scripts\smoothscroll.js" />
     <Content Include="Scripts\site_scripts\Treeview.js" />
-    <Content Include="Styles\animate-custom.css" />
-    <Content Include="Styles\animations.css" />
-    <Content Include="Styles\bootstrap-theme.css" />
-    <Content Include="Styles\bootstrap-theme.min.css" />
-    <Content Include="Styles\bootstrap.css" />
-    <Content Include="Styles\bootstrap.min.css" />
-    <Content Include="Styles\custom.css" />
-    <Content Include="Styles\icomoon.css" />
+    <Content Include="Styles\PerControl\CreateControl.css" />
+    <Content Include="Styles\PerControl\TakeControl.css" />
+    <Content Include="Styles\site_css\animate-custom.css" />
+    <Content Include="Styles\site_css\animations.css" />
+    <Content Include="Styles\site_css\bootstrap-theme.css" />
+    <Content Include="Styles\site_css\bootstrap-theme.min.css" />
+    <Content Include="Styles\site_css\bootstrap.css" />
+    <Content Include="Styles\site_css\bootstrap.min.css" />
+    <Content Include="Styles\site_css\custom.css" />
+    <Content Include="Styles\site_css\icomoon.css" />
     <Content Include="Styles\icomoon\icomoon.svg" />
     <Content Include="Styles\jquery-ui-redmond\images\animated-overlay.gif" />
     <Content Include="Styles\jquery-ui-redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -161,9 +163,9 @@
     <Content Include="Styles\jquery-ui-redmond\images\ui-icons_f9bd01_256x240.png" />
     <Content Include="Styles\jquery-ui-redmond\jquery-ui-1.10.4.custom.css" />
     <Content Include="Styles\jquery-ui-redmond\jquery-ui-1.10.4.custom.min.css" />
-    <Content Include="Styles\jQueryUIFixes.css" />
-    <Content Include="Styles\main.css" />
-    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\site_css\jQueryUIFixes.css" />
+    <Content Include="Styles\site_css\main.css" />
+    <Content Include="Styles\site_css\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\site_scripts\jquery-1.4.1-vsdoc.js" />
@@ -219,7 +221,7 @@
     </Compile>
     <Compile Include="Classes\Enums.vb" />
     <Compile Include="Classes\Modules\Formatting.vb" />
-    <Compile Include="Classes\MiscFunctions.vb" />
+    <Compile Include="Classes\Modules\MiscFunctions.vb" />
     <Compile Include="Classes\Question.vb" />
     <Compile Include="Classes\QuestionControl.vb">
       <SubType>ASPXCodeBehind</SubType>
@@ -365,8 +367,8 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Site.Master" />
-    <None Include="Styles\bootstrap-theme.css.map" />
-    <None Include="Styles\bootstrap.css.map" />
+    <None Include="Styles\site_css\bootstrap-theme.css.map" />
+    <None Include="Styles\site_css\bootstrap.css.map" />
     <None Include="Styles\icomoon\.DS_Store" />
     <None Include="Styles\icomoon\icomoon-.eot" />
     <None Include="Styles\icomoon\icomoon.eot" />

@@ -176,14 +176,14 @@ Public Class Survey
         Return FillDataTable(cmd)
     End Function
     Public Sub SaveSurvey()
-        If SurveyType = 0 Then
-            SurveyType = NewSurveyID()
+        If Questions.Count > 0 Then
+            If SurveyType = 0 Then
+                SurveyType = NewSurveyID()
+            End If
+            SaveSurveyType()
+            SaveSurveyText()
+            SaveSurveyOption()
         End If
-
-        SaveSurveyType()
-        SaveSurveyText()
-        SaveSurveyOption()
-
     End Sub
     Private Sub SaveSurveyType()
         Dim cmd = SqlCommand("Lookup.usp_Upsert_SurveyTypes")

@@ -87,7 +87,7 @@
         End If
     End Sub
     Private Sub btnFinish_Click(sender As Object, e As System.EventArgs) Handles btnFinish.Click
-        objSurvey.SurveyTitle = txtTitle.Text.Trim()
+        objSurvey.Title = txtTitle.Text.Trim()
         objSurvey.SaveSurvey()
     End Sub
 

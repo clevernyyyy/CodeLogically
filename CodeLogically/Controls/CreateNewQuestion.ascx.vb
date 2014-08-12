@@ -40,7 +40,7 @@ Public Class CreateNewQuestion
     Public Sub New(S As Survey, Optional ByVal enmQType As Enums.enmQuestionType = 0)
         MyBase.New()
         ParentSurvey = S
-        ParentSurvey.SurveySubType = enmQType
+        ParentSurvey.Type = enmQType
         If enmQType > 0 Then
             QuestionType = enmQType
             ddlQuestionType.Visible = False
@@ -53,7 +53,7 @@ Public Class CreateNewQuestion
 
         If HttpContext.Current.Session("Survey") IsNot Nothing Then
             ParentSurvey = HttpContext.Current.Session("Survey")
-            QuestionType = ParentSurvey.SurveySubType
+            QuestionType = ParentSurvey.Type
             If QuestionType > 0 Then
                 ddlQuestionType.Visible = False
             Else

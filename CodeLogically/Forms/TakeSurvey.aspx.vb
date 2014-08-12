@@ -25,7 +25,7 @@ Public Class TakeSurvey
                             Optional ByVal lSetFocusToTop As Boolean = False)
         Dim dt As DataTable = Nothing
 
-        Dim cmd = SqlCommand("Lookup.usp_Get_SurveyTypes")
+        Dim cmd = SqlCommand("Survey.usp_Get_Surveys")
 
         With cmd.Parameters
             '.AddWithValue("@cDescription", cDescription)
@@ -74,14 +74,14 @@ Public Class TakeSurvey
         Dim strTitle As String = ""
         Dim strUser As String = ""
         Dim dCreated As DateTime
-        Dim nSurveyType As Integer  'Identity Column
+        Dim nSurveyID As Integer  'Identity Column
 
         strTitle = Server.HtmlDecode(dvgPack.SelectedRow.Cells(0).Text)
         strUser = Server.HtmlDecode(dvgPack.SelectedRow.Cells(1).Text)
         dCreated = dvgPack.SelectedRow.Cells(2).Text
-        nSurveyType = dvgPack.SelectedRow.Cells(3).Text
+        nSurveyID = dvgPack.SelectedRow.Cells(3).Text
 
-        LoadSelectedSurvey(strTitle, strUser, dCreated, nSurveyType)
+        LoadSelectedSurvey(strTitle, strUser, dCreated, nSurveyID)
     End Sub
 
     Private Sub dvgPack_RowDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles dvgPack.RowDataBound

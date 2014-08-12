@@ -65,7 +65,7 @@ Module MiscFunctions
     End Function
     Public Function NewSurveyID() As Integer
         Dim intReturn As Integer
-        Dim cmd As SqlCommand = SqlCommand("[LookUp].usp_SurveyType_NewID")
+        Dim cmd As SqlCommand = SqlCommand("[Survey].usp_Create_NewSurveyID")
 
         Try
             cmd.Connection.Open()

@@ -103,11 +103,13 @@
     <Content Include="Controls\Questions\YesNoIDK.ascx" />
     <Content Include="Forms\Surveys\CreateQuestions.aspx" />
     <Content Include="Forms\Surveys\CreateSurvey.aspx" />
+    <Content Include="Forms\Surveys\QuestionDefinitions.aspx" />
     <Content Include="Forms\Surveys\SurveyAnalytics.aspx" />
     <Content Include="Forms\Surveys\Surveys.aspx" />
     <Content Include="Forms\Surveys\TakeSurvey.aspx" />
     <Content Include="img\cal.gif" />
     <Content Include="img\favicon.ico" />
+    <Content Include="img\help.ico" />
     <Content Include="Scripts\PerPage\CreateSurvey.js" />
     <Content Include="Scripts\PerPage\TakeSurvey.js" />
     <Content Include="Scripts\site_scripts\bootstrap.js" />
@@ -312,6 +314,13 @@
     <Compile Include="Forms\Surveys\CreateSurvey.aspx.vb">
       <DependentUpon>CreateSurvey.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Surveys\QuestionDefinitions.aspx.designer.vb">
+      <DependentUpon>QuestionDefinitions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\QuestionDefinitions.aspx.vb">
+      <DependentUpon>QuestionDefinitions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Forms\Surveys\SurveyAnalytics.aspx.designer.vb">
       <DependentUpon>SurveyAnalytics.aspx</DependentUpon>

@@ -192,4 +192,15 @@ Public Class CreateNewQuestion
         HideTheQuestionStuff()
 
     End Sub
+
+    Private Sub QuestionTypeDefinitions_ServerClick(sender As Object, e As System.EventArgs) Handles QuestionTypeDefinitions.ServerClick
+        OpenQuestionTypeDefinitions()
+    End Sub
+
+    Private Sub OpenQuestionTypeDefinitions()
+        Dim strJava As String = "OpenQuestionTypeDefinitions();"
+
+        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenQuestionTypeDefinitions", strJava, True)
+
+    End Sub
 End Class

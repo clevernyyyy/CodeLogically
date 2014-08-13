@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class CreateNewQuestion
 
     '''<summary>
+    '''lblQuestionType control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblQuestionType As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''lblQuestionText control.
     '''</summary>
     '''<remarks>
@@ -23,13 +32,22 @@ Partial Public Class CreateNewQuestion
     Protected WithEvents lblQuestionText As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtQuestionText control.
+    '''divQuestionTypeDefinitions control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtQuestionText As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents divQuestionTypeDefinitions As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''QuestionTypeDefinitions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents QuestionTypeDefinitions As Global.System.Web.UI.HtmlControls.HtmlAnchor
 
     '''<summary>
     '''ddlQuestionType control.
@@ -39,6 +57,15 @@ Partial Public Class CreateNewQuestion
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlQuestionType As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''txtQuestionText control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtQuestionText As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''chkIDKMyBFFJill control.

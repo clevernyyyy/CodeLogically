@@ -25,8 +25,6 @@ function OpenSurveyEditor() {
     return false;
 }
 
-
-
 function OpenSurveyEditorFast() {
     $("#divCreateSurvey").dialog({
         appendTo: "#CreateSurveyPage",
@@ -41,3 +39,23 @@ function OpenSurveyEditorFast() {
     return false;
 }
 
+
+function OpenQuestionTypeDefinitions() {
+    $("#divQuestionTypeDefinitions").dialog({
+        appendTo: "#QuestionTypeDefinitions",
+        modal: true,
+        dialogClass: "no-close",
+        width: 400,
+        height: 600,
+        title: "Question Type Definitions",
+        show: { effect: "size", duration: 800 },
+        hide: { effect: "clip", duration: 800 },
+        closeOnEscape: false,
+        buttons: {
+            OK: function () {
+                $(this).dialog("close");
+            }
+        },
+    }).css('z-index', '1005');
+    return false;
+}

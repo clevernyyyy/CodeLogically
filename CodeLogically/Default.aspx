@@ -27,7 +27,7 @@
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
     
     <!-- favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />    
+    <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div id="playArea">
@@ -75,8 +75,9 @@
     <div id="footerwrap">
         <div class="container">
             <h2 class="centered" style="color: white;">
-                Created by <a href="http://www.adamschaal.com">A/</a> <a href="">S/</a> <a href="http://www.leightoneash.com">
-                    L/</a>
+                Created by <a href="http://www.adamschaal.com">A</a>/ 
+                           <a href="">S</a>/
+                           <a href="http://www.leightoneash.com">L</a>
             </h2>
         </div>
     </div>

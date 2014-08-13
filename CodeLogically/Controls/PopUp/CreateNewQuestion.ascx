@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="CreateNewQuestion.ascx.vb" Inherits="CodeLogically.CreateNewQuestion" %>
 
-<%@ Register Src="~/Controls/Inputs/UserOption.ascx" TagPrefix="uctrl" TagName="UserOption" %>
+<%@ Register Src="~/Controls/PopUp/UserOption.ascx" TagPrefix="uctrl" TagName="UserOption" %>
 
  <!-- Custom styles for this control -->
  <link href="/Styles/PerControl/CreateControl.css" rel="stylesheet" />

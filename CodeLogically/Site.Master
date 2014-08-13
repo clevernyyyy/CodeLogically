@@ -31,7 +31,7 @@
         type='text/css' />
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />    
+    <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>

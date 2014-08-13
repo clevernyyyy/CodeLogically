@@ -99,7 +99,7 @@
     <Content Include="Controls\Questions\MultipleChoice.ascx" />
     <Content Include="Controls\PopUp\TakeSurvey.ascx" />
     <Content Include="Controls\Questions\TextInput.ascx" />
-    <Content Include="Controls\Inputs\UserOption.ascx" />
+    <Content Include="Controls\PopUp\UserOption.ascx" />
     <Content Include="Controls\Questions\YesNoIDK.ascx" />
     <Content Include="Forms\Surveys\CreateQuestions.aspx" />
     <Content Include="Forms\Surveys\CreateSurvey.aspx" />
@@ -278,10 +278,10 @@
       <DependentUpon>TextInput.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Inputs\UserOption.ascx.designer.vb">
+    <Compile Include="Controls\PopUp\UserOption.ascx.designer.vb">
       <DependentUpon>UserOption.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Inputs\UserOption.ascx.vb">
+    <Compile Include="Controls\PopUp\UserOption.ascx.vb">
       <DependentUpon>UserOption.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

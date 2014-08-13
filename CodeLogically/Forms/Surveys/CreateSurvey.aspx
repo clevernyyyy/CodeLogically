@@ -30,7 +30,7 @@
     <script type="text/javascript" src="/Scripts/PerPage/CreateSurvey.js?cachebreak=08092014"></script>
     
     <!-- favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    
+    <link rel="shortcut icon" href="../img/favicon.ico?v=2" type="image/x-icon" />    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style>

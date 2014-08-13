@@ -5,7 +5,12 @@
 .questionText
 {
     font-size:small;
-    /*font-family:Arial Black;*/
+    /*font-family:Arial Black;*/   
+}
+
+.questionType
+{
+    margin-left:220px;
 }
 
 
@@ -14,4 +19,37 @@
     height:25px;
     background-color:#f9f9f9;
    
+}
+
+.questionButton
+{
+    font-size: 12px !important;
+    font-weight: bold;
+    font-family: Latha;
+    color: #ffffff;
+    min-width: 54px;
+    height: 24px; 
+    white-space: nowrap;   
+    cursor: pointer;  
+    outline: 0 none;
+    padding: 0 10px 2px;
+    text-align: center;
+       
+    /* Coloring */       
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#5384BE), to(#4386D7)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #5384BE, #4386D7); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #5384BE, #4386D7); /* for Opera */
+}
+
+.questionButton:hover
+{
+    cursor: pointer;    
+    /* Coloring */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #85B6F0',endColorstr='#579AEB'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #85B6F0',endColorstr='#579AEB'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#85B6F0),to(#579AEB)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #85B6F0, #579AEB); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #85B6F0, #579AEB); /* for Opera */
 }

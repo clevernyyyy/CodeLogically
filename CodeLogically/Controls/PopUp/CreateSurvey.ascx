@@ -10,9 +10,9 @@
     <asp:Label ID="lblTitle" runat="server" CssClass="questionText" 
         Text="Please enter a descriptive title for your Survey!"></asp:Label>
     <br />
-    <asp:TextBox ID="txtTitle" runat="server" Width="600px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
+    <asp:TextBox ID="txtTitle" runat="server" Width="500px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
     <uctrl:CreateQuestion runat="server" ID="uctrlCreateQuestion" />
-    <asp:Button runat="server" ID="btnAddAnother" Text="Add Another Question" />
+    <asp:Button runat="server" ID="btnAddAnother"  CssClass="questionButton" Text="Add Another Question" />
     <asp:UpdatePanel runat="server" ID="upQuestions">
         <ContentTemplate>
             <asp:Repeater runat="server" ID="rptCurrentQuestions">

@@ -198,9 +198,9 @@ Public Class CreateNewQuestion
     End Sub
 
     Private Sub OpenQuestionTypeDefinitions()
-        Dim strJava As String = "OpenQuestionTypeDefinitions();"
+        Dim strJava As String = "OpenSurveyEditorAndHelp();"
 
-        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenQuestionTypeDefinitions", strJava, True)
+        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenSurveyEditorAndHelp", strJava, True)
 
     End Sub
 End Class

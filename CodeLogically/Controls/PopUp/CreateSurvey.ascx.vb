@@ -11,6 +11,9 @@
         Else
             objSurvey = Session("Survey")
         End If
+
+        'Commenting out this script until I can fix the AJAX issue.
+        'AddNewQuestionJS(btnAddAnother)
     End Sub
     Private Sub LoadSurvey()
         Dim collQuestions As Questions = objSurvey.Questions
@@ -63,8 +66,7 @@
         ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenSurveyEditorFast", strJava, True)
     End Sub
 
-
-    Private Sub SaveCurrentList()
+    Public Sub SaveCurrentList()
         If ValidPage() Then
             Dim nQuestionType As Enums.enmQuestionType = uctrlCreateQuestion.QuestionTypeBox.SelectedValue
             Dim objOptions As QuestionOptions = Nothing
@@ -94,8 +96,21 @@
     Private Function ValidPage() As Boolean
         Return uctrlCreateQuestion.ValidPage()
     End Function
-    Private Sub NewQuestion()
+    Public Sub NewQuestion()
         uctrlCreateQuestion.ClearControls()
         LoadSurvey()
     End Sub
+
+
+#Region "JavaScript"
+    Private Sub AddNewQuestionJS(ByVal btn As Button)
+        Dim strJava As String = ""
+
+        'Make the AJAX call
+        strJava = "javascript:addQuestion();"
+        btn.Attributes.Add("onclick", strJava)
+
+    End Sub
+#End Region
+
 End Class

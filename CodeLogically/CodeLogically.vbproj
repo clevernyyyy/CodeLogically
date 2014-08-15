@@ -92,6 +92,8 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="AddQuestion.asmx" />
+    <Content Include="Controls\PopUp\Help_QuestionTypeDef.ascx" />
     <Content Include="Controls\Questions\AgreeDisagree.ascx" />
     <Content Include="Controls\PopUp\CreateNewQuestion.ascx" />
     <Content Include="Controls\PopUp\CreateSurvey.ascx" />
@@ -220,6 +222,10 @@
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="AddQuestion.asmx.vb">
+      <DependentUpon>AddQuestion.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\Connections.vb" />
     <Compile Include="Classes\CreateQuestion.vb">
       <SubType>ASPXCodeBehind</SubType>
@@ -229,6 +235,13 @@
     <Compile Include="Classes\Modules\MiscFunctions.vb" />
     <Compile Include="Classes\Question.vb" />
     <Compile Include="Classes\QuestionControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PopUp\Help_QuestionTypeDef.ascx.designer.vb">
+      <DependentUpon>Help_QuestionTypeDef.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopUp\Help_QuestionTypeDef.ascx.vb">
+      <DependentUpon>Help_QuestionTypeDef.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\Questions\AgreeDisagree.ascx.designer.vb">

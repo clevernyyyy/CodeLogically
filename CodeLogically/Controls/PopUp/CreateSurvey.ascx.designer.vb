@@ -84,4 +84,13 @@ Partial Public Class CreateNewSurvey
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnFinish As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Help control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Help As Global.CodeLogically.Help_QuestionTypeDef
 End Class

@@ -44,7 +44,7 @@ function loadNextQuestion()
 {
     $.ajax({
         type: "POST",
-        url: "http://localhost:64663/AddQuestion.asmx/AddQuestion",
+        url: "~/AddQuestion.asmx/AddQuestion",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: loadSuccess(),

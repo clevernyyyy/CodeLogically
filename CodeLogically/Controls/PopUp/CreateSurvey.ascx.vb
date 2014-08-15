@@ -13,7 +13,7 @@
         End If
 
         'Commenting out this script until I can fix the AJAX issue.
-        'AddNewQuestionJS(btnAddAnother)
+        AddNewQuestionJS(btnAddAnother)
     End Sub
     Private Sub LoadSurvey()
         Dim collQuestions As Questions = objSurvey.Questions
@@ -26,7 +26,7 @@
             Dim Q As Question = e.Item.DataItem
             Dim lblNum As Label = e.Item.FindControl("lblQuestionNumber")
             'Dim pnlControl As Panel = e.Item.FindControl("pnlQuestionControl")
-            lblNum.Text = Q.QuestionNumber
+            lblNum.Text = ("#" + CStr(Q.QuestionNumber) + ".)  ")
             Dim ctrl As QuestionControl
             'pnlControl.Controls.Clear()
             Select Case Q.QuestionType

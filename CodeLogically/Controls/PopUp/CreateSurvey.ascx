@@ -13,34 +13,30 @@
     <asp:TextBox ID="txtTitle" runat="server" Width="500px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
     <uctrl:CreateQuestion runat="server" ID="uctrlCreateQuestion" />
     <asp:Button runat="server" ID="btnAddAnother"  CssClass="questionButton" Text="Add Another Question" />
-    <asp:UpdatePanel runat="server" ID="upQuestions">
-        <ContentTemplate>
-            <asp:Repeater runat="server" ID="rptCurrentQuestions">
-                <HeaderTemplate>
-                    <div>
-                        <th>
-                            <td>
-                                <asp:Label ID="lblNumber" runat="server" Text="#" />
-                            </td>
-                        </th>
-                    </div>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <div>
-                        <tr>
-                            <td>
-                                <asp:Label runat="server" ID="lblQuestionNumber" />
-                            </td>
-                        </tr>
-                    </div>
-                    <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false"/>
-                    <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
-                    <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>   
-                    <uctrl:AgreeDisagree runat="server" ID="ctrlAgreeDisagree" visible="false"/>                                   
-                </ItemTemplate>
-            </asp:Repeater>
-        </ContentTemplate>
-    </asp:UpdatePanel>
+    <br />
+    <div id="questionContent" style="margin-top:15px; float:left;">
+        <asp:UpdatePanel runat="server" ID="upQuestions">
+            <ContentTemplate>
+                <asp:Repeater runat="server" ID="rptCurrentQuestions">
+                    <ItemTemplate>
+                        <div>
+                            <tr>
+                                <td>
+                                    <asp:Label runat="server" ID="lblQuestionNumber" CssClass="questionText"/>
+                                    <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false"/>
+                                    <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
+                                    <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>   
+                                    <uctrl:AgreeDisagree runat="server" ID="ctrlAgreeDisagree" visible="false"/>  
+                                    <hr />    
+                                </td>
+                            </tr>
+                        </div>                             
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </div>
+
     <div id="divBottomLeft" class="bottomPopupLeft">
         <asp:Button runat="server" ID="btnCancel" Text="Cancel Survey" />
     </div>

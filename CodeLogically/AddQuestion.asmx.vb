@@ -15,11 +15,15 @@ Imports System.Collections.Specialized
 Public Class AddQuestion
     Inherits System.Web.Services.WebService
 
+
+    Dim instance As CreateNewSurvey
+
+    Public Sub New()
+        instance = New CreateNewSurvey
+    End Sub
     <WebMethod(True)> _
     Public Sub AddQuestion()
         Try
-            Dim instance = New CreateNewSurvey
-
             instance.SaveCurrentList()
             instance.NewQuestion()
         Catch ex As Exception

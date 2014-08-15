@@ -18,7 +18,7 @@
     <ItemTemplate>
                     <tr>
                 <li>
-                        <td><asp:Label runat="server" ID="lblQuestionText" /></td>
+                        <td><asp:Label runat="server" ID="lblQuestionText"  CssClass="questionText" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtSD" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtD" /></td>
                         <td><asp:RadioButton runat="server" ID="rbtN" /></td>

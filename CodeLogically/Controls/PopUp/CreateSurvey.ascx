@@ -12,7 +12,7 @@
     <br />
     <asp:TextBox ID="txtTitle" runat="server" Width="500px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
     <uctrl:CreateQuestion runat="server" ID="uctrlCreateQuestion" />
-    <asp:Button runat="server" ID="btnAddAnother"  CssClass="questionButton" Text="Add Another Question" />
+    <asp:Button runat="server" ID="btnAddAnother"  CssClass="AddQuestionButton" Text="Add Another Question" />
     <br />
     <div id="questionContent" style="margin-top:15px; float:left;">
         <asp:UpdatePanel runat="server" ID="upQuestions">
@@ -40,8 +40,8 @@
     </div>
 
     <div id="divBottomLeft" class="bottomPopupLeft">
-        <asp:Button runat="server" ID="btnCancel" Text="Cancel Survey" />
+        <asp:Button runat="server" ID="btnCancel" class="bottomButtons" Text="Cancel Survey" />
     </div>
     <div id="divBottomRight" class="bottomPopupRight">
-        <asp:Button runat="server" ID="btnFinish" Text="Finish Survey" />
+        <asp:Button runat="server" ID="btnFinish" class="bottomButtons" Text="Finish Survey" />
     </div>

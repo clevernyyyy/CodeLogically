@@ -28,7 +28,7 @@
         <ContentTemplate>
             <asp:CheckBox runat="server" ID="chkIDKMyBFFJill" CssClass="questionText" Text="Check to allow 'I don't know' result"></asp:CheckBox>
             <asp:CheckBox runat="server" ID="chkMultiLine" CssClass="questionText" Text="Check to allow Multi-Line entry"></asp:CheckBox>
-            <asp:Button runat="server" ID="btnAddOption" CssClass="questionButton" Text="Add Option" Width="100px" ></asp:Button>
+            <asp:Button runat="server" ID="btnAddOption" CssClass="bottomButtons" Text="Add Option" Width="100px" ></asp:Button>
             <asp:TextBox ID="txtRadioAmount" runat="server" AutoPostBack="true" ></asp:TextBox>
             <div runat="server" id="divOptions">
                 <asp:Repeater runat="server" ID="rptUserOptions">

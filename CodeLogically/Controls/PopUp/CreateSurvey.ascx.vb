@@ -67,7 +67,7 @@
     End Sub
 
     Public Sub SaveCurrentList()
-        If ValidPage() Then
+        If ValidPage() Then ' And Not IsPostBack() Then     (Add when I get AJAX working)
             Dim nQuestionType As Enums.enmQuestionType = uctrlCreateQuestion.QuestionTypeBox.SelectedValue
             Dim objOptions As QuestionOptions = Nothing
             If QuestionAllowsOptions(nQuestionType) Then
@@ -79,7 +79,10 @@
                 If txtOptions.Count > 0 Then
                     Dim lstOptions As List(Of String) = txtOptions.ToList
                     For Each strOption In lstOptions
-                        objOptions.Add(New QuestionOption(strOption, 0))
+                        'Don't add an option that was never entered
+                        If strOption <> "" Then
+                            objOptions.Add(New QuestionOption(strOption, 0))
+                        End If
                     Next
                 End If
             End If

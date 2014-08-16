@@ -1,15 +1,26 @@
 ﻿body {
 }
 
-/* TEXT for QUESTIONS */
+/********************************/
+/********* Labels *************/
+/********************************/
+
 .questionText
+{
+    float: left;
+    font-size:small;
+    margin-left:10px;
+    /*font-family:Arial Black;*/   
+}
+
+.numberText
 {
     float: left;
     font-size:small;
     /*font-family:Arial Black;*/   
 }
 
-.surveyTitle
+.smallfont
 {
     font-size:small;
 }
@@ -20,12 +31,35 @@
 }
 
 
+
+/********************************/
+/********* Controls *************/
+/********************************/
+
 .smallBox
 {
     height:25px;
-    background-color:#f9f9f9;
-   
+    background-color:#f9f9f9;   
 }
+
+.ctrlDropBox
+{
+    height:25px;
+    background-color:#f9f9f9;
+    margin-left: 40px;
+}
+
+.RadioButtonList
+{
+  vertical-align:super;  
+  margin-top: -1px;
+  font-weight: normal !important;
+}
+
+
+/********************************/
+/********* Buttons **************/
+/********************************/
 
 .questionButton
 {

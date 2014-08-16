@@ -7,7 +7,7 @@
 <%@ Register Src="~/Controls/Questions/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
 <%@ Register Src="~/Controls/Questions/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
 
-    <asp:Label ID="lblTitle" runat="server" CssClass="surveyTitle" 
+    <asp:Label ID="lblTitle" runat="server" CssClass="smallfont" 
         Text="Please enter a descriptive title for your Survey!"></asp:Label>
     <br />
     <asp:TextBox ID="txtTitle" runat="server" Width="500px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
@@ -22,7 +22,7 @@
                         <div id="divQuestions" style="float:left">
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblQuestionNumber" CssClass="questionText" />
+                                    <asp:Label runat="server" ID="lblQuestionNumber" CssClass="numberText" />
                                     <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false" />
                                     <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
                                     <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>   

@@ -23,15 +23,6 @@ Partial Public Class MultipleChoice
     Protected WithEvents lblQuestionText As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''rblRadioButtons control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rblRadioButtons As Global.System.Web.UI.WebControls.RadioButtonList
-
-    '''<summary>
     '''ddlOptions control.
     '''</summary>
     '''<remarks>
@@ -39,4 +30,13 @@ Partial Public Class MultipleChoice
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlOptions As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Place control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Place As Global.System.Web.UI.WebControls.PlaceHolder
 End Class

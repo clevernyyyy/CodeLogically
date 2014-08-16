@@ -23,6 +23,7 @@
 .smallfont
 {
     font-size:small;
+    font-weight:normal;
 }
 
 .questionType
@@ -153,4 +154,29 @@
 
     /* Classes used in dialogs */
     /* ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix */
+}
+
+
+
+
+/********************************/
+/********* Placeholders *********/
+/********************************/
+
+
+::-webkit-input-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}
+:-moz-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}
+
+:-ms-input-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
 }

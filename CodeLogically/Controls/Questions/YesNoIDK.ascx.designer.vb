@@ -23,13 +23,13 @@ Partial Public Class YesNoIDK
     Protected WithEvents lblQuestionText As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''rbtYes control.
+    '''rbtYes  control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rbtYes As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents rbtYes As Global.System.Web.UI.HtmlControls.HtmlInputRadioButton
 
     '''<summary>
     '''rbtNo control.
@@ -38,7 +38,7 @@ Partial Public Class YesNoIDK
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rbtNo As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents rbtNo As Global.System.Web.UI.HtmlControls.HtmlInputRadioButton
 
     '''<summary>
     '''rbtIDKMyBFFJill control.
@@ -47,5 +47,5 @@ Partial Public Class YesNoIDK
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rbtIDKMyBFFJill As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents rbtIDKMyBFFJill As Global.System.Web.UI.HtmlControls.HtmlInputRadioButton
 End Class

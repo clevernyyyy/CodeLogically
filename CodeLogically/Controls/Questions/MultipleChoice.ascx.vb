@@ -9,9 +9,11 @@
             MyBase.QuestionType = value
             If value = Enums.enmQuestionType.DropDown Then
                 ddlOptions.Visible = True
-                rblRadioButtons.Visible = False
+                'Place.Visible = False
+                'rblRadioButtons.Visible = False
             Else
-                rblRadioButtons.Visible = True
+                'Place.Visible = True
+                'rblRadioButtons.Visible = True
                 ddlOptions.Visible = False
             End If
         End Set
@@ -58,8 +60,20 @@
             ddlOptions.DataValueField = "OptionText"
             ddlOptions.DataBind()
         ElseIf Me.QuestionType = Enums.enmQuestionType.MultiRadio Then
+            Place.Controls.Clear()
             For Each O As QuestionOption In Q.QuestionOptions
-                AddNewRadioButton(O.OptionOrder, O.OptionText, Q.QuestionNumber)
+                Dim myRB As HtmlInputRadioButton = New HtmlInputRadioButton()
+                'This works and aligns left, but doesn't get the actual text to seem to work
+                myRB.Attributes.Add("style", "float:left;")
+                Place.Controls.Add(myRB)
+
+                Dim span As HtmlGenericControl = New HtmlGenericControl("span")
+                span.InnerHtml = O.OptionText + "</br>"
+                span.Attributes.Add("class", "smallfont")
+                span.Attributes.Add("style", "align:left;")
+                Place.Controls.Add(span)
+
+                'AddNewRadioButton(O.OptionOrder, O.OptionText, Q.QuestionNumber)
             Next
         End If
     End Sub
@@ -76,13 +90,14 @@
         'End With
 
         Dim li As New ListItem(cText)
-        rblRadioButtons.Items.Add(li)
-
+        'rblRadioButtons.Items.Add(li)
+        
         'rbl.Controls.Add(MyRadioButton)
     End Sub
     Public Sub New()
         Me.ddlOptions = New DropDownList
-        Me.rblRadioButtons = New RadioButtonList
+        'Me.rblRadioButtons = New RadioButtonList
+        Me.Place = New PlaceHolder
         Me.lblQuestionText = New Label
     End Sub
 End Class

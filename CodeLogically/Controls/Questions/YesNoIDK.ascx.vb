@@ -61,9 +61,9 @@
         Return True
     End Function
     Public Sub New()
-        Me.rbtIDKMyBFFJill = New RadioButton
-        Me.rbtNo = New RadioButton
-        Me.rbtYes = New RadioButton
+        Me.rbtIDKMyBFFJill = New HtmlInputRadioButton
+        Me.rbtNo = New HtmlInputRadioButton
+        Me.rbtYes = New HtmlInputRadioButton
         Me.lblQuestionText = New Label
     End Sub
     Public Overrides Sub LoadQuestion(Q As Question)

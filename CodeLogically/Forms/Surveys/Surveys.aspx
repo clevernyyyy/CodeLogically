@@ -1,4 +1,7 @@
-﻿<%@ Page Title="Surveys" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
+﻿<%@ Page Title="Surveys" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
+CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
+
+<%@ Register Src="~/Controls/PopUp/Login.ascx" TagPrefix="uctrl" TagName="Log" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -19,11 +22,12 @@
         rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
+    <link href='/Styles/site_css/custom.css' rel='stylesheet' type='text/css' />
 
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
-    <script type="text/javascript" src="/Scripts/PerPage/TakeSurvey.js?cachebreak=08092014"></script>
+    <script type="text/javascript" src="/Scripts/PerPage/Surveys.js?cachebreak=08162014"></script>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    
@@ -69,4 +73,11 @@
             </div>
         </div>
     </div>
+    
+    <div class="none border" id="divLogin" title="Login Please">
+        <uctrl:Log ID="Login" runat="server" />
+    </div>
+
+
+
 </asp:Content>

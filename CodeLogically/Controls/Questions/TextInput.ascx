@@ -3,5 +3,5 @@
 
 <asp:Label runat="server" ID="lblQuestionText"  CssClass="questionText"/>
 <br />
-&gt;&gt;
-<asp:TextBox runat="server" ID="txtQuestionAnswer"  CssClass="questionText"/>
+<asp:TextBox runat="server" ID="txtQuestionAnswer" Width="600px" style="text-align:left; font-size:small" CssClass="smallBox"/>
+<br />

@@ -4,8 +4,14 @@
 /* TEXT for QUESTIONS */
 .questionText
 {
+    float: left;
     font-size:small;
     /*font-family:Arial Black;*/   
+}
+
+.surveyTitle
+{
+    font-size:small;
 }
 
 .questionType

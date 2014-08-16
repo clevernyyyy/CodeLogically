@@ -79,26 +79,31 @@ Public Class CreateNewQuestion
 
     Private Sub ddlQuestionType_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles ddlQuestionType.SelectedIndexChanged
         If ddlQuestionType.SelectedIndex >= 0 Then
-            QuestionType = ddlQuestionType.SelectedValue
-            HideTheQuestionStuff()
-            Select Case QuestionType
-                Case Enums.enmQuestionType.YesNo, Enums.enmQuestionType.YesNoIDK
-                    chkIDKMyBFFJill.Visible = True
-                    chkIDKMyBFFJill.Checked = (QuestionType = Enums.enmQuestionType.YesNoIDK)
-                Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
-                    chkMultiLine.Visible = True
-                    chkMultiLine.Checked = (QuestionType = Enums.enmQuestionType.MultiLine)
-                Case Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio, Enums.enmQuestionType.AgreeDisagree
-                    Dim lstOptions As New List(Of String)
-                    lstOptions.Add("")
-                    rptUserOptions.Visible = True
-                    rptUserOptions.DataSource = lstOptions
-                    rptUserOptions.DataBind()
-                    btnAddOption.Visible = True
-                    'Case Enums.enmQuestionType.MultiRadio
-                    '    txtRadioAmount.Visible = True
-                    '    pnlRadioButtons.Visible = True
-            End Select
+            If ddlQuestionType.SelectedValue <> "" Then
+                QuestionType = ddlQuestionType.SelectedValue
+                HideTheQuestionStuff()
+                Select Case QuestionType
+                    Case Enums.enmQuestionType.YesNo, Enums.enmQuestionType.YesNoIDK
+                        chkIDKMyBFFJill.Visible = True
+                        chkIDKMyBFFJill.Checked = (QuestionType = Enums.enmQuestionType.YesNoIDK)
+                    Case Enums.enmQuestionType.SingleLine, Enums.enmQuestionType.MultiLine
+                        chkMultiLine.Visible = True
+                        chkMultiLine.Checked = (QuestionType = Enums.enmQuestionType.MultiLine)
+                    Case Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio, Enums.enmQuestionType.AgreeDisagree
+                        Dim lstOptions As New List(Of String)
+                        lstOptions.Add("")
+                        rptUserOptions.Visible = True
+                        rptUserOptions.DataSource = lstOptions
+                        rptUserOptions.DataBind()
+                        btnAddOption.Visible = True
+                        'Case Enums.enmQuestionType.MultiRadio
+                        '    txtRadioAmount.Visible = True
+                        '    pnlRadioButtons.Visible = True
+                End Select
+            Else
+                'Nothing was selected
+                'Remove added check boxes?
+            End If
         End If
     End Sub
     Private Sub HideTheQuestionStuff()

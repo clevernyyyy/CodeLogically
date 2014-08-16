@@ -7,7 +7,7 @@
 <%@ Register Src="~/Controls/Questions/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
 <%@ Register Src="~/Controls/Questions/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
 
-    <asp:Label ID="lblTitle" runat="server" CssClass="questionText" 
+    <asp:Label ID="lblTitle" runat="server" CssClass="surveyTitle" 
         Text="Please enter a descriptive title for your Survey!"></asp:Label>
     <br />
     <asp:TextBox ID="txtTitle" runat="server" Width="500px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
@@ -17,21 +17,23 @@
     <div id="questionContent" style="margin-top:15px; float:left;">
         <asp:UpdatePanel runat="server" ID="upQuestions">
             <ContentTemplate>
-                <asp:Repeater runat="server" ID="rptCurrentQuestions">
+                <asp:Repeater runat="server" ID="rptCurrentQuestions" >
                     <ItemTemplate>
-                        <div>
+                        <div id="divQuestions" style="float:left">
                             <tr>
                                 <td>
-                                    <asp:Label runat="server" ID="lblQuestionNumber" CssClass="questionText"/>
-                                    <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false"/>
+                                    <asp:Label runat="server" ID="lblQuestionNumber" CssClass="questionText" />
+                                    <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false" />
                                     <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
                                     <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>   
                                     <uctrl:AgreeDisagree runat="server" ID="ctrlAgreeDisagree" visible="false"/>  
-                                    <hr />    
                                 </td>
                             </tr>
-                        </div>                             
-                    </ItemTemplate>
+                        <hr style="width:250; border:none; position:absolute; left:0; right:0; margin-left:-200px;"/> 
+                        <br />     
+                        </div>       
+                        <br />                
+                    </ItemTemplate>    
                 </asp:Repeater>
             </ContentTemplate>
         </asp:UpdatePanel>

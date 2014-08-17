@@ -6,6 +6,8 @@
 <%@ Register Src="~/Controls/Questions/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
 <%@ Register Src="~/Controls/Questions/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
 
+ <!-- Custom styles for this control -->
+ <link href="/Styles/PerControl/TakeControl.css" rel="stylesheet" />
 
             <asp:Repeater runat="server" ID="rptSurvey">
                 <ItemTemplate>

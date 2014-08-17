@@ -23,6 +23,7 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
         rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
+    <link href="/Styles/PerControl/TakeControl.css" rel="stylesheet" />
     
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>

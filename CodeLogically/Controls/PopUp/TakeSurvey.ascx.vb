@@ -14,7 +14,11 @@
             objSurvey = Session("Survey")
         End If
     End Sub
-    Private Sub LoadSurvey()
+    Public Sub LoadSurvey(Optional ByVal objTakeSurvey As Survey = Nothing)
+        If objTakeSurvey IsNot Nothing Then
+            objSurvey = objTakeSurvey
+        End If
+
         Dim collQuestions As Questions = objSurvey.Questions
         rptSurvey.DataSource = collQuestions
         rptSurvey.DataBind()

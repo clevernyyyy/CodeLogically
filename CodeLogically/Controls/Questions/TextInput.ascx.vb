@@ -39,6 +39,12 @@
             End If
         End Set
     End Property
+    Public Overrides ReadOnly Property Value As Object
+        Get
+            Return txtQuestionAnswer.Text
+        End Get
+
+    End Property
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

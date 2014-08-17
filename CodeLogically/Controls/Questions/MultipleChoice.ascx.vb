@@ -28,7 +28,29 @@
         End Set
     End Property
 
+    Public ReadOnly Property OptionDropDown As DropDownList
+        Get
+            Return ddlOptions
+        End Get
+    End Property
 
+    Public Overrides ReadOnly Property Value As Object
+        Get
+            If QuestionType = Enums.enmQuestionType.DropDown Then
+                Return ddlOptions.SelectedValue
+            Else
+                For Each ctrl As Control In Place.Controls
+                    If ctrl.GetType Is GetType(RadioButton) Then
+                        If DirectCast(ctrl, RadioButton).Checked Then
+                            Return DirectCast(ctrl, RadioButton).Text
+                        End If
+                    End If
+                Next
+            End If
+            Return Nothing
+        End Get
+
+    End Property
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
     End Sub

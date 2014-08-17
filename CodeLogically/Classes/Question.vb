@@ -284,7 +284,7 @@ Public Class Survey
             End Try
         End If
     End Sub
-    Private Sub SaveSurveyAnswers()
+    Public Sub SaveSurveyAnswers()
 
         Dim cmd = SqlCommand("Survey.usp_BulkUpsert_Survey_Answers")
 
@@ -298,23 +298,25 @@ Public Class Survey
         End With
 
         For Each q As Question In Questions
-            Dim dr As DataRow = dtSurveyAnswers.NewRow
-            With dr
-                .Item("nSurveyID") = ID
-                .Item("nUserNum") = UserNum
-                .Item("nQuestionNumber") = q.QuestionNumber
-                '.Item("cOption") = q.QuestionAnswer
-                '.Item("cSaveValue") = q.QuestionAnswer
-            End With
-
-            dtSurveyAnswers.Rows.Add(dr)
+            For Each kvpAnswer As KeyValuePair(Of Integer, String) In q.QuestionAnswers
+                Dim dr As DataRow = dtSurveyAnswers.NewRow
+                With dr
+                    .Item("nSurveyID") = ID
+                    .Item("nUserNum") = UserNum
+                    .Item("nQuestionNumber") = q.QuestionNumber
+                    .Item("cOption") = kvpAnswer.Key
+                    .Item("cSaveValue") = kvpAnswer.Value
+                End With
+                dtSurveyAnswers.Rows.Add(dr)
+            Next
         Next
 
         With cmd.Parameters
             .AddWithValue("@nSurveyID", ID)
+            .AddWithValue("@nUserNum", UserNum)
             Dim tvp As SqlClient.SqlParameter = .AddWithValue("@SurveyAnswers", dtSurveyAnswers)
             tvp.SqlDbType = SqlDbType.Structured
-            tvp.TypeName = "[Survey].[SurveyAnswers_Type]"
+            tvp.TypeName = "[Survey].[Answers_Type]"
         End With
 
         Try

@@ -19,6 +19,36 @@
     Public Overrides Function SaveAnswer() As Boolean
         Return True
     End Function
+    Public Overrides ReadOnly Property Value As Object
+        Get
+            Dim dicValue As New Dictionary(Of Integer, String)
+            Dim intOption As Integer = 0
+            For Each item In rptOptions.Items
+                Dim rbtStrongDisagree As RadioButton = item.FindControl("rbtSD")
+                Dim rbtDisagree As RadioButton = item.FindControl("rbtD")
+                Dim rbtNeutral As RadioButton = item.FindControl("rbtN")
+                Dim rbtAgree As RadioButton = item.FindControl("rbtA")
+                Dim rbtStrongAgree As RadioButton = item.FindControl("rbtSA")
+
+                Select Case True
+                    Case rbtStrongDisagree.Checked
+                        dicValue.Add(intOption, "0")
+                    Case rbtDisagree.Checked
+                        dicValue.Add(intOption, "1")
+                    Case rbtNeutral.Checked
+                        dicValue.Add(intOption, "2")
+                    Case rbtAgree.Checked
+                        dicValue.Add(intOption, "3")
+                    Case rbtStrongAgree.Checked
+                        dicValue.Add(intOption, "4")
+                End Select
+                intOption += 1
+            Next
+
+            Return dicValue
+        End Get
+
+    End Property
     Public Overrides Sub LoadQuestion(Q As Question)
         Me.QuestionType = Q.QuestionType
         rptOptions.DataSource = Q.QuestionOptions

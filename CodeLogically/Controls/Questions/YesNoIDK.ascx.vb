@@ -53,6 +53,20 @@
             Return rbtIDKMyBFFJill.ClientID
         End Get
     End Property
+    Public Overrides ReadOnly Property Value As Object
+        Get
+            Select Case True
+                Case rbtYes.Checked
+                    Return "Yes"
+                Case rbtNo.Checked
+                    Return "No"
+                Case rbtIDKMyBFFJill.Checked
+                    Return "IDK"
+            End Select
+            Return Nothing
+        End Get
+
+    End Property
 
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 

@@ -14,7 +14,8 @@
     <uctrl:CreateQuestion runat="server" ID="uctrlCreateQuestion" />
     <asp:Button runat="server" ID="btnAddAnother"  CssClass="AddQuestionButton" Text="Add Another Question" />
     <br />
-    <div id="questionContent" style="margin-top:15px; float:left;">
+    <div id="questionContent" runat="server" style="margin-top:15px; float:left; 
+        width:600px; height:400px; overflow-y:auto; overflow-x:hidden; position:absolute;">
         <asp:UpdatePanel runat="server" ID="upQuestions">
             <ContentTemplate>
                 <asp:Repeater runat="server" ID="rptCurrentQuestions" >

@@ -9,7 +9,7 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
     <meta name="description" content="CodeOne Test Site">
     <meta name="author" content="Adam Schaal">
     <link rel="shortcut icon" href="">
-    <title>Surveys</title>
+    <title>Survey</title>
 
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/site_css/bootstrap.min.css" />
@@ -40,22 +40,7 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
         }
     </style>
     <div id="divSurveyMainPage" runat="server" class="container">
-    
-        <p>I think we should have a login here</p>
-        <p>If there is no user create a login</p>    
-        <br />
-        <p>We should probably make a login control for this</p>
-        <p>So that we can implement it everywhere if needed</p>
-        <br />
-        <p>I can even create a second database specifically for logins and user management</p>
-        <p>logins can be another one of our "modules"</p>
-        
-        <br />
-        <p>If they succesfully login in they'll see something like below, but bigger, bolder and cooler looking</p>
-        <br />
-        <br />
-        <br />
-        <br />
+
         <div class="col-xs-12 col-sm-12">
             <div id="gridDetails" class="row">
                 <div class="col-8 col-sm-8 col-lg-5 jumbotron">
@@ -72,10 +57,14 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
                 </div>
             </div>
         </div>
+        <!--/row-->
     </div>
+    <!--/.container-->
     
-    <div class="none border" id="divLogin" title="Login Please">
-        <uctrl:Log ID="Login" runat="server" />
+    <div style="clear: both;" />
+    
+    <div id="divLoginOpen">
+        <uctrl:Log ID="Login_Control" runat="server" />
     </div>
 
 

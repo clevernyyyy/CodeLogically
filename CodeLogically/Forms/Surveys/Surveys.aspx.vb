@@ -30,7 +30,6 @@
         Return False
     End Function
 
-
     Private Sub OpenLoginDialog()
         Dim strJava As String = "OpenLoginDialog();"
 

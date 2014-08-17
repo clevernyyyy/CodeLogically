@@ -8,7 +8,7 @@ function OpenSurveyEditor() {
         modal: true,
         dialogClass: "no-close",
         width: 650,
-        height: 780,
+        height: 680,
         title: "Survey Editor",
         show: { effect: "size", duration: 800 },
         hide: { effect: "clip", duration: 800 },
@@ -24,7 +24,7 @@ function OpenSurveyEditorFast() {
         modal: true,
         dialogClass: "no-close",
         width: 650,
-        height: 780,
+        height: 680,
         title: "Survey Editor",
         hide: { effect: "clip", duration: 800 },
         closeOnEscape: false,
@@ -44,7 +44,7 @@ function loadNextQuestion()
 {
     $.ajax({
         type: "POST",
-        url: "~/AddQuestion.asmx/AddQuestion",
+        url: "/AddQuestion.asmx/AddQuestion/",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: loadSuccess(),

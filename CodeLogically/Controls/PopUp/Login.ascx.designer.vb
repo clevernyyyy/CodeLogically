@@ -74,16 +74,7 @@ Partial Public Class Login
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbRegister As Global.System.Web.UI.HtmlControls.HtmlAnchor
-
-    '''<summary>
-    '''btnReg control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnReg As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents lbRegister As Global.System.Web.UI.WebControls.LinkButton
 
     '''<summary>
     '''btnCancel control.

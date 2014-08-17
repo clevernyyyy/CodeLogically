@@ -12,16 +12,13 @@
         <br />
     <asp:Label id="lblPassword" runat="server" Text="Password:">Password:</asp:Label>
     <asp:TextBox ID="txtPassword" runat="server" Width="200px" style="text-align:left; 
-        font-size:small" CssClass="smallBox"></asp:TextBox>
+        font-size:small" CssClass="smallBox" TextMode="Password"></asp:TextBox>
     <br />
 
     <asp:Label ID="lblRegister" runat="server" Text="Don't have a login?  "></asp:Label>
     
-    <a ID="lbRegister" runat="server">Register Now!</a>
-    
-        <asp:Button runat="server" ID="btnReg" Text="Register" />
-
-   
+    <asp:LinkButton ID="lbRegister" runat="server" Text="Register Now!"></asp:LinkButton>
+       
     <div id="divBottomLeft" class="bottomPopupLeft">
         <asp:Button runat="server" ID="btnCancel" Text="Cancel" />
     </div>

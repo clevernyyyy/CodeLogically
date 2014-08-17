@@ -3,6 +3,7 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        AddRegJS(lbRegister)
     End Sub
     Private Sub SignIn()
         SignIn(txtUserName.Text, txtPassword.Text)
@@ -18,20 +19,15 @@
         SignIn()
     End Sub
 
-    Private Sub btnReg_Click(sender As Object, e As System.EventArgs) Handles btnReg.Click
-        OpenRegisterControl()
-    End Sub
+#Region "JavaScript"
+    Private Sub AddRegJS(ByVal lb As LinkButton)
+        Dim strJava As String = ""
 
-
-    Private Sub lbRegister_ServerClick(sender As Object, e As System.EventArgs) Handles lbRegister.ServerClick
-        OpenRegisterControl()
-    End Sub
-
-    Private Sub OpenRegisterControl()
-        Dim strJava As String = "OpenRegister();"
-
-        ScriptManager.RegisterStartupScript(Me, Me.GetType, "OpenRegister", strJava, True)
+        'Make the AJAX call
+        strJava = "javascript:OpenRegister();"
+        lb.Attributes.Add("onclick", strJava)
 
     End Sub
+#End Region
 
 End Class

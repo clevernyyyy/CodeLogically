@@ -12,7 +12,7 @@
                 'Place.Visible = False
                 'rblRadioButtons.Visible = False
             Else
-                'Place.Visible = True
+                Place.Visible = True
                 'rblRadioButtons.Visible = True
                 ddlOptions.Visible = False
             End If

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Log In" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false"
-    CodeBehind="Login.aspx.vb" Inherits="CodeLogically.Login" %>
+    CodeBehind="Login.aspx.vb" Inherits="CodeLogically.Login2" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>

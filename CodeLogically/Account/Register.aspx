@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="Register" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false"
-    CodeBehind="Register.aspx.vb" Inherits="CodeLogically.Register" %>
+    CodeBehind="Register.aspx.vb" Inherits="CodeLogically.Register2" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>

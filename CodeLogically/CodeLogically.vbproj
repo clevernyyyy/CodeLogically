@@ -95,6 +95,7 @@
     <Content Include="AddQuestion.asmx" />
     <Content Include="Controls\PopUp\Help_QuestionTypeDef.ascx" />
     <Content Include="Controls\PopUp\Login.ascx" />
+    <Content Include="Controls\PopUp\Register.ascx" />
     <Content Include="Controls\Questions\AgreeDisagree.ascx" />
     <Content Include="Controls\PopUp\CreateNewQuestion.ascx" />
     <Content Include="Controls\PopUp\CreateSurvey.ascx" />
@@ -239,6 +240,7 @@
     <Compile Include="Classes\QuestionControl.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Classes\User.vb" />
     <Compile Include="Controls\PopUp\Help_QuestionTypeDef.ascx.designer.vb">
       <DependentUpon>Help_QuestionTypeDef.ascx</DependentUpon>
     </Compile>
@@ -251,6 +253,13 @@
     </Compile>
     <Compile Include="Controls\PopUp\Login.ascx.vb">
       <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PopUp\Register.ascx.designer.vb">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopUp\Register.ascx.vb">
+      <DependentUpon>Register.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\Questions\AgreeDisagree.ascx.designer.vb">

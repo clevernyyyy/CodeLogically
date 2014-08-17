@@ -47,5 +47,5 @@ Partial Public Class Surveys
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Login_Control As Global.CodeLogically.Login1
+    Protected WithEvents Login_Control As Global.CodeLogically.Login
 End Class

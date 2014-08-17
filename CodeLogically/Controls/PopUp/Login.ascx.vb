@@ -2,6 +2,13 @@
     Inherits System.Web.UI.UserControl
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If IsPostBack Then
+            If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Cancel") Then
+                'Close
+            ElseIf (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Finish") Then
+                SignIn()
+            End If
+        End If
 
         AddRegJS(lbRegister)
     End Sub
@@ -15,10 +22,6 @@
         End If
     End Sub
 
-    Private Sub btnFinish_Click(sender As Object, e As System.EventArgs) Handles btnFinish.Click
-        SignIn()
-    End Sub
-
 #Region "JavaScript"
     Private Sub AddRegJS(ByVal lb As LinkButton)
         Dim strJava As String = ""
@@ -29,5 +32,4 @@
 
     End Sub
 #End Region
-
 End Class

@@ -19,12 +19,16 @@
     
     <asp:LinkButton ID="lbRegister" runat="server" Text="Register Now!"></asp:LinkButton>
        
-    <div id="divBottomLeft" class="bottomPopupLeft">
-        <asp:Button runat="server" ID="btnCancel" Text="Cancel" />
+    <div id="divBottomLeft" class="bottomPopupLeft">        
+        <button type="button" id="btnCancel" runat="server" onclick="__doPostBack('btnCancel','Cancel');">Cancel</button>
     </div>
     <div id="divBottomRight" class="bottomPopupRight">
-        <asp:Button runat="server" ID="btnFinish" Text="Login" />
+        <button type="button" id="btnFinish" runat="server" onclick="__doPostBack('btnFinish','Finish');">Finish</button>
     </div>
+
+    
+      <span id="Message"
+            runat="server"/>
 
 </div>
 

@@ -119,9 +119,8 @@ Public Class Survey
         Me.Questions = New Questions
         For Each dr As DataRow In dt.Rows
             Dim dicQuestionAnswers = New Dictionary(Of Integer, String)
-            Dim objQ As New Question(Me, dr.Item("cText"), dr.Item("nOptionControlType"), Nothing, dicQuestionAnswers)
+            Dim objQ As New Question(Me, dr.Item("cText"), dr.Item("nOptionControlType"), New QuestionOptions, dicQuestionAnswers)
             objQ.QuestionNumber = dr.Item("nQuestionNumber")
-            objQ.QuestionOptions = New QuestionOptions
             For Each drO As DataRow In FillOptions(objQ.QuestionNumber).Rows
                 Dim objO As New QuestionOption(drO.Item("cOption"), drO.Item("nOrder"))
                 objQ.QuestionOptions.Add(objO)
@@ -166,7 +165,7 @@ Public Class Survey
 
         With cmd.Parameters
             .AddWithValue("@nSurveyID", ID)
-            .AddWithValue("@nSurveyQuestion", nQuestionNumber)
+            .AddWithValue("@nQuestionNumber", nQuestionNumber)
         End With
 
         Return FillDataTable(cmd)

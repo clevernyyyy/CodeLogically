@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class Login
 
     '''<summary>
+    '''udpLogin control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents udpLogin As Global.System.Web.UI.UpdatePanel
+
+    '''<summary>
     '''lblLogin control.
     '''</summary>
     '''<remarks>
@@ -57,6 +66,15 @@ Partial Public Class Login
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''inputPassword control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents inputPassword As Global.System.Web.UI.HtmlControls.HtmlInputPassword
 
     '''<summary>
     '''lblRegister control.

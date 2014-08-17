@@ -64,7 +64,9 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
     <div style="clear: both;" />
     
     <div id="divLoginOpen">
-        <uctrl:Log ID="Login_Control" runat="server" />
+        <uctrl:Log ID="ctrlLogin" runat="server" />
+        <asp:HiddenField ID="hUser" runat="server" />
+        <asp:HiddenField ID="hPass" runat="server" />
     </div>
 
 

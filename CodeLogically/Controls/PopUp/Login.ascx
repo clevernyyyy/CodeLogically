@@ -14,11 +14,11 @@
     <asp:TextBox ID="txtPassword" runat="server" Width="200px" style="text-align:left; 
         font-size:small" CssClass="smallBox"></asp:TextBox>
    
-<%--    <div id="divBottomLeft" class="bottomPopupLeft">
+    <div id="divBottomLeft" class="bottomPopupLeft">
         <asp:Button runat="server" ID="btnCancel" Text="Cancel" />
     </div>
     <div id="divBottomRight" class="bottomPopupRight">
         <asp:Button runat="server" ID="btnFinish" Text="Login" />
-    </div>--%>
+    </div>
 
 </div>

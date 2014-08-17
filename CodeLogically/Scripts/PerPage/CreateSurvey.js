@@ -67,3 +67,24 @@ function loadSuccess() {
 function fillFail(results) {
     //alert("failure on fill");
 }
+
+
+function OpenSurveyEditorAndHelp() {
+    $("#divQuestionTypeDefinitions").dialog({
+        //autoOpen: true,
+        modal: true,
+        width: 400,
+        height: 650,
+        title: "Question Type Definitions",
+        show: {
+            effect: "size",
+            duration: 800
+        },
+        hide: {
+            effect: "clip",
+            duration: 800
+        },
+        closeOnEscape: false
+    }).css('z-index', '1005');
+    return false;
+}

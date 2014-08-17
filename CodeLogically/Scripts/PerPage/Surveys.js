@@ -39,3 +39,23 @@ function OpenLoginDialogFast() {
     return false;
 }
 
+
+function OpenRegister() {
+    $("#divRegisterControl").dialog({
+        //autoOpen: true,
+        modal: true,
+        width: 650,
+        height: 650,
+        title: "Register",
+        show: {
+            effect: "size",
+            duration: 800
+        },
+        hide: {
+            effect: "clip",
+            duration: 800
+        },
+        closeOnEscape: false
+    }).css('z-index', '1005');
+    return false;
+}

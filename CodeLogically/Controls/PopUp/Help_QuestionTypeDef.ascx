@@ -2,39 +2,50 @@
 
 
 
-    <asp:Label ID="lblTitle" runat="server" CssClass="questionText" 
-        Text="Please enter a descriptive title for your Survey!"></asp:Label>
-    <br />
-    <asp:TextBox ID="txtTitle" runat="server" Width="500px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
+<div id="divQuestionTypes" runat="server">
+    <div id="divYesNo" runat="server">
+        <asp:Label ID="lblYesNo" runat="server" Text="Yes/No Question Type:" CssClass="questionTypeFont"></asp:Label>
+        <br />
+        <asp:Label ID="lblExample1" runat="server" Text="#1.)  Example Question?" CssClass="smallfont"></asp:Label>
+        <br />
+        <div id="rButtons" class="questionText" style="font-weight:normal; float:left;">
+            <label class="radio-inline">
+                <input type="radio" runat="server" name="YNI" id="rbtYes" value="Yes" />Yes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" runat="server" name="YNI" id="rbtNo" value="No" />No  
+            </label>  
+            <label class="radio-inline">
+                <input type="radio" runat="server" name="YNI" id="rbtIDKMyBFFJill" value="IDK" />I Don't Know (Optional)
+            </label>
+        </div>
+        <br />
+    </div>
+    <div id="divTextInput" runat="server">
+        <br />
+        <asp:Label ID="lblTextInput" runat="server" Text="Text Input Type:" CssClass="questionTypeFont"></asp:Label>
+        <br />
+        <asp:Label ID="lblExample2" runat="server" Text="#2.)  Example Question?" CssClass="smallfont"></asp:Label>
+        <br />
+        <asp:TextBox runat="server" ID="txtQuestionAnswer" Width="150px" style="text-align:left; font-size:small" CssClass="smallBox"/>
+        <asp:Label ID="lblMultiLine" runat="server" Text="(Multi-line Optional)" CssClass="smallfont"></asp:Label>
+    </div>
+    <div id="divMultipleChoice" runat="server">
+        <br />
+        <asp:Label ID="lblDropDown" runat="server" Text="DropDown Type:" CssClass="questionTypeFont"></asp:Label>
+        <br />
+        <asp:Label ID="lblExample3" runat="server" Text="#3.)  Example Question?" CssClass="smallfont"></asp:Label>
+        <asp:DropDownList ID="ddlOptions" runat="server" style="font-size:small" Width="100px" CssClass="ctrlDropBox" />
+        <br />
+        <br />
+        <asp:Label ID="lblMultiRadio" runat="server" Text="Multi Radio Type:" CssClass="questionTypeFont"></asp:Label>
+        <br />
+        <asp:Label ID="lblExample4" runat="server" Text="#4.)  Example Question?:" CssClass="smallfont"></asp:Label>
 
-    <asp:Button runat="server" ID="btnAddAnother"  CssClass="questionButton" Text="Add Another Question" />
-    <asp:UpdatePanel runat="server" ID="upQuestions">
-        <ContentTemplate>
-            <asp:Repeater runat="server" ID="rptCurrentQuestions">
-                <HeaderTemplate>
-                    <div>
-                        <th>
-                            <td>
-                                <asp:Label ID="lblNumber" runat="server" Text="#" />
-                            </td>
-                        </th>
-                    </div>
-                </HeaderTemplate>
-                <ItemTemplate>
-                    <div>
-                        <tr>
-                            <td>
-                                <asp:Label runat="server" ID="lblQuestionNumber" />
-                            </td>
-                        </tr>
-                    </div>                                   
-                </ItemTemplate>
-            </asp:Repeater>
-        </ContentTemplate>
-    </asp:UpdatePanel>
-    <div id="divBottomLeft" class="bottomPopupLeft">
-        <asp:Button runat="server" ID="btnCancel" Text="Cancel Survey" />
+
+
     </div>
-    <div id="divBottomRight" class="bottomPopupRight">
-        <asp:Button runat="server" ID="btnFinish" Text="Finish Survey" />
+    <div id="divAgreeDisagree" runat="server">
+    
     </div>
+</div>

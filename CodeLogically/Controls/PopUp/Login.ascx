@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Login.ascx.vb" Inherits="CodeLogically.Login" %>
 
+<%@ Register Src="~/Controls/PopUp/Register.ascx" TagPrefix="uctrl" TagName="Reg" %>
 
-<%--Random test HTML--%>
 <div id="divLoginControl" >
     <asp:Label ID="lblLogin" runat="server" CssClass="questionText" 
         Text="Please Login!"></asp:Label>
@@ -13,6 +13,14 @@
     <asp:Label id="lblPassword" runat="server" Text="Password:">Password:</asp:Label>
     <asp:TextBox ID="txtPassword" runat="server" Width="200px" style="text-align:left; 
         font-size:small" CssClass="smallBox"></asp:TextBox>
+    <br />
+
+    <asp:Label ID="lblRegister" runat="server" Text="Don't have a login?  "></asp:Label>
+    
+    <a ID="lbRegister" runat="server">Register Now!</a>
+    
+        <asp:Button runat="server" ID="btnReg" Text="Register" />
+
    
     <div id="divBottomLeft" class="bottomPopupLeft">
         <asp:Button runat="server" ID="btnCancel" Text="Cancel" />
@@ -21,4 +29,9 @@
         <asp:Button runat="server" ID="btnFinish" Text="Login" />
     </div>
 
+</div>
+
+    
+<div class="none border" id="divRegisterControl" title="Help">
+    <uctrl:Reg ID="Register" runat="server" />
 </div>

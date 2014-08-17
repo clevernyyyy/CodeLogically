@@ -129,4 +129,13 @@ Partial Public Class CreateNewQuestion
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlRadioButtons As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
+    '''Help control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Help As Global.CodeLogically.Help_QuestionTypeDef
 End Class

@@ -26,6 +26,12 @@
     font-weight:normal;
 }
 
+.questionTypeFont
+{
+    font-size:small;
+    font-weight:bold;
+}
+
 .questionType
 {
     margin-left:220px;

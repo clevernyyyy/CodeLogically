@@ -49,7 +49,6 @@
 </div>
 
     
-<%--    <div class="none border" id="divQuestionTypeDefinitions" title="Help">
+    <div class="none border" id="divQuestionTypeDefinitions" title="Help">
         <uctrl:Help ID="Help" runat="server" />
     </div>
---%>

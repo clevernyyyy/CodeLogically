@@ -59,6 +59,33 @@ Partial Public Class Login
     Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''lblRegister control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblRegister As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lbRegister control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbRegister As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnReg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnReg As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''btnCancel control.
     '''</summary>
     '''<remarks>
@@ -75,4 +102,13 @@ Partial Public Class Login
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnFinish As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Register control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Register As Global.CodeLogically.Register
 End Class

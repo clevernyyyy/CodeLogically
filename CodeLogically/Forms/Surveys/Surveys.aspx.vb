@@ -15,11 +15,7 @@
             CheckLogin()
         End If
 
-
     End Sub
-
-
-
 
     Private Sub LoadUserLvlDisplay()
         'Only show the user things they have access for

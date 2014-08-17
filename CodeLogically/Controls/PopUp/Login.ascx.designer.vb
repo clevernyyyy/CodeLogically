@@ -32,40 +32,13 @@ Partial Public Class Login
     Protected WithEvents lblLogin As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lblUser control.
+    '''inputUser control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''txtUserName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtUserName As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''lblPassword control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblPassword As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''txtPassword control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputUser As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
     '''inputPassword control.
@@ -104,22 +77,13 @@ Partial Public Class Login
     Protected WithEvents btnCancel As Global.System.Web.UI.HtmlControls.HtmlButton
 
     '''<summary>
-    '''btnFinish control.
+    '''btnLogin" control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnFinish As Global.System.Web.UI.HtmlControls.HtmlButton
-
-    '''<summary>
-    '''Message control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Message As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Register control.

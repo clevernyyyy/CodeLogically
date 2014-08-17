@@ -2,20 +2,28 @@
 
 <%@ Register Src="~/Controls/PopUp/Register.ascx" TagPrefix="uctrl" TagName="Reg" %>
 
+<!-- including jQuery Dialog UI here-->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/dialog.js"></script>
+
 <div id="divLoginControl" >
 <asp:ScriptManager runat="server"></asp:ScriptManager>
 <asp:UpdatePanel runat="server" id="udpLogin">
 <ContentTemplate>
+
     <asp:Label ID="lblLogin" runat="server" CssClass="questionText" 
         Text="Please Login!"></asp:Label>
     <br />
-    <asp:Label id="lblUser" runat="server" Text="User Name:">User Name:</asp:Label>
-    <asp:TextBox ID="txtUserName" runat="server" Width="200px" style="text-align:left; 
-        font-size:small;" CssClass="smallBox"></asp:TextBox>
+    <%--<asp:Label id="lblUser" runat="server" Text="User Name:">User Name:</asp:Label>--%>
+<%--    <asp:TextBox ID="txtUserName" runat="server" Width="200px" style="text-align:left; 
+        font-size:small;" CssClass="smallBox"></asp:TextBox>--%>
+    <input type="text" id="inputUser" placeholder="UserName" runat="server" />
         <br />
-    <asp:Label id="lblPassword" runat="server" Text="Password:">Password:</asp:Label>
-    <asp:TextBox ID="txtPassword" runat="server" Width="200px" style="text-align:left; 
-        font-size:small;" CssClass="smallBox" TextMode="Password" ></asp:TextBox>
+<%--    <asp:Label id="lblPassword" runat="server" Text="Password:">Password:</asp:Label>--%>
+<%--    <asp:TextBox ID="txtPassword" runat="server" Width="200px" style="text-align:left; 
+        font-size:small;" CssClass="smallBox" TextMode="Password" ></asp:TextBox>--%>
         <input type="password" id="inputPassword" placeholder="Password" runat="server" />
     <br />
 
@@ -27,16 +35,10 @@
         <button type="button" id="btnCancel" runat="server" onclick="__doPostBack('btnCancel','Cancel');">Cancel</button>
     </div>
     <div id="divBottomRight" class="bottomPopupRight">
-        <button type="button" id="btnFinish" runat="server" onclick="__doPostBack('btnFinish','Finish');">Finish</button>
+        <button type="button" id="btnFinish" runat="server" onclick="__doPostBack('btnLogin','Login');">Login</button>
     </div>
 
-    
-      <span id="Message" runat="server"/>
       </ContentTemplate>
-      <Triggers>
-        <asp:AsyncPostBackTrigger ControlID="btnFinish" EventName="ServerClick" />
-        <asp:PostBackTrigger ControlID="btnFinish" />
-      </Triggers>
 </asp:UpdatePanel>
 </div>
 

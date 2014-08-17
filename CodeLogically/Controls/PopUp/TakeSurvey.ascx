@@ -9,7 +9,7 @@
  <!-- Custom styles for this control -->
  <link href="/Styles/PerControl/TakeControl.css" rel="stylesheet" />
 
- <div id="questionContent  runat="server" style="margin-top:15px; float:left; 
+ <div id="questionContent"  runat="server" style="margin-top:15px; float:left; 
         width:600px; height:400px; overflow-y:auto; overflow-x:hidden; position:absolute;">
             <asp:Repeater runat="server" ID="rptSurvey">
                 <ItemTemplate>

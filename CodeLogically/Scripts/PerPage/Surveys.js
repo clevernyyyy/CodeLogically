@@ -25,7 +25,7 @@ function OpenLoginDialog() {
 
 function OpenLoginDialogFast() {
     $("#divLoginOpen").dialog({
-        autoOpen: true,
+        //autoOpen: true,
         modal: true,
         width: 650,
         height: 400,

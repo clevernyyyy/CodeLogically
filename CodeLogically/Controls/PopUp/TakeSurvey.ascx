@@ -18,9 +18,19 @@
                             </td>
                         </tr>
                     </div>--%>
+                    <asp:Label runat="server" ID="lblQuestionNumber" CssClass="numberText" />
                     <uctrl:YesNoIDK runat="server" ID="ctrlYesNoIDK" visible="false"/>
                     <uctrl:TextInput runat="server" ID="ctrlTextInput" visible="false"/>
                     <uctrl:MultipleChoice runat="server" ID="ctrlMultipleChoice" visible="false"/>     
                     <uctrl:AgreeDisagree runat="server" ID="ctrlAgreeDisagree" visible="false"/>                                 
                 </ItemTemplate>
             </asp:Repeater>
+
+
+    <div id="divBottomLeft" class="bottomPopupLeft">
+        <asp:Button runat="server" ID="btnCancel" class="bottomButtons" Text="Cancel Survey" />
+    </div>
+    <div id="divBottomRight" class="bottomPopupRight">
+        <asp:Button runat="server" ID="btnSave" class="bottomButtons" Text="Save Survey" />
+        <asp:Button runat="server" ID="btnFinish" class="bottomButtons" Text="Finish Survey" />
+    </div>

@@ -38,7 +38,6 @@ Public Class CreateNewQuestion
         ddlQuestionType.SelectedIndex = -1
     End Sub
     Public Sub New(S As Survey, Optional ByVal enmQType As Enums.enmQuestionType = 0)
-        MyBase.New()
         ParentSurvey = S
         ParentSurvey.Type = enmQType
         If enmQType > 0 Then
@@ -50,17 +49,6 @@ Public Class CreateNewQuestion
         End If
     End Sub
     Public Sub New()
-
-        If HttpContext.Current.Session("Survey") IsNot Nothing Then
-            ParentSurvey = HttpContext.Current.Session("Survey")
-            QuestionType = ParentSurvey.Type
-            If QuestionType > 0 Then
-                ddlQuestionType.Visible = False
-            Else
-                ddlQuestionType = New DropDownList
-                ddlQuestionType.Visible = True
-            End If
-        End If
     End Sub
     Protected Overloads Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then

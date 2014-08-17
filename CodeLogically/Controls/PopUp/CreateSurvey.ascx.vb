@@ -1,7 +1,7 @@
 ﻿Public Class CreateNewSurvey
     Inherits System.Web.UI.UserControl
 
-    Private objSurvey As Survey
+    Public objSurvey As Survey
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             If Session("Survey") IsNot Nothing Then
@@ -94,6 +94,10 @@
     Private Sub btnFinish_Click(sender As Object, e As System.EventArgs) Handles btnFinish.Click
         objSurvey.Title = txtTitle.Text.Trim()
         objSurvey.SaveSurvey()
+        Session.Clear()
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As System.EventArgs) Handles btnCancel.Click
         Session.Clear()
     End Sub
 

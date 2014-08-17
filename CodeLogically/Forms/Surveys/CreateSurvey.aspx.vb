@@ -7,14 +7,12 @@ Public Class CreateSurvey
     End Sub
 
     Private Sub btnDyanmicSurvey_Click(sender As Object, e As System.EventArgs) Handles btnDynamicSurvey.ServerClick
-        Dim dt As DataTable = Nothing
         Dim objSurvey As New Survey(0, 0, "", 1, Date.Now())
         Session("Survey") = objSurvey
 
         OpenSurveyEditor()
 
         'SimplePopup(Me, "Please fill out questions.", "Input Required")
-
 
     End Sub
 

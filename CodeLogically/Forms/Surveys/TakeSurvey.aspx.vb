@@ -7,7 +7,6 @@ Public Class TakeSurvey
 
             'Clear Everything
 
-
             'Initialize Survey Gridview
             Dim cTitle As String = ""
             Dim cUser As String = ""
@@ -48,23 +47,12 @@ Public Class TakeSurvey
     End Sub
 
     Private Sub LoadSelectedSurvey(ByVal cTitle As String, ByVal cUser As String, ByVal dCreated As DateTime, ByVal nSurveryID As Integer)
-
-        If Session("Survey") IsNot Nothing Then
-            Dim objtest As Survey = Session("Survey")
-            If objtest.ID <> nSurveryID Then
-                Session.Clear()
-            End If
-        End If
-
         Dim objSurvey = New Survey(nSurveryID, 0, cTitle, 1, dCreated)
         objSurvey.LoadSurvey()
-        Session("Survey") = objSurvey
 
         Take_Survey.LoadSurvey(objSurvey)
 
         OpenSurveyEditor()
-
-
     End Sub
 
 #End Region

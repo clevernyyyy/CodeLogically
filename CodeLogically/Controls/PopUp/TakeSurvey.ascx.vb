@@ -3,16 +3,6 @@
 
     Private objSurvey As Survey
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If Not IsPostBack Then
-            If Session("Survey") Is Nothing Then
-                'Throw New Exception
-            Else
-                objSurvey = Session("Survey")
-                LoadSurvey()
-            End If
-        Else
-            objSurvey = Session("Survey")
-        End If
     End Sub
     Public Sub LoadSurvey(Optional ByVal objTakeSurvey As Survey = Nothing)
         If objTakeSurvey IsNot Nothing Then
@@ -53,6 +43,18 @@
         End If
 
 
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As System.EventArgs) Handles btnCancel.Click
+        Session.Clear()
+    End Sub
+
+    Private Sub btnFinish_Click(sender As Object, e As System.EventArgs) Handles btnFinish.Click
+        Session.Clear()
+    End Sub
+
+    Private Sub btnSave_Click(sender As Object, e As System.EventArgs) Handles btnSave.Click
+        Session.Clear()
     End Sub
 
 End Class

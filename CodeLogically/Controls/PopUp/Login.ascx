@@ -8,6 +8,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/dialog.js"></script>
 
+ <!-- Custom styles for this control -->
+ <link href="/Styles/PerControl/Login.css" rel="stylesheet" />
+
 <div id="divLoginControl" >
 <asp:ScriptManager runat="server"></asp:ScriptManager>
 <asp:UpdatePanel runat="server" id="udpLogin">

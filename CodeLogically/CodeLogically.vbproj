@@ -115,6 +115,7 @@
     <Content Include="img\favicon.ico" />
     <Content Include="img\help.ico" />
     <Content Include="Scripts\PerPage\CreateSurvey.js" />
+    <Content Include="Scripts\PerPage\Login.js" />
     <Content Include="Scripts\PerPage\Surveys.js" />
     <Content Include="Scripts\PerPage\TakeSurvey.js" />
     <Content Include="Scripts\site_scripts\bootstrap.js" />
@@ -145,6 +146,7 @@
     <Content Include="Scripts\site_scripts\smoothscroll.js" />
     <Content Include="Scripts\site_scripts\Treeview.js" />
     <Content Include="Styles\PerControl\CreateControl.css" />
+    <Content Include="Styles\PerControl\Login.css" />
     <Content Include="Styles\PerControl\TakeControl.css" />
     <Content Include="Styles\site_css\animate-custom.css" />
     <Content Include="Styles\site_css\animations.css" />

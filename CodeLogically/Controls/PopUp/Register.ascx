@@ -1,4 +1,8 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Register.ascx.vb" Inherits="CodeLogically.Register" %>
+
+ <!-- Custom styles for this control -->
+ <link href="/Styles/PerControl/Login.css" rel="stylesheet" />
+
 <h3>
     <font face="Verdana">Registration Page</font>
 </h3>

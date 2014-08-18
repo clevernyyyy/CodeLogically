@@ -77,13 +77,13 @@ Partial Public Class Login
     Protected WithEvents btnCancel As Global.System.Web.UI.HtmlControls.HtmlButton
 
     '''<summary>
-    '''btnLogin" control.
+    '''btnFinish control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnFinish As Global.System.Web.UI.HtmlControls.HtmlButton
 
     '''<summary>
     '''Register control.

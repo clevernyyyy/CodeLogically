@@ -2,17 +2,24 @@
 
 });
 
+var winH = $(window).height() - 100;
+
 function OpenSurveyEditor() {
     $("#divCreateSurvey").dialog({
         appendTo: "#CreateSurveyPage",
         modal: true,
         dialogClass: "no-close",
+        position: "absolute",
         width: 650,
-        height: 680,
+        height: winH,
+        fluid: true,
         title: "Survey Editor",
         show: { effect: "size", duration: 800 },
         hide: { effect: "clip", duration: 800 },
-        closeOnEscape: false
+        closeOnEscape: false,
+        open: function (event, ui) {
+            $('#divCreateSurvey').css('overflow', 'hidden'); //this line does the actual hiding
+    }
     }).css('z-index', '1005');
     return false;
 }
@@ -87,4 +94,40 @@ function OpenSurveyEditorAndHelp() {
         closeOnEscape: false
     }).css('z-index', '1005');
     return false;
+}
+
+
+
+// on window resize run function
+$(window).resize(function () {
+    fluidDialog();
+});
+
+// catch dialog if opened within a viewport smaller than the dialog width
+$(document).on("dialogopen", ".ui-dialog", function (event, ui) {
+    fluidDialog();
+});
+
+function fluidDialog() {
+    var $visible = $(".ui-dialog:visible");
+    // each open dialog
+    $visible.each(function () {
+        var $this = $(this);
+        var dialog = $this.find(".ui-dialog-content").data("ui-dialog");
+        // if fluid option == true
+        if (dialog.options.fluid) {
+            var wWidth = $(window).width();
+            // check window width against dialog width
+            if (wWidth < (parseInt(dialog.options.maxWidth) + 50)) {
+                // keep dialog from filling entire screen
+                $this.css("max-width", "90%");
+            } else {
+                // fix maxWidth bug
+                $this.css("max-width", dialog.options.maxWidth + "px");
+            }
+            //reposition dialog
+            dialog.option("position", dialog.options.position);
+        }
+    });
+
 }

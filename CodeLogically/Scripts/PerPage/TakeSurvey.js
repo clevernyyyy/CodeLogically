@@ -3,13 +3,15 @@ $(document).ready(function () {
     InitSiteJS();
 });
 
+var winH = $(window).height() - 100;
+
 function OpenSurveyEditor() {
     $("#divTakeSurvey").dialog({
         appendTo: "#TakeSurveyPage",
         modal: true,
         dialogClass: "no-close",
         width: 950,
-        height: 750,
+        height: winH,
         title: "Survey Editor",
         show: { effect: "size", duration: 800 },
         hide: { effect: "clip", duration: 800 },

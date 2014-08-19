@@ -8,7 +8,7 @@ function OpenSurveyEditor() {
     $("#divCreateSurvey").dialog({
         appendTo: "#CreateSurveyPage",
         modal: true,
-        dialogClass: "no-close",
+        //dialogClass: "no-close",
         position: "absolute",
         width: 650,
         height: winH,
@@ -18,8 +18,8 @@ function OpenSurveyEditor() {
         hide: { effect: "clip", duration: 800 },
         closeOnEscape: false,
         open: function (event, ui) {
-            $('#divCreateSurvey').css('overflow', 'hidden'); //this line does the actual hiding
-    }
+            //$(this).css('overflow', 'hidden'); //this line does the actual hiding
+        }
     }).css('z-index', '1005');
     return false;
 }
@@ -31,10 +31,14 @@ function OpenSurveyEditorFast() {
         modal: true,
         dialogClass: "no-close",
         width: 650,
-        height: 680,
+        height: winH,
+        fluid: true,
         title: "Survey Editor",
         hide: { effect: "clip", duration: 800 },
         closeOnEscape: false,
+        open: function (event, ui) {
+            $(this).css('overflow', 'hidden'); //this line does the actual hiding
+        }
     }).css('z-index', '1005');
     return false;
 }

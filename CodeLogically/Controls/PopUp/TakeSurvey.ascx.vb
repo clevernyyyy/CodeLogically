@@ -3,9 +3,9 @@
 
     Private objSurvey As Survey
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If Not IsPostBack Then
-            Session.Clear()
-        End If
+        'If Not IsPostBack Then
+        '    Session.Clear()
+        'End If
         objSurvey = HttpContext.Current.Session("Survey")
     End Sub
     Public Sub LoadSurvey(Optional ByVal objTakeSurvey As Survey = Nothing)
@@ -72,6 +72,14 @@
                         ctrl = item.FindControl("ctrlTextInput")
                     Case Enums.enmQuestionType.DropDown, Enums.enmQuestionType.MultiRadio
                         ctrl = DirectCast(item.FindControl("ctrlMultipleChoice"), MultipleChoice)
+
+                        For Each ctl As Control In ctrl.Controls
+                            If ctl.GetType Is GetType(RadioButton) Then
+                                If DirectCast(ctl, RadioButton).Checked Then
+                                    Return DirectCast(ctl, RadioButton).Text
+                                End If
+                            End If
+                        Next
                         If ctrl IsNot Nothing Then
                             ctrl.QuestionType = Q.QuestionType
                         End If

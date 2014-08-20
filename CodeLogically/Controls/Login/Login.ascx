@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="Login.ascx.vb" Inherits="CodeLogically.Login" %>
 
-<%@ Register Src="~/Controls/PopUp/Register.ascx" TagPrefix="uctrl" TagName="Reg" %>
+<%@ Register Src="~/Controls/Login/Register.ascx" TagPrefix="uctrl" TagName="Reg" %>
 
 <!-- including jQuery Dialog UI here-->
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
@@ -9,7 +9,7 @@
 <script type="text/javascript" src="js/dialog.js"></script>
 
  <!-- Custom styles for this control -->
- <link href="/Styles/PerControl/Login.css" rel="stylesheet" />
+ <link href="/Styles/Login/Login.css" rel="stylesheet" />
 
 <div id="divLoginControl" >
 <asp:ScriptManager runat="server"></asp:ScriptManager>

@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="TakeSurvey.ascx.vb" Inherits="CodeLogically.TakeSurveyControl" %>
 
-<%@ Register Src="~/Controls/PopUp/CreateNewQuestion.ascx" TagPrefix="uctrl" TagName="CreateQuestion" %>
-<%@ Register Src="~/Controls/Questions/YesNoIDK.ascx" TagPrefix="uctrl" TagName="YesNoIDK" %>
-<%@ Register Src="~/Controls/Questions/TextInput.ascx" TagPrefix="uctrl" TagName="TextInput" %>
-<%@ Register Src="~/Controls/Questions/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
-<%@ Register Src="~/Controls/Questions/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
+<%@ Register Src="~/Controls/Surveys/PopUp/CreateNewQuestion.ascx" TagPrefix="uctrl" TagName="CreateQuestion" %>
+<%@ Register Src="~/Controls/Surveys/Questions/YesNoIDK.ascx" TagPrefix="uctrl" TagName="YesNoIDK" %>
+<%@ Register Src="~/Controls/Surveys/Questions/TextInput.ascx" TagPrefix="uctrl" TagName="TextInput" %>
+<%@ Register Src="~/Controls/Surveys/Questions/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
+<%@ Register Src="~/Controls/Surveys/Questions/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
 
  <!-- Custom styles for this control -->
- <link href="/Styles/PerControl/TakeControl.css" rel="stylesheet" />
+ <link href="/Styles/Surveys/TakeControl.css" rel="stylesheet" />
 
  <div id="questionContent"  runat="server" style="margin-top:15px; float:left; 
         width:600px; height:400px; overflow-y:auto; overflow-x:hidden; position:absolute;">

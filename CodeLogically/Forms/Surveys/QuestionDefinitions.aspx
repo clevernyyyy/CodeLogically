@@ -22,7 +22,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
-    <script type="text/javascript" src="/Scripts/PerPage/TakeSurvey.js?cachebreak=08092014"></script>
+    <script type="text/javascript" src="/Scripts/Surveys/TakeSurvey.js?cachebreak=08092014"></script>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    

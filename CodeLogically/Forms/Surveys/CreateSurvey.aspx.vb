@@ -4,7 +4,7 @@ Public Class CreateSurvey
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If HttpContext.Current.Session("User") IsNot Nothing Then
-            divLoginOpen.Visible = False
+            'divLoginOpen.Visible = False
         End If
     End Sub
 

@@ -76,7 +76,7 @@
                         For Each ctl As Control In ctrl.Controls
                             If ctl.GetType Is GetType(RadioButton) Then
                                 If DirectCast(ctl, RadioButton).Checked Then
-                                    Return DirectCast(ctl, RadioButton).Text
+                                    ' Return DirectCast(ctl, RadioButton).Text
                                 End If
                             End If
                         Next

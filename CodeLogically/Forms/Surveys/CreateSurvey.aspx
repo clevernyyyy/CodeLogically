@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Create Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master"
     CodeBehind="CreateSurvey.aspx.vb" Inherits="CodeLogically.CreateSurvey" %>
         
-<%@ Register Src="~/Controls/PopUp/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CS" %>
+<%@ Register Src="~/Controls/Surveys/PopUp/CreateSurvey.ascx" TagPrefix="uctrl" TagName="CS" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
@@ -27,7 +27,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
-    <script type="text/javascript" src="/Scripts/PerPage/CreateSurvey.js?cachebreak=08092014"></script>
+    <script type="text/javascript" src="/Scripts/Surveys/CreateSurvey.js?cachebreak=08092014"></script>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="../img/favicon.ico?v=2" type="image/x-icon" />    

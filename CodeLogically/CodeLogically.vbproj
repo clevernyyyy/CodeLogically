@@ -93,18 +93,18 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="AddQuestion.asmx" />
-    <Content Include="Controls\PopUp\Help_QuestionTypeDef.ascx" />
-    <Content Include="Controls\PopUp\Login.ascx" />
-    <Content Include="Controls\PopUp\Register.ascx" />
-    <Content Include="Controls\Questions\AgreeDisagree.ascx" />
-    <Content Include="Controls\PopUp\CreateNewQuestion.ascx" />
-    <Content Include="Controls\PopUp\CreateSurvey.ascx" />
+    <Content Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx" />
+    <Content Include="Controls\Login\Login.ascx" />
+    <Content Include="Controls\Login\Register.ascx" />
+    <Content Include="Controls\Surveys\Questions\AgreeDisagree.ascx" />
+    <Content Include="Controls\Surveys\PopUp\CreateNewQuestion.ascx" />
+    <Content Include="Controls\Surveys\PopUp\CreateSurvey.ascx" />
     <Content Include="Controls\Inputs\Date.ascx" />
-    <Content Include="Controls\Questions\MultipleChoice.ascx" />
-    <Content Include="Controls\PopUp\TakeSurvey.ascx" />
-    <Content Include="Controls\Questions\TextInput.ascx" />
-    <Content Include="Controls\PopUp\UserOption.ascx" />
-    <Content Include="Controls\Questions\YesNoIDK.ascx" />
+    <Content Include="Controls\Surveys\Questions\MultipleChoice.ascx" />
+    <Content Include="Controls\Surveys\PopUp\TakeSurvey.ascx" />
+    <Content Include="Controls\Surveys\Questions\TextInput.ascx" />
+    <Content Include="Controls\Surveys\PopUp\UserOption.ascx" />
+    <Content Include="Controls\Surveys\Questions\YesNoIDK.ascx" />
     <Content Include="Forms\Surveys\CreateQuestions.aspx" />
     <Content Include="Forms\Surveys\CreateSurvey.aspx" />
     <Content Include="Forms\Surveys\QuestionDefinitions.aspx" />
@@ -114,10 +114,10 @@
     <Content Include="img\cal.gif" />
     <Content Include="img\favicon.ico" />
     <Content Include="img\help.ico" />
-    <Content Include="Scripts\PerPage\CreateSurvey.js" />
-    <Content Include="Scripts\PerPage\Login.js" />
-    <Content Include="Scripts\PerPage\Surveys.js" />
-    <Content Include="Scripts\PerPage\TakeSurvey.js" />
+    <Content Include="Scripts\Surveys\CreateSurvey.js" />
+    <Content Include="Scripts\Login\Login.js" />
+    <Content Include="Scripts\Surveys\Surveys.js" />
+    <Content Include="Scripts\Surveys\TakeSurvey.js" />
     <Content Include="Scripts\site_scripts\bootstrap.js" />
     <Content Include="Scripts\site_scripts\bootstrap.min.js" />
     <Content Include="Scripts\site_scripts\Gruntfile.js" />
@@ -145,9 +145,9 @@
     <Content Include="Scripts\site_scripts\scripts.js" />
     <Content Include="Scripts\site_scripts\smoothscroll.js" />
     <Content Include="Scripts\site_scripts\Treeview.js" />
-    <Content Include="Styles\PerControl\CreateControl.css" />
-    <Content Include="Styles\PerControl\Login.css" />
-    <Content Include="Styles\PerControl\TakeControl.css" />
+    <Content Include="Styles\Surveys\CreateControl.css" />
+    <Content Include="Styles\Login\Login.css" />
+    <Content Include="Styles\Surveys\TakeControl.css" />
     <Content Include="Styles\site_css\animate-custom.css" />
     <Content Include="Styles\site_css\animations.css" />
     <Content Include="Styles\site_css\bootstrap-theme.css" />
@@ -243,45 +243,45 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Classes\User.vb" />
-    <Compile Include="Controls\PopUp\Help_QuestionTypeDef.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx.designer.vb">
       <DependentUpon>Help_QuestionTypeDef.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PopUp\Help_QuestionTypeDef.ascx.vb">
+    <Compile Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx.vb">
       <DependentUpon>Help_QuestionTypeDef.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\PopUp\Login.ascx.designer.vb">
+    <Compile Include="Controls\Login\Login.ascx.designer.vb">
       <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PopUp\Login.ascx.vb">
+    <Compile Include="Controls\Login\Login.ascx.vb">
       <DependentUpon>Login.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\PopUp\Register.ascx.designer.vb">
+    <Compile Include="Controls\Login\Register.ascx.designer.vb">
       <DependentUpon>Register.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PopUp\Register.ascx.vb">
+    <Compile Include="Controls\Login\Register.ascx.vb">
       <DependentUpon>Register.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Questions\AgreeDisagree.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\Questions\AgreeDisagree.ascx.designer.vb">
       <DependentUpon>AgreeDisagree.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Questions\AgreeDisagree.ascx.vb">
+    <Compile Include="Controls\Surveys\Questions\AgreeDisagree.ascx.vb">
       <DependentUpon>AgreeDisagree.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\PopUp\CreateNewQuestion.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\PopUp\CreateNewQuestion.ascx.designer.vb">
       <DependentUpon>CreateNewQuestion.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PopUp\CreateNewQuestion.ascx.vb">
+    <Compile Include="Controls\Surveys\PopUp\CreateNewQuestion.ascx.vb">
       <DependentUpon>CreateNewQuestion.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\PopUp\CreateSurvey.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\PopUp\CreateSurvey.ascx.designer.vb">
       <DependentUpon>CreateSurvey.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PopUp\CreateSurvey.ascx.vb">
+    <Compile Include="Controls\Surveys\PopUp\CreateSurvey.ascx.vb">
       <DependentUpon>CreateSurvey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -292,38 +292,38 @@
       <DependentUpon>Date.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Questions\MultipleChoice.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\Questions\MultipleChoice.ascx.designer.vb">
       <DependentUpon>MultipleChoice.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Questions\MultipleChoice.ascx.vb">
+    <Compile Include="Controls\Surveys\Questions\MultipleChoice.ascx.vb">
       <DependentUpon>MultipleChoice.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\PopUp\TakeSurvey.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\PopUp\TakeSurvey.ascx.designer.vb">
       <DependentUpon>TakeSurvey.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PopUp\TakeSurvey.ascx.vb">
+    <Compile Include="Controls\Surveys\PopUp\TakeSurvey.ascx.vb">
       <DependentUpon>TakeSurvey.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Questions\TextInput.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\Questions\TextInput.ascx.designer.vb">
       <DependentUpon>TextInput.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Questions\TextInput.ascx.vb">
+    <Compile Include="Controls\Surveys\Questions\TextInput.ascx.vb">
       <DependentUpon>TextInput.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\PopUp\UserOption.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\PopUp\UserOption.ascx.designer.vb">
       <DependentUpon>UserOption.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PopUp\UserOption.ascx.vb">
+    <Compile Include="Controls\Surveys\PopUp\UserOption.ascx.vb">
       <DependentUpon>UserOption.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Questions\YesNoIDK.ascx.designer.vb">
+    <Compile Include="Controls\Surveys\Questions\YesNoIDK.ascx.designer.vb">
       <DependentUpon>YesNoIDK.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Questions\YesNoIDK.ascx.vb">
+    <Compile Include="Controls\Surveys\Questions\YesNoIDK.ascx.vb">
       <DependentUpon>YesNoIDK.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -436,6 +436,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controls\Chat\" />
+    <Folder Include="Forms\Chat\" />
+    <Folder Include="Scripts\Chat\" />
+    <Folder Include="Styles\Chat\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

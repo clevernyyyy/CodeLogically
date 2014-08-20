@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="CreateNewQuestion.ascx.vb" Inherits="CodeLogically.CreateNewQuestion" %>
 
-<%@ Register Src="~/Controls/PopUp/UserOption.ascx" TagPrefix="uctrl" TagName="UserOption" %>
-<%@ Register Src="~/Controls/PopUp/Help_QuestionTypeDef.ascx" TagPrefix="uctrl" TagName="Help" %>
+<%@ Register Src="~/Controls/Surveys/PopUp/UserOption.ascx" TagPrefix="uctrl" TagName="UserOption" %>
+<%@ Register Src="~/Controls/Surveys/PopUp/Help_QuestionTypeDef.ascx" TagPrefix="uctrl" TagName="Help" %>
 
  <!-- Custom styles for this control -->
- <link href="/Styles/PerControl/CreateControl.css" rel="stylesheet" />
+ <link href="/Styles/Surveys/CreateControl.css" rel="stylesheet" />
 
  <!-- Scripts -->
- <script type="text/javascript" src="/Scripts/PerPage/CreateSurvey.js?cachebreak=08092014"></script>
+ <script type="text/javascript" src="/Scripts/Surveys/CreateSurvey.js?cachebreak=08092014"></script>
 
  <div id="CreateNewQuestionPage">
     <br />

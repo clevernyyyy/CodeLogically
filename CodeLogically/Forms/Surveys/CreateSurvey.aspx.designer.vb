@@ -14,33 +14,6 @@ Option Explicit On
 Partial Public Class CreateSurvey
 
     '''<summary>
-    '''divLoginOpen control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents divLoginOpen As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
-    '''<summary>
-    '''hUser control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents hUser As Global.System.Web.UI.WebControls.HiddenField
-
-    '''<summary>
-    '''hPass control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents hPass As Global.System.Web.UI.WebControls.HiddenField
-
-    '''<summary>
     '''btnDynamicSurvey control.
     '''</summary>
     '''<remarks>

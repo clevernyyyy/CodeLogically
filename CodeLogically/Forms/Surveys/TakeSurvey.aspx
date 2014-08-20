@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Take Survey" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
 CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEventValidation="false" %>
 
-<%@ Register Src="~/Controls/PopUp/TakeSurvey.ascx" TagPrefix="uctrl" TagName="TS" %>
+<%@ Register Src="~/Controls/Surveys/PopUp/TakeSurvey.ascx" TagPrefix="uctrl" TagName="TS" %>
 <%@ Register Src="~/Controls/Inputs/Date.ascx" TagPrefix="uctrl" TagName="Date" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
@@ -23,12 +23,12 @@ CodeBehind="TakeSurvey.aspx.vb" Inherits="CodeLogically.TakeSurvey"  EnableEvent
         rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
-    <link href="/Styles/PerControl/TakeControl.css" rel="stylesheet" />
+    <link href="/Styles/Surveys/TakeControl.css" rel="stylesheet" />
     
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
-    <script type="text/javascript" src="/Scripts/PerPage/TakeSurvey.js?cachebreak=08092014"></script>
+    <script type="text/javascript" src="/Scripts/Surveys/TakeSurvey.js?cachebreak=08092014"></script>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    

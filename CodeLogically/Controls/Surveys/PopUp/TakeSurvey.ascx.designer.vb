@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class TakeSurveyControl
 
     '''<summary>
+    '''questionContent control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents questionContent As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''rptSurvey control.
     '''</summary>
     '''<remarks>

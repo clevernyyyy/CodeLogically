@@ -1,11 +1,11 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="CreateSurvey.ascx.vb"
     Inherits="CodeLogically.CreateNewSurvey" %>
 
-<%@ Register Src="~/Controls/PopUp/CreateNewQuestion.ascx" TagPrefix="uctrl" TagName="CreateQuestion" %>
-<%@ Register Src="~/Controls/Questions/YesNoIDK.ascx" TagPrefix="uctrl" TagName="YesNoIDK" %>
-<%@ Register Src="~/Controls/Questions/TextInput.ascx" TagPrefix="uctrl" TagName="TextInput" %>
-<%@ Register Src="~/Controls/Questions/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
-<%@ Register Src="~/Controls/Questions/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
+<%@ Register Src="~/Controls/Surveys/PopUp/CreateNewQuestion.ascx" TagPrefix="uctrl" TagName="CreateQuestion" %>
+<%@ Register Src="~/Controls/Surveys/Questions/YesNoIDK.ascx" TagPrefix="uctrl" TagName="YesNoIDK" %>
+<%@ Register Src="~/Controls/Surveys/Questions/TextInput.ascx" TagPrefix="uctrl" TagName="TextInput" %>
+<%@ Register Src="~/Controls/Surveys/Questions/MultipleChoice.ascx" TagPrefix="uctrl" TagName="MultipleChoice" %>
+<%@ Register Src="~/Controls/Surveys/Questions/AgreeDisagree.ascx" TagPrefix="uctrl" TagName="AgreeDisagree" %>
 
     <asp:Label ID="lblTitle" runat="server" CssClass="smallfont" 
         Text="Please enter a descriptive title for your Survey!"></asp:Label>

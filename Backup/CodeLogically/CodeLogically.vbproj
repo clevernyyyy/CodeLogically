@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{1414AE35-1923-497D-B741-BCA355A6A0F4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CodeLogically</RootNamespace>
+    <AssemblyName>CodeLogically</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CodeLogically.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CodeLogically.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AddQuestion.asmx" />
+    <Content Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx" />
+    <Content Include="Controls\Login\Login.ascx" />
+    <Content Include="Controls\Login\Register.ascx" />
+    <Content Include="Controls\Surveys\Questions\AgreeDisagree.ascx" />
+    <Content Include="Controls\Surveys\PopUp\CreateNewQuestion.ascx" />
+    <Content Include="Controls\Surveys\PopUp\CreateSurvey.ascx" />
+    <Content Include="Controls\Inputs\Date.ascx" />
+    <Content Include="Controls\Surveys\Questions\MultipleChoice.ascx" />
+    <Content Include="Controls\Surveys\PopUp\TakeSurvey.ascx" />
+    <Content Include="Controls\Surveys\Questions\TextInput.ascx" />
+    <Content Include="Controls\Surveys\PopUp\UserOption.ascx" />
+    <Content Include="Controls\Surveys\Questions\YesNoIDK.ascx" />
+    <Content Include="Forms\Surveys\CreateQuestions.aspx" />
+    <Content Include="Forms\Surveys\CreateSurvey.aspx" />
+    <Content Include="Forms\Surveys\QuestionDefinitions.aspx" />
+    <Content Include="Forms\Surveys\SurveyAnalytics.aspx" />
+    <Content Include="Forms\Surveys\Surveys.aspx" />
+    <Content Include="Forms\Surveys\TakeSurvey.aspx" />
+    <Content Include="img\cal.gif" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\help.ico" />
+    <Content Include="Scripts\Surveys\CreateSurvey.js" />
+    <Content Include="Scripts\Login\Login.js" />
+    <Content Include="Scripts\Surveys\Surveys.js" />
+    <Content Include="Scripts\Surveys\TakeSurvey.js" />
+    <Content Include="Scripts\site_scripts\bootstrap.js" />
+    <Content Include="Scripts\site_scripts\bootstrap.min.js" />
+    <Content Include="Scripts\site_scripts\Gruntfile.js" />
+    <Content Include="Scripts\site_scripts\holder.js" />
+    <Content Include="Scripts\site_scripts\interact.js" />
+    <Content Include="Scripts\site_scripts\jquery-1.10.1.min.js" />
+    <Content Include="Scripts\site_scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\site_scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\site_scripts\jquery-func.js" />
+    <Content Include="Scripts\site_scripts\jquery-migrate-1.1.1.min.js" />
+    <Content Include="Scripts\site_scripts\jquery-ui-1.10.4.custom.min.js" />
+    <Content Include="Scripts\site_scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\site_scripts\jquery.fancybox-buttons.js" />
+    <Content Include="Scripts\site_scripts\jquery.fancybox-media.js" />
+    <Content Include="Scripts\site_scripts\jquery.fancybox-thumbs.js" />
+    <Content Include="Scripts\site_scripts\jquery.fancybox.js" />
+    <Content Include="Scripts\site_scripts\jquery.fancybox.pack.js" />
+    <Content Include="Scripts\site_scripts\jquery.min.js" />
+    <Content Include="Scripts\site_scripts\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Scripts\site_scripts\jquery.numeric.js" />
+    <Content Include="Scripts\site_scripts\jquery.watermarkinput.js" />
+    <Content Include="Scripts\site_scripts\json2.js" />
+    <Content Include="Scripts\site_scripts\modernizr.custom.js" />
+    <Content Include="Scripts\site_scripts\retina.js" />
+    <Content Include="Scripts\site_scripts\scripts.js" />
+    <Content Include="Scripts\site_scripts\smoothscroll.js" />
+    <Content Include="Scripts\site_scripts\Treeview.js" />
+    <Content Include="Styles\Surveys\CreateControl.css" />
+    <Content Include="Styles\Login\Login.css" />
+    <Content Include="Styles\Surveys\TakeControl.css" />
+    <Content Include="Styles\site_css\animate-custom.css" />
+    <Content Include="Styles\site_css\animations.css" />
+    <Content Include="Styles\site_css\bootstrap-theme.css" />
+    <Content Include="Styles\site_css\bootstrap-theme.min.css" />
+    <Content Include="Styles\site_css\bootstrap.css" />
+    <Content Include="Styles\site_css\bootstrap.min.css" />
+    <Content Include="Styles\site_css\custom.css" />
+    <Content Include="Styles\site_css\icomoon.css" />
+    <Content Include="Styles\icomoon\icomoon.svg" />
+    <Content Include="Styles\jquery-ui-redmond\images\animated-overlay.gif" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Styles\jquery-ui-redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Styles\jquery-ui-redmond\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Styles\jquery-ui-redmond\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Styles\site_css\jQueryUIFixes.css" />
+    <Content Include="Styles\site_css\main.css" />
+    <Content Include="Styles\site_css\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\site_scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\site_scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\site_scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AddQuestion.asmx.vb">
+      <DependentUpon>AddQuestion.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\Connections.vb" />
+    <Compile Include="Classes\CreateQuestion.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\Enums.vb" />
+    <Compile Include="Classes\Modules\Formatting.vb" />
+    <Compile Include="Classes\Modules\MiscFunctions.vb" />
+    <Compile Include="Classes\Question.vb" />
+    <Compile Include="Classes\QuestionControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\User.vb" />
+    <Compile Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx.designer.vb">
+      <DependentUpon>Help_QuestionTypeDef.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx.vb">
+      <DependentUpon>Help_QuestionTypeDef.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login\Login.ascx.designer.vb">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login\Login.ascx.vb">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login\Register.ascx.designer.vb">
+      <DependentUpon>Register.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login\Register.ascx.vb">
+      <DependentUpon>Register.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\AgreeDisagree.ascx.designer.vb">
+      <DependentUpon>AgreeDisagree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\AgreeDisagree.ascx.vb">
+      <DependentUpon>AgreeDisagree.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\CreateNewQuestion.ascx.designer.vb">
+      <DependentUpon>CreateNewQuestion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\CreateNewQuestion.ascx.vb">
+      <DependentUpon>CreateNewQuestion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\CreateSurvey.ascx.designer.vb">
+      <DependentUpon>CreateSurvey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\CreateSurvey.ascx.vb">
+      <DependentUpon>CreateSurvey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Inputs\Date.ascx.designer.vb">
+      <DependentUpon>Date.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Inputs\Date.ascx.vb">
+      <DependentUpon>Date.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\MultipleChoice.ascx.designer.vb">
+      <DependentUpon>MultipleChoice.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\MultipleChoice.ascx.vb">
+      <DependentUpon>MultipleChoice.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\TakeSurvey.ascx.designer.vb">
+      <DependentUpon>TakeSurvey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\TakeSurvey.ascx.vb">
+      <DependentUpon>TakeSurvey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\TextInput.ascx.designer.vb">
+      <DependentUpon>TextInput.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\TextInput.ascx.vb">
+      <DependentUpon>TextInput.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\UserOption.ascx.designer.vb">
+      <DependentUpon>UserOption.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\PopUp\UserOption.ascx.vb">
+      <DependentUpon>UserOption.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\YesNoIDK.ascx.designer.vb">
+      <DependentUpon>YesNoIDK.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Surveys\Questions\YesNoIDK.ascx.vb">
+      <DependentUpon>YesNoIDK.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\CreateQuestions.aspx.designer.vb">
+      <DependentUpon>CreateQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\CreateQuestions.aspx.vb">
+      <DependentUpon>CreateQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Surveys\CreateSurvey.aspx.designer.vb">
+      <DependentUpon>CreateSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\CreateSurvey.aspx.vb">
+      <DependentUpon>CreateSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Surveys\QuestionDefinitions.aspx.designer.vb">
+      <DependentUpon>QuestionDefinitions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\QuestionDefinitions.aspx.vb">
+      <DependentUpon>QuestionDefinitions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Surveys\SurveyAnalytics.aspx.designer.vb">
+      <DependentUpon>SurveyAnalytics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\SurveyAnalytics.aspx.vb">
+      <DependentUpon>SurveyAnalytics.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Surveys\Surveys.aspx.designer.vb">
+      <DependentUpon>Surveys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\Surveys.aspx.vb">
+      <DependentUpon>Surveys.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Surveys\TakeSurvey.aspx.designer.vb">
+      <DependentUpon>TakeSurvey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Surveys\TakeSurvey.aspx.vb">
+      <DependentUpon>TakeSurvey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <None Include="Styles\site_css\bootstrap-theme.css.map" />
+    <None Include="Styles\site_css\bootstrap.css.map" />
+    <None Include="Styles\icomoon\.DS_Store" />
+    <None Include="Styles\icomoon\icomoon-.eot" />
+    <None Include="Styles\icomoon\icomoon.eot" />
+    <None Include="Styles\icomoon\icomoon.ttf" />
+    <None Include="Styles\icomoon\icomoon.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Controls\Chat\" />
+    <Folder Include="Forms\Chat\" />
+    <Folder Include="Scripts\Chat\" />
+    <Folder Include="Styles\Chat\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64663</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

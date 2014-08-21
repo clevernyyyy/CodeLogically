@@ -1,0 +1,180 @@
+﻿body {
+}
+
+/********************************/
+/********* Labels *************/
+/********************************/
+
+.questionText
+{
+    float: left;
+    font-size:small;
+    margin-left:10px;
+    /*font-family:Arial Black;*/   
+}
+
+.numberText
+{
+    float: left;
+    font-size:small;
+    /*font-family:Arial Black;*/   
+}
+
+.smallfont
+{
+    font-size:small;
+    font-weight:normal;
+}
+
+.questionType
+{
+    margin-left:220px;
+}
+
+
+
+/********************************/
+/********* Controls *************/
+/********************************/
+
+.smallBox
+{
+    height:25px;
+    background-color:#f9f9f9;   
+}
+
+.ctrlDropBox
+{
+    height:25px;
+    background-color:#f9f9f9;
+    margin-left: 40px;
+}
+
+.RadioButtonList
+{
+  vertical-align:super;  
+  margin-top: -1px;
+  font-weight: normal !important;
+}
+
+
+/********************************/
+/********* Buttons **************/
+/********************************/
+
+.AddQuestionButton
+{
+    font-size: 12px !important;
+    font-weight: bold;
+    font-family: Latha;
+    color: #ffffff;
+    min-width: 54px;
+    height: 24px; 
+    white-space: nowrap;   
+    cursor: pointer;  
+    outline: 0 none;
+    padding: 0 10px 2px;
+    text-align: center;
+    float:right;
+       
+    /* Coloring */       
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#5384BE), to(#4386D7)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #5384BE, #4386D7); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #5384BE, #4386D7); /* for Opera */
+}
+
+.AddQuestionButton:hover
+{
+    cursor: pointer;    
+    /* Coloring */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #85B6F0',endColorstr='#579AEB'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #85B6F0',endColorstr='#579AEB'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#85B6F0),to(#579AEB)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #85B6F0, #579AEB); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #85B6F0, #579AEB); /* for Opera */
+}
+
+
+.bottomButtons
+{
+    font-size: 12px !important;
+    font-weight: bold;
+    font-family: Latha;
+    color: #ffffff;
+    min-width: 54px;
+    height: 24px; 
+    white-space: nowrap;   
+    cursor: pointer;  
+    outline: 0 none;
+    padding: 0 10px 2px;
+    text-align: center;
+       
+    /* Coloring */       
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5384BE', endColorstr='#4386D7'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#5384BE), to(#4386D7)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #5384BE, #4386D7); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #5384BE, #4386D7); /* for Opera */
+}
+
+.bottomButtons:hover
+{
+    cursor: pointer;    
+    /* Coloring */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #85B6F0',endColorstr='#579AEB'); /* for IE */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #85B6F0',endColorstr='#579AEB'); /* for IE 8 and above */
+    background: -webkit-gradient(linear, left top, left bottom, from(#85B6F0),to(#579AEB)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #85B6F0, #579AEB); /* for firefox 3.6+ */
+    background: -o-linear-gradient(top, #85B6F0, #579AEB); /* for Opera */
+}
+
+
+
+/********************************/
+/****** jQuery Dialog Play ******/
+/********************************/
+
+
+.ui-widget-header
+{
+    /* Grey gradient */
+    /* background: url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #cccccc; */
+        
+    /* Baby Blue gradient */
+    /* background: linear-gradient(to bottom, #8bd0e7 0%, #61b4cf 50%, #8bd0e7 100%) repeat scroll 0 0 rgba(0, 0, 0, 0) !important; */
+    
+    /* Darker Blue gradient*/
+    background: linear-gradient(to bottom, #3b679e 0%, #2b88d9 35%, #2b88d9 50%, #2b88d9 50%, #207cca 65%, #7db9e8 100%) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    
+    color: White;
+    font-weight: bold;
+    padding: 4px 18px;
+
+    /* Classes used in dialogs */
+    /* ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix */
+}
+
+
+/********************************/
+/********* Placeholders *********/
+/********************************/
+
+
+::-webkit-input-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}
+:-moz-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}
+
+:-ms-input-placeholder 
+{
+    font-size:small;
+    font-weight:normal;
+}

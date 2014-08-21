@@ -1,0 +1,57 @@
+﻿/*****************************/
+/*Fix accordion arrow display*/
+.ui-icon
+{
+    display: inline-block;
+}
+.rowClass .scombobox-dropdown-background, .rowClass .scombobox-dropdown-arrow, .rowClass .scombobox-display
+{
+    top: 1px;
+    height: 23px;
+}
+.scombobox 
+{
+    margin: 0;
+}
+/*Combobox list limitations***/
+.scombobox-list
+{
+    max-height: 300px;
+    max-width: 1000px !important;
+    width: 500px;
+}
+[id*='ddlCity'] .scombobox-invalid 
+{
+    background: none; /*Don't show as invalid*/
+}
+/*jquery based dropdowns in dialogs*/
+.ui-dialog 
+{
+    overflow: visible;
+}
+/*Popup with hidden close*****/
+.no-close .ui-dialog-titlebar-close 
+{
+    display: none;
+}
+/*Red buttons*/
+.ui-state-default.ui-red,
+ui-state-hover.ui-red
+{
+    background-color: #ffcccc;
+}
+.ui-state-default.ui-green,
+ui-state-hover.ui-green
+{
+    background-color: #ccffcc;
+}
+.ui-accordion-content
+{
+    padding: 0 !important;
+}
+/*Disabled buttons*/
+.ui-button[disabled='disabled'] 
+{
+    background-color: #ddd !important;
+    color: #aaa !important;
+}

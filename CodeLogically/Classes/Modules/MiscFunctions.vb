@@ -10,8 +10,10 @@ Module MiscFunctions
         End If
     End Function
     Public Function SqlCommand(commandText As String) As SqlCommand
-        Dim cmd As New SqlCommand(commandText, NewConnection)
+        Dim cmd As New SqlCommand
         cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = commandText
+        cmd.Connection = NewConnection()
         Return cmd
     End Function
     Public Function AddEmptyRowToBegining(ByRef dtTable As DataTable, Optional ByVal cSortCol As String = "", Optional ByVal FixNulls As Boolean = True)

@@ -32,8 +32,9 @@ Namespace Areas.ChatLogically.Hubs
                        Where x.Value = Context.ConnectionId.ToString()
                        Select x).FirstOrDefault
             Dim s As String = ""
-            dic.TryRemove(name.Key, s)
-            Return Clients.All.disconnected(name.Key)
+            'dic.TryRemove(name.Key, s)
+            'Return Clients.All.disconnected(name.Key)
+            Return Nothing
         End Function
 
         Public Sub Hello()

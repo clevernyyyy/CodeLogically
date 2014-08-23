@@ -23,11 +23,11 @@ Partial Public Class _Default
     Protected WithEvents btnViewSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
 
     '''<summary>
-    '''btnViewX control.
+    '''btnViewChat control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnViewX As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents btnViewChat As Global.System.Web.UI.HtmlControls.HtmlAnchor
 End Class

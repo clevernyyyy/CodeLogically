@@ -54,8 +54,8 @@
                     </div>
                     <div class="col-8 col-sm-8 col-lg-4">
                         <h4 style="color:White">
-                            View Project X!</h4>
-                        <a id="btnViewX" runat="server" class="btn btn-default" href="" role="button">View &raquo;</a>
+                            View Project Chat!</h4>
+                        <a id="btnViewChat" runat="server" class="btn btn-default" href="/ChatLogically/ChatRoom/SignalRChat" role="button">View &raquo;</a>
                     </div>
                 </div>
             <br />

@@ -414,9 +414,9 @@ btnViewSurvey control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="F:CodeLogically._Default.btnViewX">
+</member><member name="F:CodeLogically._Default.btnViewChat">
 	<summary>
-btnViewX control.
+btnViewChat control.
 </summary>
 	<remarks>
 Auto-generated field.

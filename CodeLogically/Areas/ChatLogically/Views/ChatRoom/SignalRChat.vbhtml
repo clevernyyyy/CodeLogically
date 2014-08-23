@@ -135,9 +135,9 @@
             // Create a function that the hub can call to broadcast chat messages.
             chat.client.broadcastMessage = function (name, message) {
                 //Interpret smileys
-                message = message.replace(":)", "<img src=\"/images/smile.gif\" class=\"smileys\" />");
-                message = message.replace(":D", "<img src=\"/images/laugh.gif\" class=\"smileys\" />");
-                message = message.replace(":o", "<img src=\"/images/cool.gif\" class=\"smileys\" />");
+                message = message.replace(":)", "<img src=\"../../../../img/smile.gif\" class=\"smileys\" />");
+                message = message.replace(":D", "<img src=\"../../../../img/laugh.gif\" class=\"smileys\" />");
+                message = message.replace(":o", "<img src=\"../../../../img/cool.gif\" class=\"smileys\" />");
 
                 //display the message
                 $('#chatlog').append('<div class="border"><span style="color:orange">' + name + '</span>: ' + message + '</div>');

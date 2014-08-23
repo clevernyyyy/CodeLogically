@@ -159,7 +159,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx" />
     <Content Include="Controls\Login\Login.ascx" />
-    <Content Include="Controls\Surveys\Register.ascx" />
+    <Content Include="Controls\Login\Register.ascx" />
     <Content Include="Controls\Surveys\Questions\AgreeDisagree.ascx" />
     <Content Include="Controls\Surveys\PopUp\CreateNewQuestion.ascx" />
     <Content Include="Controls\Surveys\PopUp\CreateSurvey.ascx" />
@@ -342,10 +342,10 @@
       <DependentUpon>Login.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Controls\Surveys\Register.ascx.designer.vb">
+    <Compile Include="Controls\Login\Register.ascx.designer.vb">
       <DependentUpon>Register.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Surveys\Register.ascx.vb">
+    <Compile Include="Controls\Login\Register.ascx.vb">
       <DependentUpon>Register.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

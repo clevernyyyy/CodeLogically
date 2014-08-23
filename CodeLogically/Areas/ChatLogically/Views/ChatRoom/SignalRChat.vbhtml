@@ -20,10 +20,10 @@
                 </select>
             </div>
         </div>
-        <input type="hidden" id="displayname" />
-        <div id="dialog" title="Enter your name to start a chat.">
+        <input type="hidden" id="nick" />
+        @*<div id="dialog" title="Enter your name to start a chat.">
             <input type="text" id="nick" />
-        </div>
+        </div>*@
     </div>
 
 
@@ -100,7 +100,7 @@
 
 
             // Get the user name and store it to prepend to messages.
-            $('#displayname').val(prompt('Enter your name:', ''));
+            $('#nick').val(prompt('Enter your name:', ''));
             startChatHub();
         }
 

@@ -4,13 +4,15 @@
 <div id="container">
     <div class="col-xs-12 col-sm-12">
         <input type="hidden" id="nickname" />
-        <div id="chatlog" style="width:400px"></div>
-        <div id="onlineusers">
-            <b>Online Users</b>
+        <div style="display:inline-block;">
+            <div id="chatlog" style="width:400px;display:inline-block;"></div>
+            <div id="onlineusers" style="display:inline-block;">
+                <b>Online Users</b>
+            </div>
         </div>
         <div id="chatarea">
             <div class="messagelog">
-                <textarea spellcheck="true" id="message" class="messagebox" maxlength="400"></textarea>
+                <textarea spellcheck="true" id="message" class="messagebox" maxlength="400" style="width:400px;"></textarea>
             </div>
             <div class="actionpane">
                 <input type="button" id="btnsend" value="Send" />

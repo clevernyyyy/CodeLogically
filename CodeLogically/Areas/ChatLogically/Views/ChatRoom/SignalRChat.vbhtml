@@ -79,26 +79,6 @@
         });
 
         function showModalUserNickName() {
-
-
-            //$("#dialog").dialog({
-            //    modal: true,
-            //    //dialogClass: "no-close",
-            //    position: "absolute",
-            //    width: 650,
-            //    height: 400,
-            //    fluid: true,
-            //    //buttons: [{
-            //    //   text: "Ok", click: function () {
-            //    //        $(this).dialog("close");
-            //    //        startChatHub();
-            //    //    }
-            //    //}],
-            //    closeOnEscape: false
-            // }).css('z-index', '1005');
-            ////return false;
-
-
             // Get the user name and store it to prepend to messages.
             $('#nick').val(prompt('Enter your name:', ''));
             startChatHub();
@@ -149,6 +129,17 @@
                 $('#onlineusers div').remove(":contains('" + name + "')");
                 $("#users option").remove(":contains('" + name + "')");
             }
+
+
+            $("#message").keypress(function (e) {
+                if (e.which == 13) {
+                    //submit form via ajax, this is not JS but server side scripting so not showing here
+                    //$("#chatlog").append($(this).val() + "<br/>");
+                    $('#chatlog').append('<div class="border"><span style="color:orange">' + $('#nickname').val() + '</span>: ' + $(this).val() + '</div>');
+                    $(this).val("");
+                    e.preventDefault();
+                }
+            });
 
             // Start the connection.
             $.connection.hub.start().done(function () {

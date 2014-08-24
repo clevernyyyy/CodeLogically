@@ -38,8 +38,8 @@
         <br />
         <br />
         <br />
-        <hr />
-        <footer>
+        <footer style="margin-top:450px;">
+            <hr />
             <p style="float:right">&copy; @DateTime.Now.Year - ChatLogically</p>
         </footer>
     </div>

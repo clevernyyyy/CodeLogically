@@ -4,26 +4,28 @@
 <div id="container">
     <div class="col-xs-12 col-sm-12">
         <input type="hidden" id="nickname" />
-        <div style="display:inline-block;">
-            <div id="chatlog" style="width:400px;display:inline-block;"></div>
-            <div id="onlineusers" style="display:inline-block;">
+        <div>
+            <div id="chatlog" style="width:400px; height:400px; 
+                border:1px solid black; overflow-y:auto; overflow-x:hidden; position:absolute;"></div>
+            <span id="onlineusers" style="display:inline-block;">
                 <b>Online Users</b>
-            </div>
+            </span>
         </div>
-        <div id="chatarea">
+        <div id="chatarea" style="margin-top:400px; position:fixed; height:100px;">
             <div class="messagelog">
-                <textarea spellcheck="true" id="message" class="messagebox" maxlength="400" style="width:400px;"></textarea>
+                <textarea spellcheck="true" id="message" class="messagebox" maxlength="350" style="width:400px;"></textarea>
             </div>
-            <div class="actionpane">
+            <div class="actionpane" style="margin-top:-30px;">
                 <input type="button" id="btnsend" value="Send" />
-            </div>
-            <div class="actionpane">
+
                 <select id="users">
                     <option value="All">All</option>
                 </select>
             </div>
         </div>
-        <input type="hidden" id="nick" maxlength="25" />
+        <form action="">
+            <input type="hidden" id="nick" maxlength="5"/>
+        </form>
     </div>
 </div>
 
@@ -81,6 +83,7 @@
 
         function showModalUserNickName() {
             // Get the user name and store it to prepend to messages.
+
             $('#nick').val(prompt('Enter your name:', ''));
             startChatHub();
         }
@@ -192,8 +195,7 @@
                     $('#message').val('').focus();
                 });
             });
-
-
+            
             function interpretSmileys(message) {
                 message = message.replace(":)", "<img src=\"../../../../img/emoticons/smile.png\" class=\"smileys\" />");
                 message = message.replace(":D", "<img src=\"../../../../img/emoticons/grin.png\" class=\"smileys\" />");

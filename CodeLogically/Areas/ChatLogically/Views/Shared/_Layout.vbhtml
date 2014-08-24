@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Chat Logically Application</title>
+    <title>@ViewBag.Title Chat Logically Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -30,10 +30,16 @@
     </div>
 
     <div class="container body-content">
+        <br />
+        <br />
         @RenderBody()
+        <br />
+        <br />
+        <br />
+        <br />
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - ChatLogically</p>
+            <p style="float:right">&copy; @DateTime.Now.Year - ChatLogically</p>
         </footer>
     </div>
 

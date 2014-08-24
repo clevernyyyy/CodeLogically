@@ -13,8 +13,11 @@ Namespace Areas.ChatLogically.Hubs
             Clients.All.broadcastMessage(name, message)
         End Sub
         Public Sub SendToSpecific(name As String, message As String, cto As String)
-            Clients.Caller.broadcastMessage(name, message)
-            Clients.Client(dic(cto)).broadcastMessage(name, message)
+            'Clients.Caller.broadcastMessage(name, message)
+            'Clients.Client(dic(cto)).broadcastMessage(name, message)
+
+            Clients.Caller.broadcastMessageUser(name, message, cto)
+            Clients.Client(dic(cto)).broadcastMessageUser(name, message)
         End Sub
         Public Sub Notify(name As String, id As String)
             If dic.ContainsKey(name) Then
@@ -41,9 +44,9 @@ Namespace Areas.ChatLogically.Hubs
                        Where x.Value = Context.ConnectionId.ToString()
                        Select x).FirstOrDefault
             Dim s As String = ""
-            dic.TryRemove(name.Key, s)
-            Return Clients.All.disconnected(name.Key)
-            'Return Nothing
+            'dic.TryRemove(name.Key, s)
+            'Return Clients.All.disconnected(name.Key)
+            Return Nothing
         End Function
 
         Public Sub Hello()

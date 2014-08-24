@@ -1,9 +1,10 @@
 ﻿
-<h2>SignalRChat</h2>
+@*<h2>SignalRChat</h2>*@
 
-    <div id="container">
+<div id="container">
+    <div class="col-xs-12 col-sm-12">
         <input type="hidden" id="nickname" />
-        <div id="chatlog"></div>
+        <div id="chatlog" style="width:400px"></div>
         <div id="onlineusers">
             <b>Online Users</b>
         </div>
@@ -22,6 +23,7 @@
         </div>
         <input type="hidden" id="nick" maxlength="25" />
     </div>
+</div>
 
 
 @*<h2>Chat Application</h2>
@@ -109,16 +111,29 @@
                 $("#users").append('<option value="' + name + '">' + name + '</option>');
                 $('#onlineusers').append('<div class="border">' + name + '</div>');
             };
-            // Create a function that the hub can call to broadcast chat messages.
+
+            // Create a function that the hub can call to broadcast chat messages.  (to All)
             chat.client.broadcastMessage = function (name, message) {
                 //Interpret smileys
-                message = message.replace(":)", "<img src=\"../../../../img/smile.gif\" class=\"smileys\" />");
-                message = message.replace(":D", "<img src=\"../../../../img/laugh.gif\" class=\"smileys\" />");
-                message = message.replace(":o", "<img src=\"../../../../img/cool.gif\" class=\"smileys\" />");
-
+                message = interpretSmileys(message);
+              
                 //display the message
                 $('#chatlog').append('<div class="border"><span style="color:orange">' + name + '</span>: ' + message + '</div>');
             };
+
+            // Create a function that the hub can call to broadcast chat messages.  (to User)
+            chat.client.broadcastMessageUser = function (name, message, user) {
+                //Interpret smileys
+                message = interpretSmileys(message);
+
+                //display the message
+                $('#chatlog').append('<div class="border"><span style="color:blue"> @@' + user + '</span>: ' +
+                    + '</div>' +
+                    '<div class="border"><span style="color:orange">'
+                    + name + '</span>: ' + message +
+                    '</div>');
+            };
+            
 
             chat.client.disconnected = function (name) {
                 //Calls when someone leaves the page
@@ -128,20 +143,40 @@
             }
 
 
-            $("#message").keypress(function (e) {
-                if (e.which == 13) {
-                    //submit form via ajax, this is not JS but server side scripting so not showing here
-                    //$("#chatlog").append($(this).val() + "<br/>");
-                    $('#chatlog').append('<div class="border"><span style="color:orange">' + $('#nickname').val() + '</span>: ' + $(this).val() + '</div>');
-                    $(this).val("");
-                    e.preventDefault();
-                }
-            });
+            //$("#message").keypress(function (e) {
+            //    if (e.which == 13) {
+            //        //submit form via ajax, this is not JS but server side scripting so not showing here
+            //        //$("#chatlog").append($(this).val() + "<br/>");
+            //        $('#chatlog').append('<div class="border"><span style="color:orange">' + $('#nickname').val() + '</span>: ' + $(this).val() + '</div>');
+            //        $(this).val("");
+            //        e.preventDefault();
+            //    }
+            //});
 
             // Start the connection.
             $.connection.hub.start().done(function () {
                 //Calls the notify method of the server
                 chat.server.notify($('#nickname').val(), $.connection.hub.id);
+
+                $("#message").keypress(function (e) {
+                    if (e.which == 13) {
+                        //submit form via ajax, this is not JS but server side scripting so not showing here
+                        if ($("#users").val() == "All") {
+                            // Call the Send method on the hub.
+                            chat.server.send($('#nickname').val(), $('#message').val());
+                        }
+                        else {
+                            chat.server.sendToSpecific($('#nickname').val(), $('#message').val(), $("#users").val());
+                        }
+                        // Clear text box and reset focus for next comment.
+                        var k = jQuery.Event("keyup");
+                        k.ctrlKey = false;
+                        k.which = 20;
+
+                        $('#message').trigger(k);
+                        $('#message').val('').focus();
+                    }
+                });
 
                 $('#btnsend').click(function () {
                     if ($("#users").val() == "All") {
@@ -155,6 +190,24 @@
                     $('#message').val('').focus();
                 });
             });
+
+
+            function interpretSmileys(message) {
+                message = message.replace(":)", "<img src=\"../../../../img/emoticons/smile.png\" class=\"smileys\" />");
+                message = message.replace(":D", "<img src=\"../../../../img/emoticons/grin.png\" class=\"smileys\" />");
+                message = message.replace(":o", "<img src=\"../../../../img/emoticons/surprised.png\" class=\"smileys\" />");
+                message = message.replace("-_-", "<img src=\"../../../../img/emoticons/mad.png\" class=\"smileys\" />");
+                message = message.replace(":(", "<img src=\"../../../../img/emoticons/sad.png\" class=\"smileys\" />");
+                message = message.replace(":\\", "<img src=\"../../../../img/emoticons/sick.png\" class=\"smileys\" />");
+                message = message.replace(":P", "<img src=\"../../../../img/emoticons/tongue.png\" class=\"smileys\" />");
+                message = message.replace("8)", "<img src=\"../../../../img/emoticons/sunglasses.png\" class=\"smileys\" />");
+                message = message.replace(":)", "<img src=\"../../../../img/emoticons/smile.png\" class=\"smileys\" />");
+                message = message.replace("P)", "<img src=\"../../../../img/emoticons/smartass.png\" class=\"smileys\" />");
+                message = message.replace(":/", "<img src=\"../../../../img/emoticons/sorry.png\" class=\"smileys\" />");
+                message = message.replace(";)", "<img src=\"../../../../img/emoticons/blink.png\" class=\"smileys\" />");
+                message = message.replace("<3)", "<img src=\"../../../../img/emoticons/love.png\" class=\"smileys\" />");
+                return message;
+            };
         }
     </script>
 end section

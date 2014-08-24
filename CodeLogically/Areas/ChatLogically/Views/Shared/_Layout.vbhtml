@@ -20,7 +20,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Chat Logically", "Index", "Home", New With {.area = ""}, New With {.class = "navbar-brand"})
+                    @Html.ActionLink("Chat Logically", "Index", "Home", New With {.area = ""}, New With {.class = "navbar-brand"})
+                    @*@Html.ActionLink("Code Logically", "Default", "Home", New With {.area = ""}, New With {.class = "navbar-brand right"})*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

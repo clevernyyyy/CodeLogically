@@ -75,7 +75,7 @@
     <div id="footerwrap">
         <div class="container">
             <h2 class="centered" style="color: white;">
-                Created by <a href="http://www.adamschaal.com">A</a>/ 
+                Created by Team <a href="http://www.adamschaal.com">A</a>/ 
                            <a href="">S</a>/
                            <a href="http://www.leightoneash.com">L</a>
             </h2>

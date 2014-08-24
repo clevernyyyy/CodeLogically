@@ -9,7 +9,7 @@
         </div>
         <div id="chatarea">
             <div class="messagelog">
-                <textarea spellcheck="true" id="message" class="messagebox"></textarea>
+                <textarea spellcheck="true" id="message" class="messagebox" maxlength="400"></textarea>
             </div>
             <div class="actionpane">
                 <input type="button" id="btnsend" value="Send" />
@@ -20,10 +20,7 @@
                 </select>
             </div>
         </div>
-        <input type="hidden" id="nick" />
-        @*<div id="dialog" title="Enter your name to start a chat.">
-            <input type="text" id="nick" />
-        </div>*@
+        <input type="hidden" id="nick" maxlength="25" />
     </div>
 
 

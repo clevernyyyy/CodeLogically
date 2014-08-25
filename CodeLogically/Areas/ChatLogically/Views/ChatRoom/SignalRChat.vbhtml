@@ -4,13 +4,19 @@
 <div id="container">
     <div class="col-xs-12 col-sm-12">
         <input type="hidden" id="nickname" />
-        <div>
-            <div id="chatlog" style="width:400px; height:400px; 
+        <div id="main-wrapper" class="col-md-10">
+            <div id="main">
+                <div id="chatlog" style="width:400px; height:400px;
                 border:1px solid black; overflow-y:auto; overflow-x:hidden; position:absolute;"></div>
-            <span id="onlineusers" style="display:inline-block;">
-                <b>Online Users</b>
-            </span>
+            </div>
         </div>
+            <div id="sidebar-wrapper" class="col-md-2 pull-right">
+                <div id="sidebar">
+                    <span id="onlineusers" style="display:inline-block;">
+                        <b>Online Users</b>
+                    </span>
+                </div>
+            </div>
         <div id="chatarea" style="margin-top:400px; position:fixed; height:100px;">
             <div class="messagelog">
                 <textarea spellcheck="true" id="message" class="messagebox" maxlength="350" style="width:400px;"></textarea>
@@ -124,6 +130,7 @@
               
                 //display the message
                 $('#chatlog').append('<div class="border"><span style="color:orange">' + name + '</span>: ' + message + '</div>');
+                $("#chatlog").scrollTop($("#chatlog")[0].scrollHeight);
             };
 
             // Create a function that the hub can call to broadcast chat messages.  (to User)
@@ -137,6 +144,7 @@
                     '<div class="border"><span style="color:orange">'
                     + name + '</span>: ' + message +
                     '</div>');
+                $("#chatlog").scrollTop($("#chatlog")[0].scrollHeight);
             };
             
 

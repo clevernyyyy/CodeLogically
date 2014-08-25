@@ -16,23 +16,26 @@
         If IsPostBack Then
             If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Cancel") Then
                 Session.Clear()
+                Response.Redirect("~/Default.aspx")
             ElseIf (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Login") Then
-                SignIn()
+                If SignIn(inputUser.Value, inputPassword.Value) Then
+                    Response.Redirect("~/Default.aspx")
+                End If
             End If
         End If
 
         AddRegJS(lbRegister)
     End Sub
 
-    Private Sub SignIn()
-        SignIn(inputUser.Value, inputPassword.Value)
-    End Sub
-    Public Sub SignIn(userName As String, passWord As String)
+    Public Function SignIn(userName As String, passWord As String) As Boolean
+        Dim blnSuccess As Boolean = False
         Dim objUser As User
         If ValidateUser(userName, passWord, objUser) Then
             Session("User") = objUser
+            blnSuccess = True
         End If
-    End Sub
+        Return blnSuccess
+    End Function
 
 #Region "JavaScript"
     Private Sub AddRegJS(ByVal lb As LinkButton)

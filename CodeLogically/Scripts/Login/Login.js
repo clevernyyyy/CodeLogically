@@ -41,11 +41,11 @@ function OpenRegister() {
         //autoOpen: true,
         appendTo: "form",
         modal: true,
-        width: 650,
-        height: 650,
+        width: 800,
+        height: 450,
         title: "Register",
         show: {
-            effect: "size",
+            effect: "clip",
             duration: 800
         },
         hide: {

@@ -23,49 +23,49 @@ Partial Public Class Register
     Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
-    '''txtFName control.
+    '''inputFName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtFName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputFName As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
-    '''txtMName control.
+    '''inputMName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtMName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputMName As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
-    '''txtLName control.
+    '''inputLName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtLName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputLName As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
-    '''txtNickName control.
+    '''inputNickName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtNickName As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputNickName As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
-    '''txtEmail control.
+    '''inputEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputEmail As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
     '''vUserName control.
@@ -77,13 +77,13 @@ Partial Public Class Register
     Protected WithEvents vUserName As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''txtEmail2 control.
+    '''inputEmail2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtEmail2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputEmail2 As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
     '''CompareEmail control.
@@ -95,13 +95,13 @@ Partial Public Class Register
     Protected WithEvents CompareEmail As Global.System.Web.UI.WebControls.CompareValidator
 
     '''<summary>
-    '''txtUserPass control.
+    '''inputUserPass control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtUserPass As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputUserPass As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
     '''vUserPass control.
@@ -113,13 +113,13 @@ Partial Public Class Register
     Protected WithEvents vUserPass As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''txtUserPass2 control.
+    '''inputUserPass2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtUserPass2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents inputUserPass2 As Global.System.Web.UI.HtmlControls.HtmlInputText
 
     '''<summary>
     '''ComparePassword control.

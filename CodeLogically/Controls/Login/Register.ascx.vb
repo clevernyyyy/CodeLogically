@@ -13,31 +13,31 @@ Public Class Register
     Private Sub cmdRegister_Click(sender As Object, e As System.EventArgs) Handles cmdRegister.Click
         Dim cMsg As String = ""
         Dim lSuccess As Boolean = True
-        If txtEmail.Text <> txtEmail2.Text Then
+        If inputEmail.Value <> inputEmail2.Value Then
             cMsg &= "Emails do not match<br>"
             lSuccess = False
         End If
-        If txtUserPass.Text <> txtUserPass2.Text Then
+        If inputUserPass.Value <> inputUserPass2.Value Then
             cMsg &= "Passwords do not match<br>"
             lSuccess = False
         End If
-        If UserExists(txtEmail.Text) Then
+        If UserExists(inputEmail.Value) Then
             lSuccess = False
             cMsg &= "User Already Exists"
 
         End If
         If lSuccess Then
             Try
-                Dim cHashPass As String = FormsAuthentication.HashPasswordForStoringInConfigFile(txtUserPass.Text, "MD5")
+                Dim cHashPass As String = FormsAuthentication.HashPasswordForStoringInConfigFile(inputUserPass.Value, "MD5")
                 Dim cmd As New SqlCommand("[Admin].usp_Upsert_User")
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.AddWithValue("@cEmail", txtEmail.Text)
-                cmd.Parameters.AddWithValue("@cFName", txtFName.Text)
-                cmd.Parameters.AddWithValue("@cMName", txtMName.Text)
-                cmd.Parameters.AddWithValue("@cLName", txtLName.Text)
+                cmd.Parameters.AddWithValue("@cEmail", inputEmail.Value)
+                cmd.Parameters.AddWithValue("@cFName", inputFName.Value)
+                cmd.Parameters.AddWithValue("@cMName", inputMName.Value)
+                cmd.Parameters.AddWithValue("@cLName", inputLName.Value)
                 cmd.Parameters.AddWithValue("@cPWD", cHashPass)
-                cmd.Parameters.AddWithValue("@cNickName", txtNickName.Text)
+                cmd.Parameters.AddWithValue("@cNickName", inputNickName.Value)
                 cnn.Open()
                 cmd.ExecuteScalar()
                 cMsg = "User Successfully Added"
@@ -47,7 +47,7 @@ Public Class Register
             End Try
         End If
         If lSuccess Then
-            Session("User") = New User(txtEmail.Text)
+            Session("User") = New User(inputEmail.Value)
             Response.Redirect("~/Default.aspx")
         Else
             Session("cErrorMessage") = cMsg

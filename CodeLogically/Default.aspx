@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div id="divLoginOpen">
+    <div id="divLoginOpen" >
         <uctrl:Log ID="ctrlLogin" runat="server" />
         <asp:HiddenField ID="hUser" runat="server" />
         <asp:HiddenField ID="hPass" runat="server" />

@@ -8,9 +8,15 @@ Public Class Register
             lblMsg.Text = Session("cErrorMessage").ToString
             Session.Remove("cErrorMessage")
         End If
+
+        If IsPostBack Then
+            If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Register") Then
+                Register()
+            End If
+        End If
     End Sub
 
-    Private Sub cmdRegister_Click(sender As Object, e As System.EventArgs) Handles cmdRegister.Click
+    Private Sub Register()
         Dim cMsg As String = ""
         Dim lSuccess As Boolean = True
         If inputEmail.Value <> inputEmail2.Value Then

@@ -14,13 +14,13 @@ Option Explicit On
 Partial Public Class Register
 
     '''<summary>
-    '''Panel1 control.
+    '''pnlRegister control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents pnlRegister As Global.System.Web.UI.WebControls.Panel
 
     '''<summary>
     '''inputFName control.
@@ -137,7 +137,7 @@ Partial Public Class Register
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cmdRegister As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents cmdRegister As Global.System.Web.UI.HtmlControls.HtmlButton
 
     '''<summary>
     '''lblMsg control.

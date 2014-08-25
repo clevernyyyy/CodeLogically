@@ -6,7 +6,7 @@
 <h3>
     <font face="Verdana" color="White">Registration Page</font>
 </h3>
-<asp:Panel ID="Panel1" runat="server" DefaultButton="cmdRegister" 
+<asp:Panel ID="pnlRegister" runat="server" 
     GroupingText="Account Information" ForeColor="White" Width="750px">
     <div>
         <span style="text-align:right;">
@@ -82,7 +82,8 @@
     </div>
 </asp:Panel>
 <div id="divBtn" style="float:right">
-    <asp:Button ID="cmdRegister" runat="server" Text="Register" type="submit" />
+    <button type="button" id="cmdRegister" runat="server" onclick="__doPostBack('cmdRegister','Register');">Register</button>
+    <%--<asp:Button ID="cmdRegister" runat="server" Text="Register" type="submit" />--%>
 </div>
 <p>
     <asp:Label ID="lblMsg" runat="server" Font-Name="Verdana" Font-Size="10" 

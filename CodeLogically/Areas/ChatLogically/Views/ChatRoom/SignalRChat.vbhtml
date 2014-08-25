@@ -173,6 +173,7 @@
 
                 $("#message").keypress(function (e) {
                     if (e.which == 13) {
+                        e.preventDefault();
                         //submit form via ajax, this is not JS but server side scripting so not showing here
                         if ($("#users").val() == "All") {
                             // Call the Send method on the hub.

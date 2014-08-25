@@ -182,12 +182,6 @@
                         else {
                             chat.server.sendToSpecific($('#nickname').val(), $('#message').val(), $("#users").val());
                         }
-                        // Clear text box and reset focus for next comment.
-                        var k = jQuery.Event("keyup");
-                        k.ctrlKey = false;
-                        k.which = 20;
-
-                        $('#message').trigger(k);
                         $('#message').val('').focus();
                     }
                 });

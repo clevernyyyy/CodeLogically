@@ -15,7 +15,7 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If IsPostBack Then
             If (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Cancel") Then
-                'Close
+                Session.Clear()
             ElseIf (Convert.ToString(Request.Form("__EVENTARGUMENT")) = "Login") Then
                 SignIn()
             End If

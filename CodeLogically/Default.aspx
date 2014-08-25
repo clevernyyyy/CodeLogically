@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="Home Page" Language="vb" MasterPageFile="~/Site.Master" AutoEventWireup="false"
     CodeBehind="Default.aspx.vb" Inherits="CodeLogically._Default" %>
 
+<%@ Register Src="~/Controls/Login/Login.ascx" TagPrefix="uctrl" TagName="Log" %>
+
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +27,7 @@
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/Login/Login.js?cachebreak=08162014"></script>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    
@@ -80,6 +83,12 @@
                            <a href="http://www.leightoneash.com">L</a>
             </h2>
         </div>
+    </div>
+
+    <div id="divLoginOpen">
+        <uctrl:Log ID="ctrlLogin" runat="server" />
+        <asp:HiddenField ID="hUser" runat="server" />
+        <asp:HiddenField ID="hPass" runat="server" />
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->

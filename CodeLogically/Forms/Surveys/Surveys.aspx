@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="Surveys" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
 CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
 
-<%@ Register Src="~/Controls/Login/Login.ascx" TagPrefix="uctrl" TagName="Log" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +24,8 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
 
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
+    <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>z
     <script type="text/javascript" src="/Scripts/Surveys/Surveys.js?cachebreak=08162014"></script>
-    <script type="text/javascript" src="/Scripts/Login/Login.js?cachebreak=08162014"></script>
     
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    
@@ -63,13 +60,5 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
     <!--/.container-->
     
     <div style="clear: both;" />
-    
-    <div id="divLoginOpen">
-        <uctrl:Log ID="ctrlLogin" runat="server" />
-        <asp:HiddenField ID="hUser" runat="server" />
-        <asp:HiddenField ID="hPass" runat="server" />
-    </div>
-
-
 
 </asp:Content>

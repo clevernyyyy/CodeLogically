@@ -39,31 +39,4 @@ Partial Public Class Surveys
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnTakeSurvey As Global.System.Web.UI.HtmlControls.HtmlAnchor
-
-    '''<summary>
-    '''ctrlLogin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ctrlLogin As Global.CodeLogically.Login
-
-    '''<summary>
-    '''hUser control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents hUser As Global.System.Web.UI.WebControls.HiddenField
-
-    '''<summary>
-    '''hPass control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents hPass As Global.System.Web.UI.WebControls.HiddenField
 End Class

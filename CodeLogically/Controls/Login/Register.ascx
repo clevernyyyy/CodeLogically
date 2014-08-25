@@ -21,6 +21,13 @@
     </div>
     <div>
         <span style="text-align:right;">
+        <asp:Label runat="server" Width="125px">NickName:</asp:Label>
+        </span><span>
+        <asp:TextBox ID="txtNickName" runat="server" type="text" />
+        </span>
+    </div>
+    <div>
+        <span style="text-align:right;">
         <asp:Label runat="server" Width="125px">Email:</asp:Label>
         </span><span>
         <asp:TextBox ID="txtEmail" runat="server" AutoComplete="off" 

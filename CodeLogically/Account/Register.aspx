@@ -37,6 +37,13 @@
                                      ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
                             </p>
                             <p>
+                                <asp:Label ID="NickNameLabel" runat="server" AssociatedControlID="NickName">NickName:</asp:Label>
+                                <asp:TextBox ID="NickName" runat="server" CssClass="textEntry"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="NickNameRequired" runat="server" ControlToValidate="NickName" 
+                                     CssClass="failureNotification" ErrorMessage="NickName is required." ToolTip="NickName is required." 
+                                     ValidationGroup="RegisterUserValidationGroup">*</asp:RequiredFieldValidator>
+                            </p>
+                            <p>
                                 <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">E-mail:</asp:Label>
                                 <asp:TextBox ID="Email" runat="server" CssClass="textEntry"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email" 

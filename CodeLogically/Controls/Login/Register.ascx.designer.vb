@@ -50,6 +50,15 @@ Partial Public Class Register
     Protected WithEvents txtLName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''txtNickName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtNickName As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
     '''txtEmail control.
     '''</summary>
     '''<remarks>

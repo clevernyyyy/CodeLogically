@@ -37,6 +37,7 @@ Public Class Register
                 cmd.Parameters.AddWithValue("@cMName", txtMName.Text)
                 cmd.Parameters.AddWithValue("@cLName", txtLName.Text)
                 cmd.Parameters.AddWithValue("@cPWD", cHashPass)
+                cmd.Parameters.AddWithValue("@cNickName", txtNickName.Text)
                 cnn.Open()
                 cmd.ExecuteScalar()
                 cMsg = "User Successfully Added"

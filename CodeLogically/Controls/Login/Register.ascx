@@ -2,6 +2,10 @@
 
  <!-- Custom styles for this control -->
  <link href="/Styles/Login/Login.css" rel="stylesheet" />
+ <link href="/Styles/ColorPicker/colorpicker.css" rel="stylesheet" media="screen" type="text/css" />
+
+<!-- Scripts -->
+<script type="text/javascript" src="/Scripts/ColorPicker/colorpicker.js"></script>
 
 <h3>
     <font face="Verdana" color="White">Registration Page</font>
@@ -20,6 +24,13 @@
         <%--<asp:TextBox ID="txtLName" runat="server" type="text" />--%>
         </span>
     </div>
+
+<%--    <script type="text/javascript">
+        function OnClientColorChange() {
+            $('#colorpickerHolder').ColorPicker({ flat: true });
+        }
+    </script>--%>
+
     <div>
         <span style="text-align:right;">
         <asp:Label runat="server" Width="150px">NickName:</asp:Label>

@@ -13,7 +13,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>CodeLogically</RootNamespace>
     <AssemblyName>CodeLogically</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <UseIISExpress>false</UseIISExpress>
     <FileUpgradeFlags>
@@ -65,6 +65,9 @@
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.1.1\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Owin.1.2.1\lib\net45\Microsoft.AspNet.SignalR.Owin.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.1.1\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
@@ -189,6 +192,11 @@
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ColorPicker\colorpicker.js" />
+    <Content Include="Scripts\ColorPicker\eye.js" />
+    <Content Include="Scripts\ColorPicker\jquery.js" />
+    <Content Include="Scripts\ColorPicker\layout.js" />
+    <Content Include="Scripts\ColorPicker\utils.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.1.min.js" />
@@ -226,6 +234,34 @@
     <Content Include="Scripts\site_scripts\scripts.js" />
     <Content Include="Scripts\site_scripts\smoothscroll.js" />
     <Content Include="Scripts\site_scripts\Treeview.js" />
+    <Content Include="Styles\ColorPicker\colorpicker.css" />
+    <Content Include="Styles\ColorPicker\images\blank.gif" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_background.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_hex.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_hsb_b.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_hsb_h.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_hsb_s.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_indic.gif" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_overlay.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_rgb_b.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_rgb_g.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_rgb_r.png" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_select.gif" />
+    <Content Include="Styles\ColorPicker\images\colorpicker_submit.png" />
+    <Content Include="Styles\ColorPicker\images\custom_background.png" />
+    <Content Include="Styles\ColorPicker\images\custom_hex.png" />
+    <Content Include="Styles\ColorPicker\images\custom_hsb_b.png" />
+    <Content Include="Styles\ColorPicker\images\custom_hsb_h.png" />
+    <Content Include="Styles\ColorPicker\images\custom_hsb_s.png" />
+    <Content Include="Styles\ColorPicker\images\custom_indic.gif" />
+    <Content Include="Styles\ColorPicker\images\custom_rgb_b.png" />
+    <Content Include="Styles\ColorPicker\images\custom_rgb_g.png" />
+    <Content Include="Styles\ColorPicker\images\custom_rgb_r.png" />
+    <Content Include="Styles\ColorPicker\images\custom_submit.png" />
+    <Content Include="Styles\ColorPicker\images\select.png" />
+    <Content Include="Styles\ColorPicker\images\select2.png" />
+    <Content Include="Styles\ColorPicker\images\slider.png" />
+    <Content Include="Styles\ColorPicker\layout.css" />
     <Content Include="Styles\Surveys\CreateControl.css" />
     <Content Include="Styles\Login\Login.css" />
     <Content Include="Styles\Surveys\TakeControl.css" />

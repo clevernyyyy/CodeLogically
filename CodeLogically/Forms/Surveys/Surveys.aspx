@@ -24,7 +24,7 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
 
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>z
+    <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
     <script type="text/javascript" src="/Scripts/Surveys/Surveys.js?cachebreak=08162014"></script>
     
     <!-- favicon -->

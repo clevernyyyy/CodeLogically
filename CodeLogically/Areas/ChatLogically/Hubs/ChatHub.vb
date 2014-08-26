@@ -35,8 +35,11 @@ Namespace Areas.ChatLogically.Hubs
                        Where x.Value = Context.ConnectionId.ToString()
                        Select x).FirstOrDefault
             Dim s As String = ""
-            'dic.TryRemove(name.Key, s)
-            'Return Clients.All.disconnected(name.Key)
+
+            If Not name.Key Is Nothing Then
+                dic.TryAdd(name.Key, s)
+            End If
+            Return Clients.All.connected(name.Key)
             Return Nothing
         End Function
         Public Overrides Function OnDisconnected(ByVal pblnTest As Boolean) As Task

@@ -40,7 +40,7 @@ function OpenRegister() {
     $("#divRegisterControl").dialog({
         //autoOpen: true,
         appendTo: "form",
-        modal: true,
+        //modal: true,
         width: 800,
         height: 450,
         title: "Register",

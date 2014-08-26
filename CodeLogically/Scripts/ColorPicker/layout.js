@@ -1,19 +1,13 @@
 (function($){
 	var initLayout = function() {
-		var hash = window.location.hash.replace('#', '');
-		var currentTab = $('ul.navigationTabs a')
-							.bind('click', showTab)
-							.filter('a[rel=' + hash + ']');
-		if (currentTab.size() == 0) {
-			currentTab = $('ul.navigationTabs a:first');
-		}
-		showTab.apply(currentTab.get(0));
 		$('#colorpickerHolder').ColorPicker({flat: true});
 		$('#colorpickerHolder2').ColorPicker({
 			flat: true,
 			color: '#00ff00',
 			onSubmit: function(hsb, hex, rgb) {
-				$('#colorSelector2 div').css('backgroundColor', '#' + hex);
+			    $('#colorSelector2 div').css('backgroundColor', '#' + hex);
+			    $(el).val(hex);
+			    $(el).ColorPickerHide();
 			}
 		});
 		$('#colorpickerHolder2>div').css('position', 'absolute');
@@ -49,19 +43,6 @@
 			}
 		});
 	};
-	
-	var showTab = function(e) {
-		var tabIndex = $('ul.navigationTabs a')
-							.removeClass('active')
-							.index(this);
-		$(this)
-			.addClass('active')
-			.blur();
-		$('div.tab')
-			.hide()
-				.eq(tabIndex)
-				.show();
-	};
-	
+
 	EYE.register(initLayout, 'init');
 })(jQuery)

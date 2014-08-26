@@ -5,7 +5,11 @@
  <link href="/Styles/ColorPicker/colorpicker.css" rel="stylesheet" media="screen" type="text/css" />
 
 <!-- Scripts -->
+<script type="text/javascript" src="/Scripts/ColorPicker/jquery.js"></script>
 <script type="text/javascript" src="/Scripts/ColorPicker/colorpicker.js"></script>
+<script type="text/javascript" src="/Scripts/ColorPicker/eye.js"></script>
+<script type="text/javascript" src="/Scripts/ColorPicker/utils.js"></script>
+<script type="text/javascript" src="/Scripts/ColorPicker/layout.js"></script>
 
 <h3>
     <font face="Verdana" color="White">Registration Page</font>
@@ -25,11 +29,19 @@
         </span>
     </div>
 
-<%--    <script type="text/javascript">
-        function OnClientColorChange() {
-            $('#colorpickerHolder').ColorPicker({ flat: true });
-        }
-    </script>--%>
+    <script type="text/javascript">
+        $('#colorpickerHolder').ColorPicker({ flat: true });
+    </script> 
+
+    <div id="customWidget">
+        <div id="colorSelector">
+            <div style="background-color: #00ff00"></div>
+        </div>
+        <div id="colorpickerHolder" style="height: 0px; display: block;">
+            <div id="collorpicker_636" class="colorpicker" style="display: block; position: absolute;">
+            </div>
+        </div>
+    </div>
 
     <div>
         <span style="text-align:right;">

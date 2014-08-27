@@ -15,7 +15,7 @@
     <asp:Label runat="server" ID="lblQuestionText" CssClass="questionText questionType" Text="Please type your question." ></asp:Label>
     <br />
     <div id="divQDT" runat="server">
-        <a id="QuestionTypeDefinitions" runat="server" href="" >
+        <a id="QuestionTypeDefinitions" href="#"  onClick="javascript:OpenSurveyEditorAndHelp();" >
             <img class="img img-circle" style="float:left;" src="/img/help.ico" height="25px" width="25px" alt="">
         </a>
     </div>

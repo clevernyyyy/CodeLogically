@@ -11,9 +11,6 @@
         Else
             objSurvey = Session("Survey")
         End If
-
-        'Commenting out this script until I can fix the AJAX issue.
-        AddNewQuestionJS(btnAddAnother)
     End Sub
     Private Sub LoadSurvey()
         Dim collQuestions As Questions = objSurvey.Questions
@@ -108,17 +105,4 @@
         uctrlCreateQuestion.ClearControls()
         LoadSurvey()
     End Sub
-
-
-#Region "JavaScript"
-    Private Sub AddNewQuestionJS(ByVal btn As Button)
-        Dim strJava As String = ""
-
-        'Make the AJAX call
-        strJava = "javascript:addQuestion();"
-        btn.Attributes.Add("onclick", strJava)
-
-    End Sub
-#End Region
-
 End Class

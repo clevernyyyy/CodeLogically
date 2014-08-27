@@ -12,7 +12,7 @@
     <br />
     <asp:TextBox ID="txtTitle" runat="server" Width="500px" style="text-align:center; font-size:small" CssClass="smallBox"></asp:TextBox>
     <uctrl:CreateQuestion runat="server" ID="uctrlCreateQuestion" />
-    <asp:Button runat="server" ID="btnAddAnother"  CssClass="AddQuestionButton" Text="Add Another Question" />
+    <asp:Button runat="server" ID="btnAddAnother"  CssClass="AddQuestionButton" Text="Add Another Question" OnClientClick="addQuestion(); return false;" />
     <br />
     <div id="questionContent" runat="server" style="margin-top:15px; float:left; 
         width:600px; height:400px; overflow-y:auto; overflow-x:hidden; position:absolute;">

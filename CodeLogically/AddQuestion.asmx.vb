@@ -6,8 +6,6 @@ Imports System.IO
 Imports System.Web.Script.Serialization
 Imports System.Collections.Specialized
 
-' To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line.
-' <System.Web.Script.Services.ScriptService()> _
 <System.Web.Services.WebService(Namespace:="http://tempuri.org/")> _
 <System.Web.Services.WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _
 <ToolboxItem(False)> _
@@ -21,11 +19,13 @@ Public Class AddQuestion
     Public Sub New()
         instance = New CreateNewSurvey
     End Sub
-    <WebMethod(True)> _
-    Public Sub AddQuestion()
+
+    <WebMethod()> _
+    Public Sub UpdateQuestion()
         Try
             instance.SaveCurrentList()
             instance.NewQuestion()
+
         Catch ex As Exception
             Throw New Exception
         End Try

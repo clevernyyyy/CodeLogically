@@ -55,11 +55,11 @@ function loadNextQuestion()
 {
     $.ajax({
         type: "POST",
-        url: "/AddQuestion.asmx/AddQuestion/",
+        url: "../../AddQuestion.asmx/UpdateQuestion",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        success: loadSuccess(),
-        error: fillFail()
+        success: loadSuccess,
+        error: fillFail
     });
 }
 
@@ -76,7 +76,7 @@ function loadSuccess() {
 }
 
 function fillFail(results) {
-    //alert("failure on fill");
+    alert("failure on fill");
 }
 
 

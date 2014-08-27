@@ -38,17 +38,25 @@ CodeBehind="Surveys.aspx.vb" Inherits="CodeLogically.Surveys" %>
         }
     </style>
     <div id="divSurveyMainPage" runat="server" class="container">
-
-        <div class="col-xs-12 col-sm-12">
+        
+        <div id="welcome">
+            <h1 class="centered" style="color: black; font-size: 72px;">Welcome to Project Survey
+            </h1>
+            <h2 class="centered" style="color: black; font-size: 24px;">Creating and Taking Surveys since MTV played music!
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12" style="margin-top:40px;">
             <div id="gridDetails" class="row">
-                <div class="col-8 col-sm-8 col-lg-5 jumbotron">
+                <div class="col-md-2">
+                </div>
+                <div class="col-4 col-sm-4 col-lg-3 jumbotron">
                     <h4>
                         Create a Survey!</h4>
                         <a ID="btnCreateSurvey" runat="server" class="btn btn-default" href="/Forms/Surveys/CreateSurvey.aspx" role="button">Create &raquo;</a>
                 </div>
                 <div class="col-md-2">
                 </div>
-                <div class="col-8 col-sm-8 col-lg-5 jumbotron">
+                <div class="col-4 col-sm-4 col-lg-3 jumbotron">
                     <h4>
                         Take a Survey!</h4>
                         <a ID="btnTakeSurvey" runat="server" class="btn btn-default" href="/Forms/Surveys/TakeSurvey.aspx" role="button">Take &raquo;</a>

@@ -48,14 +48,13 @@
                         </div>
                         <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
                             <h4 style="color: White">View Project Survey!</h4>
-                            <a id="btnViewSurvey" runat="server" class="btn btn-default" href="/Forms/Surveys/Surveys.aspx" role="button">View
-                            &raquo;</a>
+                            <a id="btnViewSurvey" runat="server" class="btn btn-inverse" style="float:right; color:white;border: 1px solid slateblue; border-radius: 10px;" href="/Forms/Surveys/Surveys.aspx" role="button">View &raquo;</a>
                         </div>
                         <div class="col-md-2">
                         </div>
                         <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
                             <h4 style="color: White">View Project Chat!</h4>
-                            <a id="btnViewChat" runat="server" class="btn btn-default" href="/ChatLogically/ChatRoom/SignalRChat" role="button">View &raquo;</a>
+                            <a id="btnViewChat" runat="server" class="btn btn-inverse" style="float:right; color:white;border: 1px solid slateblue; border-radius: 10px;" href="/ChatLogically/ChatRoom/SignalRChat" role="button">View &raquo;</a>
                         </div>
                     </div>
                     <br />
@@ -68,7 +67,7 @@
                         <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
                             *** Coming Soon ***
                             <h4 style="color: White">View Analytics!</h4>
-                            <a id="btnAnalytics" runat="server" class="btn btn-default" href="" role="button">View
+                            <a id="btnAnalytics" runat="server" class="btn btn-inverse" style="float:right; color:white;border: 1px solid slateblue; border-radius: 10px;" href="" role="button">View
                             &raquo;</a>
                         </div>
                         <div class="col-md-2">
@@ -76,7 +75,7 @@
                         <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
                             *** Coming Soon ***
                             <h4 style="color: White">Next Project</h4>
-                            <a id="A2" runat="server" class="btn btn-default" href="" role="button">View &raquo;</a>
+                            <a id="A2" runat="server" class="btn btn-inverse" style="float:right; color:white;border: 1px solid slateblue; border-radius: 10px;" href="" role="button">View &raquo;</a>
                         </div>
                     </div>
                 </div>

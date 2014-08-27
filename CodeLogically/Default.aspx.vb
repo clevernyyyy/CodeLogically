@@ -6,7 +6,7 @@
         hUser.Value = ctrlLogin.Username
         hPass.Value = ctrlLogin.Password
         If Not IsPostBack() Then
-            If Not CheckLogin() Then
+            If Not CheckLogin() And Request.QueryString("Cancel") <> "True" Then
                 OpenLoginDialog()
             Else
                 ctrlLogin.Visible = False

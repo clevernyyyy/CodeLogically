@@ -5,11 +5,13 @@
 
         If Request.Url.AbsoluteUri.Contains("Default") Then
             mnuSurveys.Visible = True
+            mnuChat.Visible = True
             mnuCreateSurveys.Visible = False
             mnuTakeSurveys.Visible = False
             mnuSurveyAnalytics.Visible = False
         ElseIf Request.Url.AbsoluteUri.Contains("Survey") Then
             mnuSurveys.Visible = False
+            mnuChat.Visible = True
             mnuCreateSurveys.Visible = True
             mnuTakeSurveys.Visible = True
             mnuSurveyAnalytics.Visible = True

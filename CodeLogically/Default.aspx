@@ -10,7 +10,7 @@
     <meta name="author" content="Adam Schaal">
     <link rel="shortcut icon" href="">
     <title>CodeOne Test Site</title>
-    
+
     <!-- Custom styles for this template -->
     <link type="text/css" rel="stylesheet" href="/Styles/site_css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
@@ -23,69 +23,86 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet'
         type='text/css' />
     <link href='/Styles/site_css/custom.css' rel='stylesheet' type='text/css' />
-    
+
     <!-- Scripts -->
     <script type="text/javascript" src="/Scripts/site_scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/Scripts/site_scripts/modernizr.custom.js"></script>
     <script type="text/javascript" src="/Scripts/Login/Login.js?cachebreak=08162014"></script>
-    
+
     <!-- favicon -->
-    <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />    
+    <link rel="shortcut icon" href="/img/favicon.ico?v=2" type="image/x-icon" />
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <div id="playArea">
         <div id="welcome">
-            <h1 class="centered" style="color: white; font-size: 72px;">
-                CodeOne Test Site
+            <h1 class="centered" style="color: white; font-size: 72px;">CodeOne Test Site
             </h1>
-            <h2 class="centered" style="color: white; font-size: 24px;">
-                Test Site since 1940!
+            <h2 class="centered" style="color: white; font-size: 24px;">Test Site since 1940!
             </h2>
         </div>
         <div id="container">
             <div class="col-xs-12 col-sm-12">
                 <div id="gridDetails" class="row">
-                    <div class="col-md-2">
-                    </div>
-                    <div class="col-8 col-sm-8 col-lg-4">
-                        <h4 style="color:White">
-                            View Project Survey!</h4>
-                        <a id="btnViewSurvey" runat="server" class="btn btn-default" href="/Forms/Surveys/Surveys.aspx" role="button">View
+                    <div id="line1" style="margin-top:20px;">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
+                            <h4 style="color: White">View Project Survey!</h4>
+                            <a id="btnViewSurvey" runat="server" class="btn btn-default" href="/Forms/Surveys/Surveys.aspx" role="button">View
                             &raquo;</a>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
+                            <h4 style="color: White">View Project Chat!</h4>
+                            <a id="btnViewChat" runat="server" class="btn btn-default" href="/ChatLogically/ChatRoom/SignalRChat" role="button">View &raquo;</a>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                    </div>
-                    <div class="col-8 col-sm-8 col-lg-4">
-                        <h4 style="color:White">
-                            View Project Chat!</h4>
-                        <a id="btnViewChat" runat="server" class="btn btn-default" href="/ChatLogically/ChatRoom/SignalRChat" role="button">View &raquo;</a>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div id="line2" style="margin-top:20px;">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
+                            *** Coming Soon ***
+                            <h4 style="color: White">View Analytics!</h4>
+                            <a id="btnAnalytics" runat="server" class="btn btn-default" href="" role="button">View
+                            &raquo;</a>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
+                            *** Coming Soon ***
+                            <h4 style="color: White">Next Project</h4>
+                            <a id="A2" runat="server" class="btn btn-default" href="" role="button">View &raquo;</a>
+                        </div>
                     </div>
                 </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div class="centered">
-                *** Coming Soon ***
                 <br />
-                <button type="button" class="btn btn-lg btn-default" style="width: 250px">
-                    Button!</button>
-            </div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <br />
+
             </div>
         </div>
     </div>
     <br />
     <div id="footerwrap">
         <div class="container">
-            <h2 class="centered" style="color: white;">
-                Created by Team <a href="http://www.adamschaal.com">A</a>/ 
-                           <a href="">S</a>/
-                           <a href="http://www.leightoneash.com">L</a>
+            <h2 class="centered" style="color: white;">Created by Team <a style="color: slateblue" href="http://www.adamschaal.com">A</a>/ 
+                           <a style="color: slateblue" href="">S</a>/
+                           <a style="color: slateblue" href="http://www.leightoneash.com">L</a>
             </h2>
         </div>
     </div>
 
-    <div id="divLoginOpen" >
+    <div id="divLoginOpen">
         <uctrl:Log ID="ctrlLogin" runat="server" />
         <asp:HiddenField ID="hUser" runat="server" />
         <asp:HiddenField ID="hPass" runat="server" />

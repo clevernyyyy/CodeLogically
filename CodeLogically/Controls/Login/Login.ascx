@@ -32,7 +32,7 @@
 
     <asp:Label ID="lblRegister" runat="server" Text="Don't have a login?  "></asp:Label>
     
-    <asp:LinkButton ID="lbRegister" runat="server" Text="Register Now!"></asp:LinkButton>
+    <asp:LinkButton ID="lbRegister" runat="server" Text="Register Now!" ForeColor="SlateBlue"></asp:LinkButton>
        
     <div id="divBottomLeft" class="bottomPopupLeft">        
         <button type="button" id="btnCancel" runat="server" onclick="__doPostBack('btnCancel','Cancel');">Cancel</button>

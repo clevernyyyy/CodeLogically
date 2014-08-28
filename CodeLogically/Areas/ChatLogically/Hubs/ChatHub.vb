@@ -29,6 +29,8 @@ Namespace Areas.ChatLogically.Hubs
                 Next
                 Clients.Others.enters(name)
             End If
+
+            Dim objUser As User = GetUser()
         End Sub
         Public Overrides Function OnConnected() As Task
             Dim name = (From x As KeyValuePair(Of String, String) In dic

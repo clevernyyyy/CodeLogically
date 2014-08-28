@@ -2,9 +2,10 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Session.Clear()
-        hUser.Value = ctrlLogin.Username
-        hPass.Value = ctrlLogin.Password
+        If Session("User") Is Nothing Then
+            hUser.Value = ctrlLogin.Username
+            hPass.Value = ctrlLogin.Password
+        End If
         If Not IsPostBack() Then
             If Not CheckLogin() And Request.QueryString("Cancel") <> "True" Then
                 OpenLoginDialog()

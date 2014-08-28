@@ -60,4 +60,6 @@
     Public Sub New(pstrEmail As String)
         Me.New(LoginUser(pstrEmail))
     End Sub
+    Public Sub New()
+    End Sub
 End Class

@@ -160,14 +160,14 @@ Module MiscFunctions
 
     End Function
 
-    Public Function GetUser()
-        Dim objUser As User
-        If HttpContext.Current.Session("User") Is Nothing Then
-            objUser = New User
-            HttpContext.Current.Session("User") = objUser
-        End If
-        objUser = HttpContext.Current.Session("User")
-        Return objUser
-    End Function
+    'Public Function GetUser()
+    '    Dim objUser As User
+    '    If HttpContext.Current.Session("User") Is Nothing Then
+    '        objUser = New User
+    '        HttpContext.Current.Session("User") = objUser
+    '    End If
+    '    objUser = HttpContext.Current.Session("User")
+    '    Return objUser
+    'End Function
 
 End Module

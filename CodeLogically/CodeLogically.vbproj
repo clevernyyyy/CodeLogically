@@ -60,6 +60,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Client">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.1.1\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
     </Reference>
@@ -88,6 +92,7 @@
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
@@ -100,6 +105,10 @@
     <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -156,10 +165,14 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="AddQuestion.asmx" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\chat.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Areas\ChatLogically\Content\bootstrap-responsive.css" />
+    <Content Include="Areas\ChatLogically\Content\bootstrap-responsive.min.css" />
+    <Content Include="Areas\ChatLogically\Content\bootstrap.css" />
+    <Content Include="Areas\ChatLogically\Content\bootstrap.min.css" />
+    <Content Include="Areas\ChatLogically\Content\chat.css" />
+    <Content Include="Areas\ChatLogically\Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Areas\ChatLogically\Content\images\glyphicons-halflings.png" />
+    <Content Include="Areas\ChatLogically\Content\Site.css" />
     <Content Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx" />
     <Content Include="Controls\Login\Login.ascx" />
     <Content Include="Controls\Login\Register.ascx" />
@@ -189,7 +202,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="Areas\ChatLogically\Views\Account\Login.vbhtml" />
+    <Content Include="Areas\ChatLogically\Views\Shared\Error.vbhtml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\apps\chat.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\ColorPicker\colorpicker.js" />
@@ -199,9 +215,21 @@
     <Content Include="Scripts\ColorPicker\utils.js" />
     <Content Include="Scripts\jquery-1.6.4.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <None Include="Scripts\jquery-1.8.3.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
     <Content Include="Scripts\jquery-ui-1.11.1.min.js" />
+    <Content Include="Scripts\jquery.signalR-1.1.0-beta1.js" />
+    <Content Include="Scripts\jquery.signalR-1.1.0-beta1.min.js" />
     <Content Include="Scripts\jquery.signalR-2.1.1.js" />
     <Content Include="Scripts\jquery.signalR-2.1.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Surveys\CreateSurvey.js" />
     <Content Include="Scripts\Login\Login.js" />
@@ -262,6 +290,8 @@
     <Content Include="Styles\ColorPicker\images\select2.png" />
     <Content Include="Styles\ColorPicker\images\slider.png" />
     <Content Include="Styles\ColorPicker\layout.css" />
+    <Content Include="Styles\site_css\bootstrap-responsive.css" />
+    <Content Include="Styles\site_css\bootstrap-responsive.min.css" />
     <Content Include="Styles\Surveys\CreateControl.css" />
     <Content Include="Styles\Login\Login.css" />
     <Content Include="Styles\Surveys\TakeControl.css" />
@@ -348,9 +378,14 @@
       <DependentUpon>AddQuestion.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Areas\ChatLogically\App_Start\BundleConfig.vb" />
+    <Compile Include="Areas\ChatLogically\App_Start\FilterConfig.vb" />
+    <Compile Include="Areas\ChatLogically\App_Start\RouteConfig.vb" />
     <Compile Include="Areas\ChatLogically\ChatLogicallyAreaRegistration.vb" />
+    <Compile Include="Areas\ChatLogically\Controllers\AccountController.vb" />
     <Compile Include="Areas\ChatLogically\Controllers\ChatRoomController.vb" />
     <Compile Include="Areas\ChatLogically\Hubs\ChatHub.vb" />
+    <Compile Include="Areas\ChatLogically\Models\LoginModel.vb" />
     <Compile Include="Areas\ChatLogically\Startup.vb" />
     <Compile Include="Classes\Connections.vb" />
     <Compile Include="Classes\CreateQuestion.vb">
@@ -560,9 +595,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\ChatLogically\Models\" />
     <Folder Include="Controls\Chat\" />
-    <Folder Include="Forms\Chat\" />
     <Folder Include="Scripts\Chat\" />
     <Folder Include="Styles\Chat\" />
   </ItemGroup>

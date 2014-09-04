@@ -23,6 +23,7 @@ Public Class AddQuestion
     <WebMethod()> _
     Public Sub UpdateQuestion()
         Try
+
             instance.SaveCurrentList()
             instance.NewQuestion()
 

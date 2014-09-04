@@ -4,16 +4,16 @@ Imports System.Web
 Imports System.Web.Mvc
 Imports System.Web.Routing
 
-Namespace ChatLogically
+Namespace ChatRoom
     Public Class RouteConfig
         Public Shared Sub RegisterRoutes(routes As RouteCollection)
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}")
 
             routes.MapRoute(name:="Default", url:="{controller}/{action}/{id}", defaults:=New With { _
                 Key .controller = "Home", _
-                Key .action = "SignalRChat", _
+                Key .action = "Index", _
                 Key .id = UrlParameter.[Optional] _
-            })
+            }).DataTokens.Add("area", "ChatLogically")
         End Sub
     End Class
 End Namespace

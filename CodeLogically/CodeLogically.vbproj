@@ -57,7 +57,7 @@
     <OptionStrict>Off</OptionStrict>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionInfer>On</OptionInfer>
+    <OptionInfer>Off</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -102,6 +102,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
@@ -134,6 +142,9 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <HintPath>..\..\CodeLogically\CodeLogically\bin\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -165,14 +176,85 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="AddQuestion.asmx" />
-    <Content Include="Areas\ChatLogically\Content\bootstrap-responsive.css" />
-    <Content Include="Areas\ChatLogically\Content\bootstrap-responsive.min.css" />
-    <Content Include="Areas\ChatLogically\Content\bootstrap.css" />
-    <Content Include="Areas\ChatLogically\Content\bootstrap.min.css" />
-    <Content Include="Areas\ChatLogically\Content\chat.css" />
-    <Content Include="Areas\ChatLogically\Content\images\glyphicons-halflings-white.png" />
-    <Content Include="Areas\ChatLogically\Content\images\glyphicons-halflings.png" />
+    <Content Include="Areas\ChatLogically\Content\DialogStyle.css" />
+    <Content Include="Areas\ChatLogically\Content\Image\ajax-loader.gif" />
     <Content Include="Areas\ChatLogically\Content\Site.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery-ui.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Areas\ChatLogically\Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Areas\ChatLogically\Scripts\Account.js" />
+    <Content Include="Areas\ChatLogically\Scripts\DialogWindows.js" />
+    <Content Include="Areas\ChatLogically\Scripts\Helpers.js" />
+    <None Include="Areas\ChatLogically\Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery-1.7.1.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.signalR-1.0.1.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.signalR-1.0.1.min.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Areas\ChatLogically\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.validate.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.validate.min.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Areas\ChatLogically\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Areas\ChatLogically\Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Areas\ChatLogically\Scripts\knockout-2.1.0.js" />
+    <Content Include="Areas\ChatLogically\Scripts\modernizr-2.5.3.js" />
+    <Content Include="Areas\ChatLogically\Scripts\SignalRMethods.js" />
+    <None Include="Areas\ChatLogically\Scripts\_references.js" />
     <Content Include="Controls\Surveys\PopUp\Help_QuestionTypeDef.ascx" />
     <Content Include="Controls\Login\Login.ascx" />
     <Content Include="Controls\Login\Register.ascx" />
@@ -197,13 +279,14 @@
     <Content Include="img\help.ico" />
     <Content Include="Areas\ChatLogically\Views\_ViewStart.vbhtml" />
     <Content Include="Areas\ChatLogically\Views\Shared\_Layout.vbhtml" />
-    <Content Include="Areas\ChatLogically\Views\ChatRoom\SignalRChat.vbhtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="ClassDiagram1.cd" />
-    <Content Include="Areas\ChatLogically\Views\Account\Login.vbhtml" />
     <Content Include="Areas\ChatLogically\Views\Shared\Error.vbhtml" />
+    <Content Include="Areas\ChatLogically\Views\Account\Index.vbhtml" />
+    <Content Include="Areas\ChatLogically\Views\Home\GetPrivateMessageDialog.vbhtml" />
+    <Content Include="Areas\ChatLogically\Views\Home\Index.vbhtml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\apps\chat.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -381,11 +464,11 @@
     <Compile Include="Areas\ChatLogically\App_Start\BundleConfig.vb" />
     <Compile Include="Areas\ChatLogically\App_Start\FilterConfig.vb" />
     <Compile Include="Areas\ChatLogically\App_Start\RouteConfig.vb" />
-    <Compile Include="Areas\ChatLogically\ChatLogicallyAreaRegistration.vb" />
+    <Compile Include="Areas\ChatLogically\App_Start\WebApiConfig.vb" />
+    <Compile Include="Areas\ChatLogically\ChatHub.vb" />
     <Compile Include="Areas\ChatLogically\Controllers\AccountController.vb" />
-    <Compile Include="Areas\ChatLogically\Controllers\ChatRoomController.vb" />
-    <Compile Include="Areas\ChatLogically\Hubs\ChatHub.vb" />
-    <Compile Include="Areas\ChatLogically\Models\LoginModel.vb" />
+    <Compile Include="Areas\ChatLogically\Controllers\HomeController.vb" />
+    <Compile Include="Areas\ChatLogically\HubCommon\Users.vb" />
     <Compile Include="Areas\ChatLogically\Startup.vb" />
     <Compile Include="Classes\Connections.vb" />
     <Compile Include="Classes\CreateQuestion.vb">
@@ -573,7 +656,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
-    <Content Include="Areas\ChatLogically\Views\web.config" />
+    <Content Include="Areas\ChatLogically\Views\Web.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -595,6 +678,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\ChatLogically\Models\" />
     <Folder Include="Controls\Chat\" />
     <Folder Include="Scripts\Chat\" />
     <Folder Include="Styles\Chat\" />

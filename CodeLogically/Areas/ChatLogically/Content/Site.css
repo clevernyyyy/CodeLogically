@@ -1,5 +1,201 @@
 ﻿body {
-    margin-top: 15px;
+    font-family: arial,tahoma,verdana,sans-serif;
+    width: 850px;
+    height: 733px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#AccountForm {
+    color: #0094ff;
+}
+
+/*Active network user list*/
+/*-----------------------------------------------------*/
+.UserList {
+    vertical-align: top;
+}
+
+.ActiveUser {
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #132e78;
+}
+
+    .ActiveUser:hover {
+        font-size: 18px;
+        color: #12506f;
+    }
+
+
+/*Buttons*/
+/*-----------------------------------------------------*/
+.button {
+    -moz-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+    background: -moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color: #79bbff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 20px;
+    text-decoration: none;
+    float: right;
+}
+
+    .button:hover {
+        background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+        background: -moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+        background-color: #378de5;
+    }
+
+    .button:active {
+        position: relative;
+        top: 1px;
+    }
+
+
+/*Global statement frame*/
+#GlobalMessages {
+    white-space: nowrap;
+    table-layout: fixed;
+    overflow: auto;
+    height: 600px;
+    width: 100%;
+    vertical-align: top;
+}
+
+/*login name */
+#Id {
+    width: 100%;
+}
+
+/*global chat messages elements*/
+.GlobMsg {
+    width: 500px;
+    margin: 10px;
+}
+
+#ActiveUserCount {
+    max-height: 300px;
+    width: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*messages to be sent tables*/
+#InputElem {
+    width: 100%;
+}
+
+/*Content Table*/
+#ContentTable {
+}
+
+/*sending a message txtbox*/
+#GlobalMsgText {
+    width: 570px;
+}
+
+#SendMsgContext {
+    width: 100%;
+}
+
+/*Login td*/
+#login {
+    width: 248px;
+}
+
+.SenderFormat {
+    color: #5e5c5c;
+}
+
+/*html formats*/
+/*----------------------------------------------------*/
+a {
+    text-decoration: none;
+}
+
+
+/*dimmer*/
+/*-------------------------------------------------*/
+#OVER {
+    width: 100%;
+    height: 100%;
+    left: 0; /*IE*/
+    top: 0;
+    text-align: center;
+    z-index: 5;
+    position: fixed;
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+/*expected gifs*/
+.overlay {
+    width: 100%;
+    z-index: 6;
+    left: 0; /*IE*/
+    top: 30%;
+    font-size: 0.8em;
+    text-align: center;
+    position: fixed;
+}
+
+/*table formatting*/
+/*---------------------------------------------*/
+.tableMainBorder {
+    border: groove;
+    border-color: #378de5;
+}
+
+.tableBorders {
+    border: groove;
+    border-color: #bbdaf7;
+}
+
+.FriendlyBackground {
+    background-color: aliceblue;
+}
+
+/*Popout*/
+/*--------------------------------------------------------*/
+.DialogTable {
+    position: absolute;
+    left:20%;
+    top: 20%;
+}
+
+/*news Content*/
+.privateMessageContentBox {
+    background-color: #d0ffcf;
+    height: 330px;
+    margin: 10px;
+    overflow-y: auto;
+    vertical-align: top;
+}
+
+.PrivateMsg {
+    width: 300px;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
 }
 
 legend {
@@ -43,23 +239,3 @@ textarea {
 .validation-summary-valid {
     display: none;
 }
-
-
-/*body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}*/
-
-/* Set padding to keep content from hitting the edges */
-/*.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}*/
-
-/* Set width on the form input elements since they're 100% wide by default */
-/*input,
-select,
-textarea {
-    max-width: 280px;
-}*/
-

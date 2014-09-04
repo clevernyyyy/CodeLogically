@@ -23,7 +23,7 @@
         Get
             Dim dicValue As New Dictionary(Of Integer, String)
             Dim intOption As Integer = 0
-            For Each item In rptOptions.Items
+            For Each item As HtmlControl In rptOptions.Items
                 Dim rbtStrongDisagree As RadioButton = item.FindControl("rbtSD")
                 Dim rbtDisagree As RadioButton = item.FindControl("rbtD")
                 Dim rbtNeutral As RadioButton = item.FindControl("rbtN")

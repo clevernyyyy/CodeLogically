@@ -1,41 +1,31 @@
-﻿Imports CodeLogically.ChatLogically.Models
-Imports System
-Imports System.Collections.Generic
+﻿Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Web
 Imports System.Web.Mvc
 Imports System.Web.Security
 
-Namespace ChatLogically.Controllers
-
+Namespace ChatRoom.Controllers
     Public Class AccountController
         Inherits Controller
+        '
+        ' GET: /Account/
 
-        Public Function Login() As ViewResult
-
+        Public Function Index() As ActionResult
             Return View()
-
         End Function
 
-        <HttpPost> _
-        <ActionName("Login")> _
-        Public Function PostLogin(loginModel As LoginModel) As ActionResult
-
-            If ModelState.IsValid Then
-
-                FormsAuthentication.SetAuthCookie(loginModel.Name, True)
-                Return RedirectToAction("signalrchat", "home")
+        Public Function Login(id As String) As ActionResult
+            If id.Length > 4 AndAlso id.Length < 11 Then
+                FormsAuthentication.SetAuthCookie(id, False)
             End If
-
-            Return View(loginModel)
+            Return Redirect("~/Account/Index")
         End Function
 
-        <HttpPost> _
-        <ActionName("SignOut")> _
-        Public Function PostSignOut() As ActionResult
-
+        Public Function SignOut() As ActionResult
             FormsAuthentication.SignOut()
-            Return RedirectToAction("signalrchat", "home")
+            Return Redirect("~/Account/Index")
         End Function
+
+
     End Class
 End Namespace

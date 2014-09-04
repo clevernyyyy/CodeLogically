@@ -75,7 +75,7 @@
 
                 If txtOptions.Count > 0 Then
                     Dim lstOptions As List(Of String) = txtOptions.ToList
-                    For Each strOption In lstOptions
+                    For Each strOption As String In lstOptions
                         'Don't add an option that was never entered
                         If strOption <> "" Then
                             objOptions.Add(New QuestionOption(strOption, 0))

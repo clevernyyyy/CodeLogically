@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-4 col-sm-4 col-lg-2" style="border: 2px solid slateblue; border-radius: 25px; padding-bottom: 16px;">
                             <h4 style="color: White">View Project Chat!</h4>
-                            <a id="btnViewChat" runat="server" class="btn btn-inverse" style="float:right; color:white;border: 1px solid slateblue; border-radius: 10px;" href="/ChatLogically/ChatRoom/SignalRChat" role="button">View &raquo;</a>
+                            <a id="btnViewChat" runat="server" class="btn btn-inverse" style="float:right; color:white;border: 1px solid slateblue; border-radius: 10px;" href="/Home" role="button">View &raquo;</a>
                         </div>
                     </div>
                     <br />
